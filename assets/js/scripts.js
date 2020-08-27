@@ -364,6 +364,11 @@ jQuery(document).ready(function ($) {
 	}));
 
 
+	$('#add_input').click(function (e) {
+		e.preventDefault();
+		$('.addAttrib').append('<div class="col-6 mb-4"><label for="Attribute_name">عنوان ویژگی </label><input type="text" class="form-control" id="Attribute_name" required></div><div class="col-6 mb-4"><label for="Attribute_value">مقدار ویژگی </label><input type="text" class="form-control" id="Attribute_value" required></div>');
+	})
+
 });
 
 

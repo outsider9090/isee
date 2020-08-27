@@ -1194,9 +1194,7 @@ ol.breadcrumb a{
 .signup_form_container{
     max-width: 75%;
     padding: 24px;
-    /*background: #fff;*/
     margin: 75px auto;
-    /*box-shadow: 0 0 5px #bdbdbd;*/
     border-radius: 14px;
 }
 .signup_form_container form fieldset h5{
@@ -1205,6 +1203,9 @@ ol.breadcrumb a{
 }
 .signup_form_container form input{
     height: 40px;
+}
+.signup_form_container form label{
+    padding: 0 12px;
 }
 .signup_form_container form i{
     font-size: 1.25rem;
@@ -1405,6 +1406,30 @@ input.signUpInput{
     padding: 8px 24px;
 }
 /* About Us page */
+
+/* Send Product Page */
+.send_product_frm{
+    padding: 24px;
+    max-width: 75%;
+    margin: auto;
+}
+.send_product_frm input{
+   border-radius: 40px;
+}
+
+.send_product_frm label{
+    padding: 0 12px;
+}
+
+.send_product_frm fieldset button{
+    position: absolute;
+    left: -80px;
+    top: 0;
+}
+/*.addAttrib input{*/
+    /*width: 90%;*/
+/*}*/
+/* Send Product Page */
 
 
 
