@@ -1,0 +1,27 @@
+.err_container{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  img{
+    width: 50%;
+    height: auto;
+    margin-top: 50px;
+  }
+  .error_text{
+    font-size: 2rem;
+    color: $AccentColor;
+    font-family: $titleFont;
+    font-weight: bold;
+  }
+  a{
+    border-radius: 50px;
+    padding: 8px 24px;
+  }
+}
+

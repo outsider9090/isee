@@ -24,7 +24,7 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-styles.css" />
 </head>
 
 
@@ -60,7 +60,7 @@
     </nav>
 </header>
 
-<main style="margin-top: 100px;">
+<main style="margin: 75px auto;">
     <div class="container w-100">
         <div class="row my-4">
             <div class="col-12">
@@ -70,7 +70,10 @@
                         <li class="breadcrumb-item active" aria-current="page">لیست فروشگاه ها</li>
                     </ol>
                 </nav>
-
+                <div id="shops_list_search_container">
+                    <input type="text" class="form-control my-4" id="shops_list_search" placeholder="جستجوی فروشگاه...">
+                    <i class="material-icons align-middle text-muted" id="shops_list_search_icon">search</i>
+                </div>
                 <div class="shops_list d-flex justify-content-start">
                     <div class="shops_cards">
                         <div class="card">
@@ -80,12 +83,15 @@
                                 </a>
                                 <a href="single.html"><h6 class="partNameBold">فروشگاه پینو</h6></a>
                             </div>
-                            <div class="card-body">
-                                <div class="shops_desc my-1">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                                    </p>
-                                </div>
+                            <!--<div class="card-body">-->
+                                <!--<div class="shops_desc my-1">-->
+                                    <!--<p>-->
+                                        <!--لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است-->
+                                    <!--</p>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <div class="card-footer">
+                                <button class="btn btn-block btn-primary">مشاهده</button>
                             </div>
                         </div>
                         <div class="card">
@@ -95,12 +101,8 @@
                                 </a>
                                 <a href="single.html"><h6 class="partNameBold">فروشگاه پوما</h6></a>
                             </div>
-                            <div class="card-body">
-                                <div class="shops_desc my-1">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                                    </p>
-                                </div>
+                            <div class="card-footer">
+                                <button class="btn btn-block btn-primary">مشاهده</button>
                             </div>
                         </div>
                         <div class="card">
@@ -110,29 +112,34 @@
                                 </a>
                                 <a href="single.html"><h6 class="partNameBold">فروشگاه پینو</h6></a>
                             </div>
-                            <div class="card-body">
-                                <div class="shops_desc my-1">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                                    </p>
-                                </div>
+                            <div class="card-footer">
+                                <button class="btn btn-block btn-primary">مشاهده</button>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-header">
                                 <a href="single.html">
                                     <!-- if shop has no avatar -->
-                                        <img src="./assets/images/image_not_found.jpg" alt="">
+                                    <img src="./assets/images/image_not_found.jpg" alt="">
                                     <!-- if shop has no avatar -->
                                 </a>
-                                <a href="single.html"><h6 class="partNameBold">فروشگاه پوما</h6></a>
+                                <a href="single.html"><h6 class="partNameBold">فروشگاه پینو</h6></a>
                             </div>
-                            <div class="card-body">
-                                <div class="shops_desc my-1">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                                    </p>
-                                </div>
+                            <div class="card-footer">
+                                <button class="btn btn-block btn-primary">مشاهده</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="single.html">
+                                    <!-- if shop has no avatar -->
+                                    <img src="./assets/images/image_not_found.jpg" alt="">
+                                    <!-- if shop has no avatar -->
+                                </a>
+                                <a href="single.html"><h6 class="partNameBold">فروشگاه پینو</h6></a>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-block btn-primary">مشاهده</button>
                             </div>
                         </div>
                         <div class="card">
@@ -142,29 +149,19 @@
                                 </a>
                                 <a href="single.html"><h6 class="partNameBold">فروشگاه پینو</h6></a>
                             </div>
-                            <div class="card-body">
-                                <div class="shops_desc my-1">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                                    </p>
-                                </div>
+                            <div class="card-footer">
+                                <button class="btn btn-block btn-primary">مشاهده</button>
                             </div>
                         </div>
                         <div class="card">
                             <div class="card-header">
                                 <a href="single.html">
-                                    <!-- if shop has no avatar -->
-                                        <img src="./assets/images/image_not_found.jpg" alt="">
-                                    <!-- if shop has no avatar -->
+                                    <img src="./assets/images/shop1.jpg" alt="">
                                 </a>
-                                <a href="single.html"><h6 class="partNameBold">فروشگاه پوما</h6></a>
+                                <a href="single.html"><h6 class="partNameBold">فروشگاه پینو</h6></a>
                             </div>
-                            <div class="card-body">
-                                <div class="shops_desc my-1">
-                                    <p>
-                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                                    </p>
-                                </div>
+                            <div class="card-footer">
+                                <button class="btn btn-block btn-primary">مشاهده</button>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,54 @@
+.contact_us_form_container{
+  width: 90%;
+  margin: auto;
+  .card{
+    background: none;
+    border: none;
+    .card-header{
+      background: none;
+      padding: 20px;
+      border: none;
+    }
+    h5{
+      font-family: Yekan,sans-serif, Arial, Helvetica;
+      font-size: 1.75rem;
+    }
+  }
+  .contact_us_image {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_us_image figure{
+    text-align: center;
+    img{
+      width: 85%;
+      padding: 8px;
+    }
+  }
+}
+
+
+
+.contact_us_frm {
+  input{
+    border-radius: 40px;
+  }
+  label{
+    padding: 0 12px;
+  }
+  textarea{
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+  button[type=submit] ,button[type=button]{
+    border-radius: 40px;
+  }
+}
+
+.form-text{
+  color: #757575;
+  font-size: 11px;
+  padding: 4px;
+}

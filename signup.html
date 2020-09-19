@@ -22,9 +22,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0"/>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-styles.css" />
 </head>
 
 
@@ -71,7 +72,7 @@
                         <div class="card-body">
                             <form class="signup_frm" id="signup_frm" novalidate>
                                 <fieldset class="mb-5">
-                                    <h5 class="text-center">ثبت نام در isee</h5>
+                                    <h5 class="text-center">درخواست ثبت فروشگاه</h5>
                                 </fieldset>
                                 <div class="form-row">
                                     <div class="col-12 mb-4 required">
@@ -101,6 +102,36 @@
 
                                 <div class="form-row">
                                     <div class="col-12 mb-4 required">
+                                        <label for="shop_name"> نام فروشگاه</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="material-icons">shopping_cart</i></span>
+                                            </div>
+                                            <input type="url" class="form-control signUpInput" id="shop_name" name="shop_name">
+                                            <div class="invalid-feedback">
+                                                <span>لطفا نام فروشگاه را وارد کنید</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-12 mb-4 required">
+                                        <label for="shop_url"> لینک فروشگاه</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="material-icons">link</i></span>
+                                            </div>
+                                            <input type="text" class="form-control signUpInput" id="shop_url" name="shop_url">
+                                            <div class="invalid-feedback">
+                                                <span>لطفا لینک فروشگاه را به درستی وارد کنید</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-12 mb-4 required">
                                         <label for="email">ایمیل فروشگاه</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
@@ -113,6 +144,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="form-row">
                                     <div class="col-12 mb-4 required">
                                         <label for="phone">شماره تماس</label>
@@ -128,39 +160,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-row required">
-                                    <div class="col-12 mb-4" style="position: relative;">
-                                        <label for="password">کلمه عبور</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="material-icons">vpn_key</i></span>
-                                            </div>
-                                            <input type="password" class="form-control signUpInput" id="password" required>
-                                            <span class="show_pass" id="showPassword"><i class="material-icons">remove_red_eye</i></span>
-                                            <div class="invalid-feedback">
-                                                <span id="invalid_password">کلمه عبور را وارد کنید</span>
-                                            </div>
-                                        </div>
-                                        </div>
-                                </div>
-                                <div class="form-row required">
-                                    <div class="col-12 mb-4">
-                                        <label for="password-confirm">تکرار کلمه عبور</label>
-                                        <div class="input-group" style="position: relative;">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="material-icons">vpn_key</i></span>
-                                            </div>
-                                            <input type="password" class="form-control signUpInput" id="password-confirm" required>
-                                            <span class="show_pass" id="showConfirmPassword"><i class="material-icons">remove_red_eye</i></span>
-                                            <div class="invalid-feedback">
-                                                تکرار کلمه عبور با کلمه عبور مطابقت ندارد
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="row my-4">
-                                    <button class="btn btn-success btn-block" disabled type="submit" id="signup_frm_submit">ثبت نام
-                                        <i class="material-icons align-middle mx-1">done</i>
+                                    <button class="btn btn-success btn-block" disabled type="button" id="signup_frm_submit">ثبت نام
+                                        <i class="fa fa-circle-o-notch align-middle mx-1"></i>
                                     </button>
                                 </div>
                             </form>

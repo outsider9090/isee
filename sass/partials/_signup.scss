@@ -1,0 +1,72 @@
+.signup_form_container{
+  max-width: 75%;
+  padding: 24px;
+  margin: 75px auto;
+  border-radius: 14px;
+}
+.signup_form_container form fieldset h5{
+  font-family: Yekan,sans-serif, Arial, Helvetica;
+  font-size: 1.75rem;
+}
+.signup_form_container form input{
+  height: 40px;
+}
+.signup_form_container form label{
+  padding: 0 12px;
+}
+.signup_form_container form i{
+  font-size: 1.25rem;
+}
+.signup_form_container .card{
+  background-color: transparent;
+  border: none;
+}
+.input-group-text{
+  border-radius: 0;
+}
+
+.required label::after{
+  content: "*";
+  color: red;
+  margin: 4px;
+  font-size: 15px;
+}
+button.disabled{
+  cursor: not-allowed;
+}
+input#password , input#password-confirm{
+  font-family: vazirLatin;
+}
+#signup_frm_submit , #contactus_frm_submit{
+  position: relative;
+  font-family: Yekan, sans-serif, Arial, Helvetica;
+  font-size: 1.25rem;
+}
+#signup_frm_submit:disabled{
+  cursor: not-allowed;
+}
+#signup_frm_submit i , #contactus_frm_submit i {
+  visibility: hidden;
+}
+.show_pass{
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  color: #757575;
+  cursor: pointer;
+  z-index: 1000;
+}
+.show_pass:hover{
+  color: #212121;
+}
+
+.input-group-text{
+  border-radius: 0 40px 40px 0 !important;
+}
+input.signUpInput{
+  border-radius: 40px 0 0 40px !important;
+}
+
+.signup_frm button[type=submit] , .signup_frm button[type=button] {
+  border-radius: 40px;
+}

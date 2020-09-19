@@ -24,14 +24,14 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-styles.css" />
 </head>
 
 
 <body style="background-color: #f7fcff;">
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_navbar" aria-controls="main_navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="products_nav">
+        <button class="navbar-toggler" type="button" id="products_navbar_toggler">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="index.html" id="navbarBrandDesktop">
@@ -60,12 +60,38 @@
     </nav>
 </header>
 
-<main style="margin-top: 100px;">
+<main style="margin-top: 75px;">
+    <div id="back_cover"></div>
+
     <div class="container-fluid w-100">
         <div class="row my-4">
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-3 col-sm-12" id="sidebar_container">
                 <div class="sidebar">
                     <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                        فیلترهای فعال <i class="material-icons">keyboard_arrow_up</i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <ul class="products_filters_list">
+                                            <li><span class="text-right">filter1 <i class="material-icons close_filter_tag">close</i></span></li>
+                                            <li><span>filter2 <i class="material-icons close_filter_tag">close</i></span></li>
+                                            <li><span>filter2 <i class="material-icons close_filter_tag">close</i></span></li>
+                                            <li><span>filter2 <i class="material-icons close_filter_tag">close</i></span></li>
+                                            <li><span>filter2 <i class="material-icons close_filter_tag">close</i></span></li>
+                                            <li><span>filter2 <i class="material-icons close_filter_tag">close</i></span></li>
+                                            <li><span>filter2 <i class="material-icons close_filter_tag">close</i></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h5 class="mb-0">
@@ -104,95 +130,150 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#sitesCollapse" aria-expanded="true" aria-controls="sitesCollapse">
+                                        سایت ها <i class="material-icons" style="transform: rotateZ(0deg);">keyboard_arrow_up</i>
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="sitesCollapse" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion3" style="">
+
+                                <div id="shops_search_container">
+                                    <input type="text" class="form-control my-2" id="shops_search">
+                                    <i class="material-icons align-middle" id="shops_search_icon">search</i>
+                                </div>
+                                <div class="card-body text-right">
+
+                                    <div class="form-check22">
+                                        <input class="form-check-input" type="checkbox" id="sitesFilterCheckBox-all" value="" checked="">
+                                        <label class="form-check-label mx-4 checkbox" for="sitesFilterCheckBox-all">
+                                            همه سایت ها
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="selectedSite" id="sitesFilterCheckBox-57" value="57">
+                                        <label class="form-check-label mx-4 checkbox" for="sitesFilterCheckBox-57">
+                                            آترین الکترونیک (55)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="selectedSite" id="sitesFilterCheckBox-15" value="15">
+                                        <label class="form-check-label mx-4 checkbox" for="sitesFilterCheckBox-15">
+                                            اسکایتک (17)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="selectedSite" id="sitesFilterCheckBox-48" value="48">
+                                        <label class="form-check-label mx-4 checkbox" for="sitesFilterCheckBox-48">
+                                            افرانیک (164)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="selectedSite" id="sitesFilterCheckBox-49" value="48">
+                                        <label class="form-check-label mx-4 checkbox" for="sitesFilterCheckBox-48">
+                                            افرانیک ببسبس (164)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="selectedSite" id="sitesFilterCheckBox-22" value="22">
+                                        <label class="form-check-label mx-4 checkbox" for="sitesFilterCheckBox-22">
+                                            الک ماژول (20)
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="selectedSite" id="sitesFilterCheckBox-36" value="36">
+                                        <label class="form-check-label mx-4 checkbox" for="sitesFilterCheckBox-36">
+                                            الکترونیک 724 (30)
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-9 col-sm-12">
-                <nav aria-label="breadcrumb" id="breadcrumb_nav">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">گروه اصلی</a></li>
-                        <li class="breadcrumb-item"><a href="#">زیرگروه 1</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">زیرگروه 2</li>
-                    </ol>
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        >
-                            ارزان ترین
-                            <i class="material-icons">keyboard_arrow_down</i>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">محبوب ترین</a>
-                            <a class="dropdown-item" href="#">جدیدترین</a>
-                            <a class="dropdown-item active" href="#">ارزان ترین</a>
-                            <a class="dropdown-item" href="#">گران ترین</a>
+                <div class="filter_container">
+                    <nav aria-label="breadcrumb" id="breadcrumb_nav">
+                        <!--<ol class="breadcrumb">-->
+                        <!--<li class="breadcrumb-item"><a href="#">گروه اصلی</a></li>-->
+                        <!--<li class="breadcrumb-item"><a href="#">زیرگروه 1</a></li>-->
+                        <!--<li class="breadcrumb-item active" aria-current="page">زیرگروه 2</li>-->
+                        <!--</ol>-->
+                        <!--<div class="dropdown">-->
+                            <!--<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"-->
+                                    <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"-->
+                            <!--&gt;-->
+                                <!--ارزان ترین-->
+                                <!--<i class="material-icons">keyboard_arrow_down</i>-->
+                            <!--</button>-->
+                            <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+                                <!--<a class="dropdown-item" href="#">محبوب ترین</a>-->
+                                <!--<a class="dropdown-item" href="#">جدیدترین</a>-->
+                                <!--<a class="dropdown-item active" href="#">ارزان ترین</a>-->
+                                <!--<a class="dropdown-item" href="#">گران ترین</a>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="row filter_buttons">
+                            <i class="material-icons align-middle mx-2 text-muted">sort</i>
+                            <span class="filter_title">مرتب سازی بر اساس:</span>
+                            <div>
+                                <button class="btn active btn-primary">محبوب ترین</button>
+                                <button class="btn btn-light">جدیدترین</button>
+                                <button class="btn btn-light">ارزان ترین</button>
+                                <button class="btn btn-light">گران ترین</button>
+                            </div>
                         </div>
-                    </div>
-                </nav>
-                <div class="products_filters">
-                    <div class="row mb-3">
-                        <h5>فیلترها</h5>
-                        <ul class="products_filters_list">
-                            <li>
-                                <span class="text-right">filter1 <i class="material-icons close_filter_tag">close</i></span>
-                            </li>
-                            <li>
-                                <span>filter2 <i class="material-icons close_filter_tag">close</i></span>
-                            </li>
-                        </ul>
-                    </div>
-
+                    </nav>
+                    <!--<div class="products_filters">-->
+                        <!--<div class="row">-->
+                            <!--<h5>فیلترها</h5>-->
+                            <!--<ul class="products_filters_list">-->
+                                <!--<li>-->
+                                    <!--<span class="text-right">filter1 <i class="material-icons close_filter_tag">close</i></span>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<span>filter2 <i class="material-icons close_filter_tag">close</i></span>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 </div>
 
-                <div class="products_list d-flex justify-content-center">
+                <div class="products_list">
                     <div class="products_cards">
                         <div class="card">
-                            <div class="card-header">
-                                <a href="single.html">
-                                    <img src="./assets/images/p2.jpg" alt="">
-                                </a>
-                                <a href="single.html"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                            </div>
-                            <div class="card-body">
-                                <!-- if product had discount-->
-                                <div class="row has_badge my-1">
-                                    <span class="products_cart-badge">10%</span>
-                                    <span class="products_cart-badge_text">در ایسام</span>
-                                </div>
-                                <!-- if product had discount-->
-
-                                <!-- if product is in one shop-->
-                                <div class="product_price_singleShop my-1">
-                                    <p class="product_price"><span class="digits">43515000 تومان</span></p>
-                                    <p class="product_price_shop"><span class="text-muted">در ایسام</span></p>
-                                </div>
-                                <!-- if product is in one shop-->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="single.html">
+                            <a href="single.html">
+                                <div class="card-header">
                                     <!-- when no image is available -->
                                     <img class="no-image" src="" alt="">
-                                </a>
-                                <a href="single.html"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                            </div>
+                                    <h6 class="partNameBold">ATMEGA16A-PUpppppppppppp</h6>
+                                </div>
+                            </a>
                             <div class="card-body">
                                 <!-- if product is in multi shops-->
                                 <div class="product_price_multiShop my-1">
-                                    <p class="product_price"><span class="digits">700000000 تومان</span></p>
-                                    <p class="product_price_shop_count text-muted"><span>2</span></p>
+                                    <p class="product_price"><span class="digits">700000000</span></p>
                                 </div>
                                 <!-- if product is in multi shops-->
                             </div>
+                            <div class="card-footer">
+                                <div class="product_price_multiShop my-1">
+                                    <i class="material-icons align-middle mx-2">shopping_basket</i>
+                                    <p class="product_price_shop_count"><span>2</span></p>
+                                </div>
+                            </div>
                         </div>
                         <div class="card">
-                            <div class="card-header">
-                                <a href="single.html">
+                            <a href="single.html">
+                                <div class="card-header">
                                     <img src="./assets/images/p1.jpg" alt="">
-                                </a>
-                                <a href="single.html"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                            </div>
+                                    <h6 class="partNameBold">ATMEGA16A-PU</h6>
+                                </div>
+                            </a>
                             <div class="card-body">
                                 <!-- if product had discount-->
                                 <div class="row has_badge my-1">
@@ -203,35 +284,24 @@
 
                                 <!-- if product is in one shop-->
                                 <div class="product_price_singleShop my-1">
-                                    <p class="product_price"><span class="digits">21515000 تومان</span></p>
-                                    <p class="product_price_shop_name"><span class="text-muted">در سیسوگ</span></p>
+                                    <p class="product_price"><span class="digits">21515000</span></p>
                                 </div>
                                 <!-- if product is in one shop-->
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="single.html">
-                                    <img src="./assets/images/p2.jpg" alt="">
-                                </a>
-                                <a href="single.html"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                            </div>
-                            <div class="card-body">
-                                <!-- if product is in multi shops-->
+                            <div class="card-footer">
                                 <div class="product_price_multiShop my-1">
-                                    <p class="product_price"><span class="digits">700000000 تومان</span></p>
-                                    <p class="product_price_shop_count text-muted"><span>2</span></p>
+                                    <i class="material-icons align-middle mx-2">shopping_basket</i>
+                                    <p class="product_price_shop_name"><span>سیسوگ</span></p>
                                 </div>
-                                <!-- if product is in multi shops-->
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header">
-                                <a href="single.html">
-                                    <img src="./assets/images/p3.jpg" alt="">
-                                </a>
-                                <a href="single.html"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                            </div>
+                            <a href="single.html">
+                                <div class="card-header">
+                                    <img src="./assets/images/p1.jpg" alt="">
+                                    <h6 class="partNameBold">ATMEGA16A-PU</h6>
+                                </div>
+                            </a>
                             <div class="card-body">
                                 <!-- if product had discount-->
                                 <div class="row has_badge my-1">
@@ -242,40 +312,125 @@
 
                                 <!-- if product is in one shop-->
                                 <div class="product_price_singleShop my-1">
-                                    <p class="product_price"><span class="digits">21515000 تومان</span></p>
-                                    <p class="product_price_shop"><span class="text-muted">در سیسوگ</span></p>
+                                    <p class="product_price"><span class="digits">21515000</span></p>
                                 </div>
                                 <!-- if product is in one shop-->
                             </div>
+                            <div class="card-footer">
+                                <div class="product_price_multiShop my-1">
+                                    <i class="material-icons align-middle mx-2">shopping_basket</i>
+                                    <p class="product_price_shop_name"><span>سیسوگ</span></p>
+                                </div>
+                            </div>
                         </div>
                         <div class="card">
-                            <div class="card-header">
-                                <a href="single.html">
+                            <a href="single.html">
+                                <div class="card-header">
+                                    <img src="./assets/images/p1.jpg" alt="">
+                                    <h6 class="partNameBold">ATMEGA16A-PU</h6>
+                                </div>
+                            </a>
+                            <div class="card-body">
+                                <!-- if product had discount-->
+                                <div class="row has_badge my-1">
+                                    <span class="products_cart-badge">15%</span>
+                                    <span class="products_cart-badge_text">در سیسوگ</span>
+                                </div>
+                                <!-- if product had discount-->
+
+                                <!-- if product is in one shop-->
+                                <div class="product_price_singleShop my-1">
+                                    <p class="product_price"><span class="digits">55555000</span></p>
+                                </div>
+                                <!-- if product is in one shop-->
+                            </div>
+                            <div class="card-footer">
+                                <div class="product_price_multiShop my-1">
+                                    <i class="material-icons align-middle mx-2">shopping_basket</i>
+                                    <p class="product_price_shop_name"><span>سیسوگ</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="single.html">
+                                <div class="card-header">
+                                    <img src="./assets/images/p2.jpg" alt="">
+                                    <h6 class="partNameBold">ATMEGA16A-PU</h6>
+                                </div>
+                            </a>
+                            <div class="card-body">
+                                <!-- if product had discount-->
+                                <div class="row has_badge my-1">
+                                    <span class="products_cart-badge">35%</span>
+                                    <span class="products_cart-badge_text">در سیسوگ</span>
+                                </div>
+                                <!-- if product had discount-->
+
+                                <!-- if product is in one shop-->
+                                <div class="product_price_singleShop my-1">
+                                    <p class="product_price"><span class="digits">40515000</span></p>
+                                </div>
+                                <!-- if product is in one shop-->
+                            </div>
+                            <div class="card-footer">
+                                <div class="product_price_multiShop my-1">
+                                    <i class="material-icons align-middle mx-2">shopping_basket</i>
+                                    <p class="product_price_shop_name"><span>سیسوگ</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <a href="single.html">
+                                <div class="card-header">
                                     <!-- when no image is available -->
                                     <img class="no-image" src="" alt="">
-                                </a>
-                                <a href="single.html"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                            </div>
+                                    <h6 class="partNameBold">ATMEGA16A-PUpppppppppppp</h6>
+                                </div>
+                            </a>
                             <div class="card-body">
                                 <!-- if product is in multi shops-->
                                 <div class="product_price_multiShop my-1">
-                                    <p class="product_price"><span class="digits">700000000 تومان</span></p>
-                                    <p class="product_price_shop_count text-muted"><span>2</span></p>
+                                    <p class="product_price"><span class="digits">700000000</span></p>
                                 </div>
                                 <!-- if product is in multi shops-->
                             </div>
+                            <div class="card-footer">
+                                <div class="product_price_multiShop my-1">
+                                    <i class="material-icons align-middle mx-2">shopping_basket</i>
+                                    <p class="product_price_shop_count"><span>2</span></p>
+                                </div>
+                            </div>
                         </div>
-
+                        <div class="card">
+                            <a href="single.html">
+                                <div class="card-header">
+                                    <!-- when no image is available -->
+                                    <img class="no-image" src="" alt="">
+                                    <h6 class="partNameBold">ATMEGA16A-PUpppppppppppp</h6>
+                                </div>
+                            </a>
+                            <div class="card-body">
+                                <!-- if product is in multi shops-->
+                                <div class="product_price_multiShop my-1">
+                                    <p class="product_price"><span class="digits">700000000</span></p>
+                                </div>
+                                <!-- if product is in multi shops-->
+                            </div>
+                            <div class="card-footer">
+                                <div class="product_price_multiShop my-1">
+                                    <i class="material-icons align-middle mx-2">shopping_basket</i>
+                                    <p class="product_price_shop_count"><span>2</span></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
     </div>
 
 </main>
+
 
 
 <footer>
@@ -299,6 +454,5 @@
 <script src="assets/js/jquery.ez-plus.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/scripts.js"></script>
-
 </body>
 </html>

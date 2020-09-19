@@ -22,13 +22,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0"/>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/Chart.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/owlcarousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/main-styles.css" />
 </head>
 
 
@@ -42,12 +42,38 @@
             <img src="./assets/images/logo.png" alt="">
         </a>
         <div class="navbar_search_box">
-            <form action="products.html">
+            <form action="products.html" style="position:relative;z-index: 10">
                 <div class="search_frm_container input-group mb-3">
                     <input type="text" class="form-control" aria-label=""
                            aria-describedby="search_btn" id="search_frm_input" autocomplete="off">
                     <i class="material-icons" id="search_btn_icon">search</i>
                     <i class="material-icons" id="clear_btn" title="Clear">close</i>
+                </div>
+                <div class="search_res_ajax">
+                    <div class="row">
+                        <a href="#">
+                            <img src="assets/images/p1.jpg" alt="">
+                            <strong>STM32F103ZCT6</strong>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#">
+                            <img src="assets/images/p2.jpg" alt="">
+                            <strong>STM32F103ZCT6</strong>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#">
+                            <img src="assets/images/image_not_found.jpg" alt="">
+                            <strong>STM32F103ZCT6</strong>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#">
+                            <img src="assets/images/p1.jpg" alt="">
+                            <strong>STM32F103ZCT6</strong>
+                        </a>
+                    </div>
                 </div>
             </form>
         </div>
@@ -64,8 +90,8 @@
     </nav>
 </header>
 
-<div id="back-color"></div>
 
+<div id="back-color"></div>
 <main style="margin-top: 100px;">
     <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
@@ -150,9 +176,29 @@
                                     </div>
                                     <div class="col-md-6 col-sm-12">
                                         <div class="product_detail_footer_icons">
-                                            <a href="#" title="share">
+                                            <div class="share_popover_container">
                                                 <i class="material-icons">share</i>
-                                            </a>
+                                                <div class="share_popover">
+                                                    <a rel="nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=" title="فیسبوک">
+                                                        <span><i class="fa fa-facebook"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="https://twitter.com/share?url=" title="توییتر">
+                                                        <span><i class="fa fa-twitter"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="mailto:?subject=Check%20this%20" title="ایمیل">
+                                                        <span><i class="fa fa-envelope"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=" title="لینکدین">
+                                                        <span><i class="fa fa-linkedin"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="https://wa.me/?text=" title="واتساپ">
+                                                        <span><i class="fa fa-whatsapp"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="https://telegram.me/share/url?url=" title="تلگرام">
+                                                        <span><i class="fa fa-telegram"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
                                             <a href="#" title="notifications">
                                                 <i class="material-icons">notifications</i>
                                             </a>
@@ -172,7 +218,7 @@
 
 
     <div class="docs my-4">
-        <div class="container-fluid">
+        <div class="container-fluid">فروشگاه های اینترنتی
             <div class="row">
                 <div class="docs_table col-md-6 col-sm-12 my-3">
                     <div class="docs_table_header">
@@ -208,11 +254,9 @@
                             </tbody>
                         </table>
 
-
                         <!-- if there is no docs -->
                         <div class="d-none" id="noDocs"></div>
                         <!-- if there is no docs -->
-
                     </div>
                 </div>
                 <div class="graph-table col-md-6 col-sm-12 my-3">
@@ -262,8 +306,13 @@
                         </div>
                         <!-- for desktop size -->
                         <div class="row e-shops-row">
-                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                <span>http://www.bartarelec.com/</span>
+                            <div class="col-lg-3 col-md-3 col-sm-6 shop_name">
+                                <span>جوان الکترونیک</span>
+                                <a href="#reportingModal" class="report_modal_trigger" data-toggle="modal" data-shop="shoeeepname">
+                                    <span class="report_tooltip" data-toggle="tooltip" data-placement="top" title="گزارش تخلف">
+                                        <i class="material-icons align-middle text-secondary mx-1">info_outline</i>
+                                    </span>
+                                </a>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-12">
                                 <span class="partName">STM32F103ZCT6</span>
@@ -362,8 +411,9 @@
                         <!-- for mobile size -->
                         <div class="e-shops-row-mobile">
                             <div class="row">
-                                <div class="col-6">
-                                    <span>http://www.bartarelec.com/</span>
+                                <div class="col-6 shop_name">
+                                    <span>بعثت الکترونیک</span>
+                                    <a href="#" class="report_tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><span ><i class="material-icons align-middle text-secondary mx-1">info_outline</i></span></a>
                                 </div>
                                 <div class="col-6 text-left mb-2">
                                     <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
@@ -664,8 +714,8 @@
                         <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
                     </div>
                     <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                        <p><span class="similar-product-shop">ATMEGA16A-PU</span></p>
+                        <p><span class="label-rating">2 فروشگاه</span></p>
                     </div>
                     <span class="cart-badge">10%</span>
                 </div>
@@ -673,6 +723,56 @@
         </div>
     </div>
 </main>
+
+
+
+<!-- Reporting Modal -->
+<div class="modal fade" id="reportingModal" tabindex="-1" role="dialog" aria-labelledby="reportingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span><h5 class="modal-title" id="exampleModalLabel">گزارش تخلف</h5></span>
+                <span>
+                <button type="button" class="close mr-auto" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </span>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="reportingForm">
+                    <div class="form-group">
+                        <label for="report_type">انتخاب نوع گزارش:</label>
+                        <select class="form-control custom-select" id="report_type">
+                            <option>گزارش تخلف قیمت</option>
+                            <option>گزارش مغایرت قیمت</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">نام:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group required">
+                        <label for="recipient-email" class="col-form-label">ایمیل:</label>
+                        <input type="email" class="form-control" id="recipient-email">
+                        <div class="invalid-feedback">
+                            <span>لطفا یک ایمیل معتبر وارد کنید</span>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="message-text" class="col-form-label">دلیل تخلف:</label>
+                        <textarea class="form-control" id="message-text" cols="5" rows="5"></textarea>
+                        <div class="form-text">حداقل طول پیام 30 کاراکتر می باشد.</div>
+                    </div>
+                    <input type="hidden" id="shop_name" name="shop_name">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-block" id="reporting_frm_submit" disabled>ارسال</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Reporting Modal -->
 
 
 <footer>

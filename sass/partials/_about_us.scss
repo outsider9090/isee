@@ -1,0 +1,23 @@
+.aboutus_container .card{
+  background: none;
+  border: none;
+  .card-header{
+    background: none;
+    background-image: url("../images/aboutus.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 250px;
+    border: none;
+  }
+  .aboutus_txt p{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 2.5;
+    padding: 8px 24px;
+  }
+}
+
+
+
+

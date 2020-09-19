@@ -1,375 +1,594 @@
 jQuery(document).ready(function ($) {
 
-	$('#gi-single').ezPlus({
-		zoomWindowFadeIn: 500,
-		zoomLensFadeIn: 500,
-		gallery: 'p-gallery',
-		imageCrossfade: true,
-		zoomWindowWidth: 300,
-		zoomWindowHeight: 300,
-		zoomWindowOffsetX: 10,
-		scrollZoom: true,
-		cursor: 'default',
-		zoomWindowPosition: 10,
-		borderColour: '#888',
-		borderSize: 4,
-		constrainSize: true,
-		easing:true,
-		easingAmount: 12,
-		galleryActiveClass:"active",
-		lensShape:'round',
-		minZoomLevel: 0.5,
-		maxZoomLevel: 1.5
-	});
-
-	$('#search_frm_input').css('border-radius', '25px');
-
-	$(document).click(function(e) {
-		if ( $(e.target).closest('#search_frm_input').length === 0 ) {
-			$('.search_res_ajax').css('display' , 'none');
-		}
-		if ( $(e.target).closest('#dropdownMenuButton').length === 0 ) {
-			$('#dropdownMenuButton').find('i').css('transform' , 'rotateZ(0deg)');
-		}
-	});
+    $('.report_tooltip').tooltip();
 
 
-	$('#search_frm_input').on('blur', function () {
-		$(this).css({
-			'border-radius': '25px',
-			'box-shadow': '0 0 10px #bdbdbd'
-		});
-	});
+    $('#gi-single').ezPlus({
+        zoomWindowFadeIn: 500,
+        zoomLensFadeIn: 500,
+        gallery: 'p-gallery',
+        imageCrossfade: true,
+        zoomWindowWidth: 300,
+        zoomWindowHeight: 300,
+        zoomWindowOffsetX: 10,
+        scrollZoom: true,
+        cursor: 'default',
+        zoomWindowPosition: 10,
+        borderColour: '#888',
+        borderSize: 4,
+        constrainSize: true,
+        easing:true,
+        easingAmount: 12,
+        galleryActiveClass:"active",
+        lensShape:'round',
+        minZoomLevel: 0.5,
+        maxZoomLevel: 1.5
+    });
+
+    $('#search_frm_input').css('border-radius', '25px');
+
+    $(document).click(function(e) {
+        if ( $(e.target).closest('#search_frm_input').length === 0 ) {
+            $('.search_res_ajax').css('display' , 'none');
+        }
+        if ( $(e.target).closest('#dropdownMenuButton').length === 0 ) {
+            $('#dropdownMenuButton').find('i').css('transform' , 'rotateZ(0deg)');
+        }
+        if ( $(e.target).closest('.share_popover_container').length === 0 ) {
+            $('.share_popover_container').removeClass('active').find('.share_popover').css('display' , 'none');
+        }
+
+    });
 
 
-	$('#search_frm_input').on('input',function () {
-		let input_txt = $(this).val();
-		if (input_txt !== ''){
-			$('#clear_btn').css('display', 'block');
-			$('.search_res_ajax').css('display' , 'block');
-			$(this).css({
-				'display': 'block',
-				'border-bottom-left-radius': '0',
-				'border-bottom-right-radius': '0',
-				'box-shadow': '0 -5px 10px #bdbdbd'
-			});
-		}else {
-			$('#clear_btn').css('display', 'none');
-			$('#search_frm_input').css({
-				'border-radius': '25px',
-				'box-shadow': '0 0 10px #bdbdbd'
-			});
-			$('.search_res_ajax').css('display' , 'none');
-		}
-	});
-	$('#clear_btn').on('click', function () {
-		$('#search_frm_input').val('');
-		$(this).css('display', 'none');
-	});
+    $('#search_frm_input').on('blur', function () {
+        $(this).css({
+            'border-radius': '25px',
+            'box-shadow': '0 0 10px #bdbdbd'
+        });
+    });
+    $('#search_frm_input').on('input',function () {
+        let input_txt = $(this).val();
+        if (input_txt !== ''){
+            $('#clear_btn').css('display', 'block');
+            $('.search_res_ajax').css('display' , 'block');
+            $(this).css({
+                'display': 'block',
+                'border-bottom-left-radius': '0',
+                'border-bottom-right-radius': '0',
+                'box-shadow': '0 -5px 10px #bdbdbd'
+            });
+        }else {
+            $('#clear_btn').css('display', 'none');
+            $('#search_frm_input').css({
+                'border-radius': '25px',
+                'box-shadow': '0 0 10px #bdbdbd'
+            });
+            $('.search_res_ajax').css('display' , 'none');
+        }
+    });
+    $('#clear_btn').on('click', function () {
+        $('#search_frm_input').val('').trigger();
+        $(this).css('display', 'none');
+    });
 
 
 
-	$('#gi-single').attr('src' , $('.gallery_image.active').attr('src'));
-	$('.gallery_image').on('click' , function (e) {
-		e.preventDefault();
-		$('#gi-single').css('opacity' , '0');
-		$('.gallery_image').removeClass('active');
-		$(this).addClass('active');
-		let image_src = $(this).attr('src');
-		$('#gi-single').attr('src' , image_src).animate({opacity: '1'} , 800);
+    $('#gi-single').attr('src' , $('.gallery_image.active').attr('src'));
+    $('.gallery_image').on('click' , function (e) {
+        e.preventDefault();
+        $('#gi-single').css('opacity' , '0');
+        $('.gallery_image').removeClass('active');
+        $(this).addClass('active');
+        let image_src = $(this).attr('src');
+        $('#gi-single').attr('src' , image_src).animate({opacity: '1'} , 800);
 
-		$('#gi-single').ezPlus({
-			imageCrossfade: true,
-			scrollZoom: true,
-			cursor: 'default',
-			zoomWindowPosition: 10,
-			borderColour: '#888',
-			borderSize: 4,
-			constrainSize: true,
-			easing:true,
-			easingAmount: 12,
-			galleryActiveClass:"active",
-			lensShape:'round',
-			minZoomLevel: 0.5,
-			maxZoomLevel: 1.5
-		});
+        $('#gi-single').ezPlus({
+            imageCrossfade: true,
+            scrollZoom: true,
+            cursor: 'default',
+            zoomWindowPosition: 10,
+            borderColour: '#888',
+            borderSize: 4,
+            constrainSize: true,
+            easing:true,
+            easingAmount: 12,
+            galleryActiveClass:"active",
+            lensShape:'round',
+            minZoomLevel: 0.5,
+            maxZoomLevel: 1.5
+        });
 
-	});
-
-
-	$.fn.digits = function () {
-		return this.each(function () {
-			$(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1/"));
-		})
-	};
-
-	$('.digits').digits();
-
-	$('.owl-carousel').owlCarousel({
-		loop:false,
-		margin:10,
-		autoplay: false,
-		responsiveClass:false,
-		nav:true,
-		dots: false,
-		lazyLoad: true,
-		responsive:{
-			0:{
-				items:1,
-			},
-			300:{
-				items:3,
-			},
-			400:{
-				items:3,
-			},
-			500:{
-				items:3,
-			},
-			600:{
-				items:3,
-			},
-			800:{
-				items:4,
-			},
-			900:{
-				items:5,
-			},
-			1000:{
-				items:5,
-			}
-		}
-	});
-	$('.owl-next').html('<i class="material-icons">chevron_right</i>');
-	$('.owl-prev').html('<i class="material-icons">chevron_left</i>');
-
-	$('.sell_count').each(function () {
-		if ($(this).text() == '0'){
-			$(this).css('color', '#dc004e');
-		}
-	});
+    });
 
 
-	$('#breadcrumb_nav').find('.btn').on('click', function () {
-		let status = $(this).attr('aria-expanded');
-		if (status == 'false'){
-			$(this).find('i').css('transform' , 'rotateZ(180deg)');
-		}else {
-			$(this).find('i').css('transform' , 'rotateZ(0deg)');
-		}
-	});
+    $.fn.digits = function () {
+        return this.each(function () {
+            $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        })
+    };
+    $('.digits').digits();
 
 
-	$('#accordion').find('.btn').on('click', function () {
-		let status = $(this).attr('aria-expanded');
-		if (status == 'false'){
-			//$('#accordion').find('.btn i').text('keyboard_arrow_down');
-			$(this).find('i').css('transform' , 'rotateZ(0deg)');
-		}else {
-			$(this).find('i').css('transform' , 'rotateZ(180deg)');
-		}
-	});
+    $('.owl-carousel').owlCarousel({
+        loop:false,
+        margin:10,
+        autoplay: false,
+        responsiveClass:false,
+        nav:true,
+        dots: false,
+        lazyLoad: true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            300:{
+                items:3,
+            },
+            400:{
+                items:3,
+            },
+            500:{
+                items:3,
+            },
+            600:{
+                items:3,
+            },
+            800:{
+                items:4,
+            },
+            900:{
+                items:5,
+            },
+            1000:{
+                items:5,
+            }
+        }
+    });
+    $('.owl-next').html('<i class="material-icons">chevron_right</i>');
+    $('.owl-prev').html('<i class="material-icons">chevron_left</i>');
 
-	$('.close_filter_tag').click(function () {
-		let li_element = $(this).parents('li');
-		li_element.remove();
-	});
+    $('.sell_count').each(function () {
+        if ($(this).text() == '0'){
+            $(this).css('color', '#dc004e');
+        }
+    });
 
-	$('.products_cards').find('img.no-image').attr('src', './assets/images/image_not_found.jpg');
-	$('.cards').find('img.no-image').attr('src', './assets/images/image_not_found.jpg');
+
+    $('#breadcrumb_nav').find('.btn').on('click', function () {
+        let status = $(this).attr('aria-expanded');
+        if (status == 'false'){
+            $(this).find('i').css('transform' , 'rotateZ(180deg)');
+        }else {
+            $(this).find('i').css('transform' , 'rotateZ(0deg)');
+        }
+    });
+
+
+    $('#accordion').find('.btn').on('click', function () {
+        let status = $(this).attr('aria-expanded');
+        if (status == 'false'){
+            //$('#accordion').find('.btn i').text('keyboard_arrow_down');
+            $(this).find('i').css('transform' , 'rotateZ(0deg)');
+        }else {
+            $(this).find('i').css('transform' , 'rotateZ(180deg)');
+        }
+    });
+
+    $('.close_filter_tag').click(function () {
+        let li_element = $(this).parents('li');
+        li_element.remove();
+    });
+
+    $('.products_cards').find('img.no-image').attr('src', './assets/images/image_not_found.jpg');
+    $('.cards').find('img.no-image').attr('src', './assets/images/image_not_found.jpg');
 
 
 
 //  signup form validation
-	let is_name_validate = false;
-	let is_username_validate = false;
-	let is_email_validate = false;
-	let is_password_validate = false;
-	let is_confirm_password_validate = false;
+    let is_name_validate = false;
+    let is_shop_name_validate = false;
+    let is_shop_link_validate = false;
+    let is_phone_validate = false;
+    let is_email_validate = false;
 
 
-	$('.signup_frm').find('input#name').on('input', function () {
-		let value = $(this).val();
-		if (value === ''){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_name_validate = false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			is_name_validate = true;
-		}
-		$('.signup_frm').change();
-	});
-	$('.signup_frm').find('input#phone').on('input', function () {
-		let value = $(this).val();
-		if (value === '' || value.length != 11){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_username_validate = false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			is_username_validate = true;
-		}
-		$('.signup_frm').change();
+    $('.signup_frm').find('input#name').on('input', function () {
+        let value = $(this).val();
+        if (value === ''){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_name_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_name_validate = true;
+        }
+        $(this).siblings('.notValid').css('display', 'none');
+        $('.signup_frm').change();
+    });
+    $('.signup_frm').find('input#shop_name').on('input', function () {
+        let value = $(this).val();
+        if (value === ''){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_shop_name_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_shop_name_validate = true;
+        }
+        $(this).siblings('.notValid').css('display', 'none');
+        $('.signup_frm').change();
+    });
+    $('.signup_frm').find('input#shop_url').on('input', function () {
+        let value = $(this).val();
+        let urlRejex = /(^http[s]?:\/{2})|(^www)|(^\/{1,2})/;
+        let is_url_valid = urlRejex.test(value);
+        console.log(is_url_valid);
+        if (value === '' || ! is_url_valid ){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_shop_link_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_shop_link_validate = true;
+        }
+        $(this).siblings('.notValid').css('display', 'none');
+        $('.signup_frm').change();
+    });
+    $('.signup_frm').find('input#phone').on('input', function () {
+        let value = $(this).val();
+        if (value === '' || value.length != 11){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_phone_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_phone_validate = true;
+        }
+        $(this).siblings('.notValid').css('display', 'none');
+        $('.signup_frm').change();
 
-	});
-	$('.signup_frm').find('input#email').on('input', function () {
-		let value = $(this).val();
-		let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-		let is_email_valid = emailReg.test( value );
-		if (! is_email_valid || value === ''){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_email_validate = false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			is_email_validate = true;
-		}
-		$('.signup_frm').change();
+    });
+    $('.signup_frm').find('input#email').on('input', function () {
+        let value = $(this).val();
+        let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        let is_email_valid = emailReg.test( value );
+        if (! is_email_valid || value === ''){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_email_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_email_validate = true;
+        }
+        $(this).siblings('.notValid').css('display', 'none');
+        $('.signup_frm').change();
 
-	});
-	$('.signup_frm').find('input#password').on('input', function () {
-		let value = $(this).val();
-		if (value === ''){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_password_validate =false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			$('.signup_frm').find('input#password-confirm').siblings('.invalid-feedback').css('display', 'none');
-			is_password_validate =true;
-		}
-		$('.signup_frm').find('input#password-confirm').blur();
-		$('.signup_frm').change();
-
-	});
-	$('.signup_frm').find('input#password-confirm').on('input', function () {
-		let value = $(this).val();
-		let pass = $('.signup_frm').find('input#password').val();
-		if (value === '' || pass!=value){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_confirm_password_validate = false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			$('.signup_frm').find('input#password').siblings('.invalid-feedback').css('display', 'none');
-			is_confirm_password_validate = true;
-		}
-		$('.signup_frm').change();
-	});
+    });
 
 
-	$('.signup_frm').on('change' , function () {
-		if (is_name_validate && is_username_validate && is_password_validate && is_confirm_password_validate && is_email_validate){
-			$('#signup_frm_submit').attr('disabled' , false);
-		}else {
-			$('#signup_frm_submit').attr('disabled' , true);
-		}
-	});
+    $('.signup_frm').on('change' , function () {
+        if (is_name_validate && is_shop_name_validate && is_shop_link_validate && is_phone_validate && is_email_validate){
+            $('#signup_frm_submit').attr('disabled' , false);
+        }else {
+            $('#signup_frm_submit').attr('disabled' , true);
+        }
+    });
 //  signup form validation
 
 
 //  contact-us form validation
-	let is_your_name_validate = false;
-	let is_your_email_validate = false;
-	let is_your_subject_validate = false;
-	let is_your_message_body_validate = false;
+    let is_your_name_validate = false;
+    let is_your_email_validate = false;
+    let is_your_subject_validate = false;
+    let is_your_message_body_validate = false;
 
-	$('.contact_us_frm').find('input#your_name').on('input', function () {
-		let value = $(this).val();
-		if (value === ''){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_your_name_validate = false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			is_your_name_validate = true;
-		}
-		$('.contact_us_frm').change();
-	});
-	$('.contact_us_frm').find('input#your_email').on('input', function () {
-		let value = $(this).val();
-		let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-		let is_email_valid = emailReg.test( value );
-		if (! is_email_valid || value === ''){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_your_email_validate = false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			is_your_email_validate = true;
-		}
-		$('.contact_us_frm').change();
-	});
-	$('.contact_us_frm').find('input#your_subject').on('input', function () {
-		let value = $(this).val();
-		if (value === ''){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_your_subject_validate =false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			is_your_subject_validate =true;
-		}
-		$('.contact_us_frm').change();
-	});
-	$('.contact_us_frm').find('textarea#your_message_body').on('keyup', function () {
-		let value = $(this).val();
-		if (value.length < 20){
-			$(this).siblings('.invalid-feedback').css('display', 'block');
-			is_your_message_body_validate = false;
-		}else {
-			$(this).siblings('.invalid-feedback').css('display', 'none');
-			is_your_message_body_validate = true;
-		}
-		$('.contact_us_frm').change();
-	});
+    $('.contact_us_frm').find('input#your_name').on('input', function () {
+        let value = $(this).val();
+        if (value === ''){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_your_name_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_your_name_validate = true;
+        }
+        $('.contact_us_frm').change();
+    });
+    $('.contact_us_frm').find('input#your_email').on('input', function () {
+        let value = $(this).val();
+        let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        let is_email_valid = emailReg.test( value );
+        if (! is_email_valid || value === ''){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_your_email_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_your_email_validate = true;
+        }
+        $('.contact_us_frm').change();
+    });
+    $('.contact_us_frm').find('input#your_subject').on('input', function () {
+        let value = $(this).val();
+        if (value === ''){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_your_subject_validate =false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_your_subject_validate =true;
+        }
+        $('.contact_us_frm').change();
+    });
+    $('.contact_us_frm').find('textarea#your_message_body').on('keyup', function () {
+        let value = $(this).val();
+        if (value.length < 20){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            is_your_message_body_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            is_your_message_body_validate = true;
+        }
+        $('.contact_us_frm').change();
+    });
 
-	$('.contact_us_frm').on('change' , function () {
-		if (is_your_name_validate && is_your_email_validate && is_your_subject_validate && is_your_message_body_validate){
-			$('#contactus_frm_submit').attr('disabled' , false);
-		}else {
-			$('#contactus_frm_submit').attr('disabled' , true);
-		}
-	});
+    $('.contact_us_frm').on('change' , function () {
+        if (is_your_name_validate && is_your_email_validate && is_your_subject_validate && is_your_message_body_validate){
+            $('#contactus_frm_submit').attr('disabled' , false);
+        }else {
+            $('#contactus_frm_submit').attr('disabled' , true);
+        }
+    });
 //  contact-us form validation
 
 
-	$('#signup_frm_submit').hover(function (e) {
-		let is_disabled = $(this).attr('disabled');
-		if (! is_disabled){
-			$(this).find('i').animate({bottom: '10px'}, 'fast');
-		}
-	},(function () {
-		let is_disabled = $(this).attr('disabled');
-		if (! is_disabled){
-			$(this).find('i').animate({bottom: '-60px'}, 'fast');
-		}
-	}));
 
-	$('#contactus_frm_submit').hover(function (e) {
-		let is_disabled = $(this).attr('disabled');
-		if (! is_disabled){
-			$(this).find('i').animate({bottom: '10px'}, 'fast');
-		}
-	},(function () {
-		let is_disabled = $(this).attr('disabled');
-		if (! is_disabled){
-			$(this).find('i').animate({bottom: '-60px'}, 'fast');
-		}
-	}));
-
-	
-	$('#showPassword').hover(function () {
-		$('.signup_frm').find('input#password').attr('type', 'text');
-	}, (function () {
-		$('.signup_frm').find('input#password').attr('type', 'password');
-	}));
-	$('#showConfirmPassword').hover(function () {
-		$('.signup_frm').find('input#password-confirm').attr('type', 'text');
-	}, (function () {
-		$('.signup_frm').find('input#password-confirm').attr('type', 'password');
-	}));
+    $('#signup_frm_submit').click(function () {
+        $(this).find('i').addClass('fa-spin').css('visibility' , 'visible');
+    });
+    $('#contactus_frm_submit').click(function (e) {
+        $(this).find('i').addClass('fa-spin').css('visibility' , 'visible');
+    });
 
 
-	$('#add_input').click(function (e) {
-		e.preventDefault();
-		$('.addAttrib').append('<div class="col-6 mb-4"><label for="Attribute_name">عنوان ویژگی </label><input type="text" class="form-control" id="Attribute_name" required></div><div class="col-6 mb-4"><label for="Attribute_value">مقدار ویژگی </label><input type="text" class="form-control" id="Attribute_value" required></div>');
-	})
+    $('#showPassword').hover(function () {
+        $('.signup_frm').find('input#password').attr('type', 'text');
+        $(this).find('i').text('visibility');
+    }, (function () {
+        $('.signup_frm').find('input#password').attr('type', 'password');
+        $(this).find('i').text('visibility_off');
+    }));
+    $('#showConfirmPassword').hover(function () {
+        $('.signup_frm').find('input#password-confirm').attr('type', 'text');
+        $(this).find('i').text('visibility');
+    }, (function () {
+        $('.signup_frm').find('input#password-confirm').attr('type', 'password');
+        $(this).find('i').text('visibility_off');
+    }));
+
+
+    $('#add_input').click(function (e) {
+        e.preventDefault();
+        $('.addAttrib').append('<div class="col-6 mb-4"><label for="Attribute_name">عنوان ویژگی </label><input type="text" class="form-control" id="Attribute_name" required></div><div class="col-6 mb-4"><label for="Attribute_value">مقدار ویژگی </label><input type="text" class="form-control" id="Attribute_value" required></div>');
+    });
+
+
+    $('.share_popover_container').click(function () {
+        $(this).addClass('active');
+        $(this).find('.share_popover').css('display', 'flex');
+    });
+
+
+    $('#signup_frm_submit').click(function () {
+        let name = $('#signup_frm').find('input#name').val();
+        let family = $('#signup_frm').find('input#family').val();
+        let shop_name = $('#signup_frm').find('input#shop_name').val();
+        let email = $('#signup_frm').find('input#email').val();
+        let phone = $('#signup_frm').find('input#phone').val();
+
+        let pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+        if (name === ''){
+            $('#signup_frm').find('input#name').siblings('.invalid-feedback').css('display', 'block');
+        }
+        if(shop_name === ''){
+            $('#signup_frm').find('input#shop_name').siblings('.invalid-feedback').css('display', 'block');
+        }
+        if(phone === ''){
+            $('#signup_frm').find('input#phone').siblings('.invalid-feedback').css('display', 'block');
+        }
+        if(!pattern.test(email)){
+            $('#signup_frm').find('input#email').siblings('.invalid-feedback').css('display', 'block');
+        }
+
+        if (name !== '' && shop_name !== '' && phone !== '' && pattern.test(email)  ) {
+            $(this).find('i').css('visibility', 'visible').addClass('fa-spin');
+            $.ajax({
+                url: '/sendEmail',
+                type: 'POST',
+                data: { 'name':name ,'family':family ,'shop_name':shop_name ,'email':email ,'phone':phone  },
+                dataType: 'JSON',
+                success: function (data) {
+                    if (data['msg'] === 1){
+                        alert('مشخصات شما ارسال شد. به زودی با شما تماس میگیریم.');
+                        $('#signup_frm').find('input#name').val('');
+                        $('#signup_frm').find('input#family').val('');
+                        $('#signup_frm').find('input#shop_name').val('');
+                        $('#signup_frm').find('input#email').val('');
+                        $('#signup_frm').find('input#phone').val('');
+                        $('#signup_frm_submit').attr('disabled','true');
+                    } else {
+                        alert(data['msg']);
+                    }
+                }, error:function (err) {
+                    //console.log(err);
+                }, complete:function () {
+                    $('#signup_frm_submit').find('i').css('visibility', 'hidden').removeClass('fa-spin');
+                }
+            });
+        }else {
+            alert('لطفا خطاهای موجود را اصلاح کنید!');
+        }
+
+    });
+    $('#contactus_frm_submit').click(function () {
+        let your_name = $('#contact_us_frm').find('input#your_name').val();
+        let your_email = $('#contact_us_frm').find('input#your_email').val();
+        let your_subject = $('#contact_us_frm').find('input#your_subject').val();
+        let your_message_body = $('#contact_us_frm').find('textarea#your_message_body').val();
+
+        $(this).find('i').css('visibility', 'visible').addClass('fa-spin');
+        $.ajax({
+            url: '/contactUs',
+            type: 'POST',
+            data: { 'your_name':your_name ,'your_email':your_email ,'your_subject':your_subject ,'your_message_body':your_message_body },
+            dataType: 'JSON',
+            success: function (data) {
+                if (data['msg'] === 1){
+                    alert('پیام شما ارسال شد.');
+                    $('#contact_us_frm').find('input#your_name').val('');
+                    $('#contact_us_frm').find('input#your_email').val('');
+                    $('#contact_us_frm').find('input#your_subject').val('');
+                    $('#contact_us_frm').find('textarea#your_message_body').val('');
+                    $('#contactus_frm_submit').attr('disabled','true');
+                } else {
+                    alert(data['msg']);
+                }
+            }, error:function (err) {
+                console.log(err);
+            }, complete:function () {
+                $('#contactus_frm_submit').find('i').css('visibility', 'hidden').removeClass('fa-spin');
+            }
+        });
+    });
+
+
+    // Reporting form validation
+    let is_recipient_email_validate = false;
+    let is_message_text_validate = false;
+
+    $('#reportingForm').find('#recipient-email').on('input' , function () {
+        let email = $('#reportingForm').find('#recipient-email').val();
+        let pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+        if (!pattern.test(email)){
+            $(this).siblings('.invalid-feedback').css('display', 'block');
+            $(this).css('border-color', 'red');
+            is_recipient_email_validate = false;
+        }else {
+            $(this).siblings('.invalid-feedback').css('display', 'none');
+            $(this).css('border-color', '#ced4da');
+            is_recipient_email_validate = true;
+        }
+        $('#reportingForm').change();
+    });
+    $('#reportingForm').find('#message-text').on('input' , function () {
+        let message = $('#reportingForm').find('#message-text').val();
+        if (message.length <30){
+            $('#message-text').siblings('.form-text').css({
+                'color': 'red',
+                'font-size': '80%'
+            });
+            $('#message-text').css('border-color', 'red');
+            is_message_text_validate = false;
+        } else {
+            $('#message-text').siblings('.form-text').css({
+                'color': 'inherit',
+                'font-size': '11px'
+            });
+            $('#message-text').css('border-color', '#ced4da');
+            is_message_text_validate = true;
+        }
+        $('#reportingForm').change();
+    });
+
+    $('#reportingForm').on('change', function () {
+        if (is_message_text_validate && is_recipient_email_validate){
+            $('#reporting_frm_submit').attr('disabled', false);
+        }else {
+            $('#reporting_frm_submit').attr('disabled', true);
+        }
+    });
+    $('#reporting_frm_submit').click(function(event) {
+        $('#reportingForm').submit();
+    });
+    // Reporting form validation
+    $('.report_modal_trigger').click(function () {
+        $('input#shop_name').val( $(this).data('shop'));
+    });
+    $('button.close').click(function () {
+        $('#reportingForm')[0].reset();
+        resetReportForm();
+    });
+
+
+
+    // Filter shops list in products page
+    $('#shops_search').on('input' , function () {
+        let value = $(this).val().toLowerCase();
+        $("#sitesCollapse").find('.form-check').filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+        if (value !== ''){
+            $('#shops_search_icon').html('close').css('cursor' , 'pointer');
+        } else {
+            $('#shops_search_icon').html('search').css('cursor' , 'default');
+        }
+    });
+    $('#shops_search_icon').click(function () {
+        let status = $(this).html();
+        if (status === 'close'){
+            $('input#shops_search').val('');
+            $('#shops_search').trigger('input');
+            $(this).css('cursor' , 'default');
+        }
+    });
+
+
+    $('#products_navbar_toggler').click(function () {
+        let is_sidebar_open = $('.sidebar').hasClass('open');
+        if (! is_sidebar_open){
+            $('.sidebar').css('right', '0');
+            $('.sidebar').addClass('open');
+            $('#back_cover').css('display', 'block');
+        } else {
+            $('.sidebar').css('right', '-600px');
+            $('.sidebar').removeClass('open');
+            $('#back_cover').css('display', 'none');
+        }
+    });
+    $('#back_cover').click(function () {
+        $('.sidebar').css('right', '-600px');
+        $('.sidebar').removeClass('open');
+        $(this).css('display', 'none');
+    });
+
+
+    // Filter shops list
+    $('#shops_list_search').on('input' , function () {
+        let value = $(this).val().toLowerCase();
+        $('.partNameBold').filter(function() {
+            $(this).parent().parent().parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+        if (value !== ''){
+            $('#shops_list_search_icon').html('close').css('cursor' , 'pointer');
+        } else {
+            $('#shops_list_search_icon').html('search').css('cursor' , 'default');
+        }
+    });
+    $('#shops_list_search_icon').click(function () {
+        let status = $(this).html();
+        if (status === 'close'){
+            $('input#shops_list_search').val('');
+            $('#shops_list_search').trigger('input');
+            $(this).css('cursor' , 'default');
+        }
+    });
+
 
 });
+
+
+function resetReportForm(){
+    $('#reportingForm').find('#recipient-email').css('border-color', '#ced4da');
+    $('#reportingForm').find('#recipient-email').siblings('.invalid-feedback').css('display', 'none');
+    $('#reportingForm').find('#message-text').siblings('.form-text').css({
+        'color': 'inherit',
+        'font-size': '11px'
+    });
+    $('#reportingForm').find('#message-text').css('border-color', '#ced4da');
+}
 
 
 
