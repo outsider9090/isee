@@ -11,6 +11,7 @@ $hoverColor: #81939C;
 $tableHoverColor: #f5f5f5;
 $textFont : vazir, sans-serif, Arial, Helvetica;
 $latinFont : vazirLatin, sans-serif, Arial, Helvetica;
+$FDFont : vazirFD;
 $latinBoldFont : vazirLatinBold, sans-serif, Arial, Helvetica;
 $titleFont : Yekan, sans-serif, Arial, Helvetica;
 /* Variabels-End */
@@ -46,6 +47,14 @@ ol, ul {
 	src:url('../fonts/vazir.ttf') format('truetype'),
 	url('../fonts/vazir.eot') format('eot'),
 	url('../fonts/vazir.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: vazirFD;
+	src:url('../fonts/FD/Vazir-FD.ttf') format('truetype'),
+	url('../fonts/FD/Vazir-FD.eot') format('eot'),
+	url('../fonts/FD/Vazir-FD.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -123,7 +132,7 @@ form label{
 }
 
 .digits{
-	font-family: $titleFont;
+	font-family: $FDFont;
 	font-weight: bold;
 }
 
@@ -303,6 +312,5 @@ button:disabled{
 
 
 .custom-select {
-	//background: #fff url(data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E) no-repeat left .75rem center;
 	background-position: left .75rem center;
 }

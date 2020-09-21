@@ -3,23 +3,25 @@
   padding: 24px;
   margin: 75px auto;
   border-radius: 14px;
-}
-.signup_form_container form fieldset h5{
-  font-family: Yekan,sans-serif, Arial, Helvetica;
-  font-size: 1.75rem;
-}
-.signup_form_container form input{
-  height: 40px;
-}
-.signup_form_container form label{
-  padding: 0 12px;
-}
-.signup_form_container form i{
-  font-size: 1.25rem;
-}
-.signup_form_container .card{
-  background-color: transparent;
-  border: none;
+  form fieldset h5{
+    font-family: Yekan,sans-serif, Arial, Helvetica;
+    font-size: 1.75rem;
+  }
+  form input{
+    height: 40px;
+  }
+  form label{
+    padding: 0 12px;
+  }
+  form i{
+    font-size: 1.25rem;
+  }
+  .card{
+    background-color: transparent;
+    border: none;
+  }
+
+
 }
 .input-group-text{
   border-radius: 0;

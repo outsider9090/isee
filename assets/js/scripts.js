@@ -180,8 +180,8 @@ jQuery(document).ready(function ($) {
         li_element.remove();
     });
 
-    $('.products_cards').find('img.no-image').attr('src', './assets/images/image_not_found.jpg');
-    $('.cards').find('img.no-image').attr('src', './assets/images/image_not_found.jpg');
+    $('.products_cards').find('img.no-image').attr('src', './assets/images/noimage.png');
+    $('.cards').find('img.no-image').attr('src', './assets/images/noimage.png');
 
 
 
@@ -260,8 +260,6 @@ jQuery(document).ready(function ($) {
         $('.signup_frm').change();
 
     });
-
-
     $('.signup_frm').on('change' , function () {
         if (is_name_validate && is_shop_name_validate && is_shop_link_validate && is_phone_validate && is_email_validate){
             $('#signup_frm_submit').attr('disabled' , false);
@@ -536,7 +534,8 @@ jQuery(document).ready(function ($) {
     });
 
 
-    $('#products_navbar_toggler').click(function () {
+    $('#products_sidebar_toggler').click(function (e) {
+        e.preventDefault();
         let is_sidebar_open = $('.sidebar').hasClass('open');
         if (! is_sidebar_open){
             $('.sidebar').css('right', '0');
@@ -559,7 +558,7 @@ jQuery(document).ready(function ($) {
     $('#shops_list_search').on('input' , function () {
         let value = $(this).val().toLowerCase();
         $('.partNameBold').filter(function() {
-            $(this).parent().parent().parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            $(this).parent().parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
         if (value !== ''){
             $('#shops_list_search_icon').html('close').css('cursor' , 'pointer');
@@ -577,7 +576,23 @@ jQuery(document).ready(function ($) {
     });
 
 
+    //  Main sidebar
+    $('.navbar-toggler-icon').click(function () {
+        let is_sidebar_open = $('.main_sidebar').hasClass('open');
+        if (! is_sidebar_open){
+            $('.main_sidebar').css('left','0').addClass('open');
+        }else {
+            $('.main_sidebar').css('left','-1000px').removeClass('open');
+        }
+    });
+    $('.close_sidebar').click(function () {
+        $('.main_sidebar').css('left','-1000px').removeClass('open');
+    })
+
+
 });
+
+
 
 
 function resetReportForm(){
@@ -588,6 +603,9 @@ function resetReportForm(){
         'font-size': '11px'
     });
     $('#reportingForm').find('#message-text').css('border-color', '#ced4da');
+}
+function getShopName(shop_name) {
+    $('input#shop_name').val(shop_name);
 }
 
 

@@ -29,8 +29,6 @@
   }
 }
 
-
-
 .contact_us_frm {
   input{
     border-radius: 40px;
@@ -41,10 +39,12 @@
   textarea{
     padding: 5px 15px;
     border-radius: 20px;
+    min-height: 150px;
   }
   button[type=submit] ,button[type=button]{
     border-radius: 40px;
   }
+
 }
 
 .form-text{

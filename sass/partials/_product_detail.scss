@@ -342,15 +342,15 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   align-content: center;
 }
 .cards .card{
   padding: 4px;
-  margin: 5px;
+  margin: 8px 4px;
   background: #ffffff;
   border: none;
-  width: 15%;
+  width: 18%;
   border-radius: 10px;
 }
 .cards .card-header {
@@ -438,7 +438,7 @@ canvas {
   font-family: $latinBoldFont;
 }
 .label-rating{
-  font-family: $textFont;
+  font-family: $FDFont;
 }
 .similar-product-shop{
   font-family: $latinFont;
@@ -467,7 +467,7 @@ canvas {
 
 .sidebar{
   background: #efedef;
-  height: 90%;
+  height: calc(100% - 120px);
   text-align: center;
   padding: 8px;
   position: fixed;
@@ -653,7 +653,7 @@ ol.breadcrumb a{
 }
 
 .products_list{
-  margin-top: 110px;
+  margin-top: 30px;
 }
 
 .products_cards{
@@ -669,28 +669,30 @@ ol.breadcrumb a{
   padding: 0;
   margin: 0;
   background: #ffffff;
-  border: 0 solid #e0e0e0;
+  border: 1px solid #e0e0e0;
   width: 20%;
-  min-height: 350px;
+  height: 350px;
   border-radius: 0;
   @include myTransition(0.3s ease);
   &:hover{
-    //transform: translateY(-4px);
-    border-width: 2px;
+    transform: scale(1.02);
   }
 }
 .products_cards .card-header {
   text-align: center;
   background-color: transparent;
   border-bottom: none;
+  height: 250px;
+  overflow-y: hidden;
 }
 .products_cards .card-header h6{
   color: #757575;
   margin: 12px auto;
   line-height: 1.6;
+  font-size: 14px;
 }
 .products_cards .card-header img{
-  width: 100%;
+  width: 150px;
   height: auto;
 }
 .products_cards .card-body {
@@ -701,6 +703,7 @@ ol.breadcrumb a{
   align-content: center;
   text-align: center;
   padding: 10px;
+  flex: none;
 }
 .products_cards .card-body i{
   font-size: 2rem;
@@ -731,10 +734,9 @@ ol.breadcrumb a{
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-end;
     align-content: center;
     color: $secondaryTextColor;
-
   }
 
 }
@@ -745,18 +747,19 @@ ol.breadcrumb a{
 .product_price_multiShop{
   width: 100%;
   i{
-    color: #757575;
+    color: $primaryColor;
+    font-size: 20px;
   }
 }
 .product_price_singleShop p{
   text-align: center;
-  font-family: $titleFont;
-  color: #757575;
+  font-family: $FDFont;
+  color: $secondaryTextColor;
 }
 .product_price_multiShop p{
   text-align: center;
-  font-family: $titleFont;
-  color: #757575;
+  font-family: $FDFont;
+  color: $secondaryTextColor;
 }
 .product_price_multiShop .product_price:not(.empty):not(.single-price)::before{
   content: 'از ';
@@ -775,12 +778,16 @@ ol.breadcrumb a{
   content: 'در فروشگاه ';
 }
 
-.product_price span{
-  font-size: 18px;
+.product_price_shop_name , .product_price_shop_count{
+  text-align: right;
+    font-family: $textFont;
+    color: #424242;
+    font-size: 12px;
 }
 
-.product_price_shop_name span{
-  font-family: $titleFont;
+
+.product_price span{
+  font-size: 18px;
 }
 
 .product_price_shop span{
@@ -847,14 +854,16 @@ ol.breadcrumb a{
   }
 }
 
-
+#sidebar_toggler{
+  display: none;
+}
 #back_cover{
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
-  z-index: 900;
+  z-index: 1000;
   background: #000;
   opacity: 0.6;
   display: none;

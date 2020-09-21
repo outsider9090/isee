@@ -30,8 +30,8 @@
 
 <body style="background-color: #f7fcff;">
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="products_nav">
-        <button class="navbar-toggler" type="button" id="products_navbar_toggler">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="index.html" id="navbarBrandDesktop">
@@ -76,7 +76,7 @@
                                     </button>
                                 </h5>
                             </div>
-                            <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion4">
                                 <div class="card-body">
                                     <div class="row">
                                         <ul class="products_filters_list">
@@ -228,19 +228,7 @@
                             </div>
                         </div>
                     </nav>
-                    <!--<div class="products_filters">-->
-                        <!--<div class="row">-->
-                            <!--<h5>فیلترها</h5>-->
-                            <!--<ul class="products_filters_list">-->
-                                <!--<li>-->
-                                    <!--<span class="text-right">filter1 <i class="material-icons close_filter_tag">close</i></span>-->
-                                <!--</li>-->
-                                <!--<li>-->
-                                    <!--<span>filter2 <i class="material-icons close_filter_tag">close</i></span>-->
-                                <!--</li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                
                 </div>
 
                 <div class="products_list">
@@ -435,14 +423,22 @@
 
 <footer>
     <nav class="footer">
-        <ul class="mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="about_us.html">درباره ما </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="contact_us.html">تماس با ما</a>
-            </li>
-        </ul>
+        <div class="row">
+            <ul class="ml-auto">
+                <li class="nav-item" id="sidebar_toggler">
+                    <a class="nav-link" href="#" id="products_sidebar_toggler"><i class="material-icons align-middle mx-3 text-muted">more_horiz</i></a>
+                </li>
+            </ul>
+            <ul class="mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about_us.html">درباره ما </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact_us.html">تماس با ما</a>
+                </li>
+            </ul>
+        </div>
+
     </nav>
 </footer>
 

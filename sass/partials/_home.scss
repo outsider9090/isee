@@ -1,5 +1,5 @@
 #back-color {
-  background-color: #efedf0;
+  background-color: #f5f5f5;
   width: 100%;
   height: 800px;
   position: fixed;
@@ -9,7 +9,7 @@
 }
 
 #main-page-back-color {
-  background-color: #efedf0;
+  background-color: #f5f5f5;
   width: 100%;
   height: 600px;
   position: fixed;
@@ -21,7 +21,7 @@
 .navbar{
   font-family: vazir, sans-serif, Arial, Helvetica;
   padding: 4px 24px;
-  background-color: #efedef;
+  background-color: #f5f5f5;
   z-index: 1000;
   height: 75px;
 }
@@ -33,11 +33,12 @@
   &:hover{
     transform: rotateZ(360deg) scale(0.8);
   }
+  img{
+    width: 65px;
+    height: auto;
+  }
 }
-.navbar-brand img{
-  width: 65px;
-  height: auto;
-}
+
 .navbar-nav li a{
   color: #212121;
   font-size: 16px;
@@ -74,34 +75,33 @@
 }
 .search_box{
   margin: 10% auto;
-}
-.search_box #logo img{
-  width: 125px;
-  height: auto;
+  #logo img{
+    width: 125px;
+    height: auto;
+  }
+  input{
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    padding: 12px;
+    color: #757575;
+    border: none;
+    box-shadow: 0 0 5px #bdbdbd;
+    border-radius: 25px;
+    text-indent: 35px;
+    transition: 0.1s ease;
+    -webkit-transition: 0.1s ease;
+    -moz-transition: 0.1s ease;
+    -o-transition: 0.1s ease;
+    direction: ltr;
+    &:hover{
+      box-shadow: 0 0 10px #9e9e9e;
+    }
+  }
 }
 
-.search_box input{
-  position: relative;
-  height: 50px;
-  line-height: 50px;
-  font-size: 20px;
-  padding: 12px;
-  color: #757575;
-  border: none;
-  box-shadow: 0 0 5px #bdbdbd;
-  border-radius: 25px;
-  text-indent: 35px;
-  transition: 0.1s ease;
-  -webkit-transition: 0.1s ease;
-  -moz-transition: 0.1s ease;
-  -o-transition: 0.1s ease;
-  direction: ltr;
-}
 
-
-.search_box input:hover{
-  box-shadow: 0 0 10px #9e9e9e;
-}
 .search_box input::placeholder{
   font-size: 16px;
   padding: 10px;
@@ -123,11 +123,12 @@
   -moz-transition: 0.1s ease;
   -o-transition: 0.1s ease;
   direction: ltr;
+  &:hover{
+    box-shadow: 0 0 10px #9e9e9e;
+  }
 }
 
-.navbar_search_box input:hover{
-  box-shadow: 0 0 10px #9e9e9e;
-}
+
 .navbar_search_box input::placeholder{
   font-size: 15px;
   padding: 4px;
@@ -151,32 +152,32 @@
   -webkit-transition: 0.8s ease;
   -moz-transition: 0.8s ease;
   -o-transition: 0.8s ease;
+  .row{
+    border-bottom: 1px solid #e0e0e0;
+    width: 95%;
+    margin: auto;
+    padding: 0;
+  }
+  a{
+    color: #424242;
+    text-align: left;
+    width: 100%;
+  }
+  img{
+    width: 60px;
+    padding: 6px;
+    margin: auto 8px;
+    border-radius: 4px;
+  }
+
 }
 
-.search_res_ajax .row{
-  border-bottom: 1px solid #e0e0e0;
-  width: 95%;
-  margin: auto;
-  padding: 0;
-}
 .search_res_ajax .row:last-child{
   border-bottom: none;
 }
 .search_res_ajax .row:hover{
   background-color: #eeeeee;
 }
-.search_res_ajax a{
-  color: #424242;
-  text-align: left;
-  width: 100%;
-}
-.search_res_ajax img{
-  width: 60px;
-  padding: 6px;
-  margin: auto 8px;
-  border-radius: 4px;
-}
-
 
 .search_frm_container i#search_btn_icon{
   position: absolute;
@@ -208,6 +209,50 @@
   transform: rotateZ(90deg);
 }
 
+.main_sidebar {
+  position: fixed;
+  left: -1000px;
+  top: 0;
+  background-color: #fafafa;
+  height: 100vh;
+  z-index: 1500;
+  width: 30%;
+  text-align: right;
+  box-shadow: 0 0 8px $hoverColor;
+  @include myTransition(0.4s ease-in-out);
+  ul{
+    padding: 24px 0;
+    li{
+      border-bottom: 1px solid #eeeeee;
+      width: 94%;
+      margin: auto;
+      a{
+        color: $secondaryTextColor;
+        font-size: 15px;
+        padding: 10px 4px;
+        i{
+          color: $secondaryTextColor;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    li:last-child{
+      border-bottom: none;
+    }
+  }
+.close_sidebar{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  i{
+    color: $AccentColor;
+  }
+}
+
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -215,18 +260,19 @@
   width: 100%;
   padding: 13px;
   background-color: #ffffff;
-}
-.footer ul{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
-  align-content: center;
-}
-.footer ul li a{
-  color: #757575;
-  font-size: 14px;
-  padding: 0 5px;
+  z-index: 1100;
+  ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    li a{
+      color: #757575;
+      font-size: 14px;
+      padding: 0 5px;
+    }
+  }
 }
 
 .footer ul li:hover a{
