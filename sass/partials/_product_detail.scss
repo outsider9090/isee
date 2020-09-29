@@ -7,14 +7,14 @@
 .navbar_search_box {
   width: 30%;
   margin-right: 15px;
-  height: 50px;
+  height: 40px;
 }
 .navbar_search_box input{
   position: relative;
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
   font-size: 18px;
-  padding: 12px;
+  padding: 8px;
   color: #757575;
   border: none;
   box-shadow: 0 0 5px #bdbdbd;
@@ -379,7 +379,7 @@
   position: relative;
 }
 .has_badge .card-body{
-  color: #dc004e;
+  color: $AccentColor;
   font-weight: bold;
 }
 
@@ -390,7 +390,7 @@
   position: absolute;
   top: -12px;
   right: 10px;
-  background: #dc004e;
+  background: $AccentColor;
   padding: 0 6px;
   border-radius: 50px;
   color: #eee;
@@ -405,7 +405,7 @@
   display: none;
 }
 .products_cart-badge{
-  background: #dc004e;
+  background: $AccentColor;
   padding: 2px 8px;
   border-radius: 50px;
   color: #eee;
@@ -413,7 +413,7 @@
   margin-left: 8px;
 }
 .products_cart-badge_text{
-  color: #dc004e;
+  color: $AccentColor;
   font-size: 13px;
 }
 .has_badge>.products_cart-badge{
@@ -471,15 +471,18 @@ canvas {
   text-align: center;
   padding: 8px;
   position: fixed;
-  top: 75px;
+  top: 60px;
   right: 0;
   width: 25%;
-  overflow-y: scroll;
+  overflow-y: auto;
   @include myTransition(0.3s ease);
   .card{
     border: none;
     margin: 12px auto;
     border-radius: 8px;
+    .card-body{
+      padding: 15px;
+    }
   }
   #accordion .card-header{
     display: flex;
@@ -490,14 +493,14 @@ canvas {
     background: none;
     width: 95%;
     margin: auto;
-    padding: 8px 0;
+    padding: 0;
     h5{
       font-family: Yekan, sans-serif, Arial, Helvetica;
       width: 100%;
       text-align: right;
     }
     button{
-      font-size: 20px;
+      font-size: 18px;
       color: #424242;
       width: 100%;
       text-align: right;
@@ -508,7 +511,7 @@ canvas {
         text-decoration: none;
       }
       i{
-        font-size: 2rem;
+        font-size: 1.5rem;
         vertical-align: middle;
         float: left;
         transition: 0.4s ease;
@@ -518,6 +521,15 @@ canvas {
       }
     }
   }
+  #sitesCollapse{
+    height: 250px;
+    overflow-y: auto;
+    label{
+      font-family: $FDFont;
+      font-size: 15px;
+    }
+  }
+
 }
 
 
@@ -527,6 +539,7 @@ canvas {
   width: 75%;
   z-index: 800;
   left: 0;
+  top: 60px;
 }
 
 #breadcrumb_nav{
@@ -536,12 +549,12 @@ canvas {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  height: 60px;
-  padding: 15px;
+  min-height: 60px;
+  padding: 5px;
   .filter_buttons {
     padding: 8px 15px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -553,6 +566,11 @@ canvas {
       font-size: 12px;
       border-radius: 24px;
     }
+  }
+  .filter_buttons_container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
   }
 }
 #breadcrumb_nav i{
@@ -600,11 +618,11 @@ ol.breadcrumb a{
   font-family: Yekan, sans-serif, Arial, Helvetica;
 }
 #breadcrumb_nav .dropdown .dropdown-menu a.active{
-  color: #dc004e !important;
+  color: $AccentColor !important;
   background: none !important;
 }
 #breadcrumb_nav .dropdown .dropdown-menu a:active{
-  color: #dc004e !important;
+  color: $AccentColor !important;
   background: none !important;
 }
 
@@ -653,7 +671,7 @@ ol.breadcrumb a{
 }
 
 .products_list{
-  margin-top: 30px;
+  margin-top: 75px;
 }
 
 .products_cards{
@@ -673,9 +691,11 @@ ol.breadcrumb a{
   width: 20%;
   height: 350px;
   border-radius: 0;
-  @include myTransition(0.3s ease);
+  @include myTransition(0.3s);
   &:hover{
-    transform: scale(1.02);
+    //transform: scale(1.005);
+    box-shadow: 0 0 3px 3px #eeeeee;
+    border-color: #ffffff;
   }
 }
 .products_cards .card-header {
@@ -855,7 +875,7 @@ ol.breadcrumb a{
 }
 
 #sidebar_toggler{
-  display: none;
+  //display: none;
 }
 #back_cover{
   position: fixed;

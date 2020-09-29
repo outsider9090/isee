@@ -35,7 +35,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_navbar" aria-controls="main_navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="index.html" id="navbarBrandDesktop">
@@ -88,6 +88,24 @@
             </ul>
         </div>
     </nav>
+
+    <div class="main_sidebar">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="index.html"><i class="material-icons align-middle mx-2">home</i> صفحه اصلی</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="signup.html"><i class="material-icons align-middle mx-2">add_shopping_cart</i> ثبت نام فروشگاه</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="shops_list.html"><i class="material-icons align-middle mx-2">filter_list</i>لیست فروشگاه ها</a>
+                    </li>
+                </ul>
+                <span class="close_sidebar">
+                        بستن
+                        <i class="material-icons align-middle">close</i>
+                    </span>
+            </div>
 </header>
 
 
@@ -113,6 +131,9 @@
     </div>
     <div class="top-content">
         <div class="container">
+
+            
+
             <div class="row">
                 <div class="product_detail">
                     <h4 id="productTitleMobile">STM32F103ZCT6</h4>
@@ -723,6 +744,13 @@
         </div>
     </div>
 </main>
+
+
+
+<!-- Scroll to top btn -->
+<a href="#" class="bg-primary" id="scroll_to_top_btn" title="رفتن به بالا">
+    <i class="material-icons align-middle text-white">keyboard_arrow_up</i>
+</a>
 
 
 
