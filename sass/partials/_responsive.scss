@@ -4,8 +4,31 @@
   }
 }
 @media screen and (max-width: 1200px) {
+  .right_side_card{
+    width: 65%;
+  }
+  .left_side_card{
+    width: 33%;
+  }
+  .product_gallery {
+    margin: auto -30px;
+  }
 }
 @media screen and (max-width: 1000px) {
+  .right_side_card , .left_side_card{
+    width: 100%;
+    margin: 30px auto;
+  }
+  .shops_list {
+    margin-top: 110px;
+  }
+  .filter_container{
+    width: 100%;
+    top: 60px;
+  }
+  #shops_search_container i {
+    left: 6%;
+  }
   .sidebar {
     position: fixed;
     width: 65%;
@@ -17,6 +40,14 @@
 }
   #sidebar_toggler{
     display: block;
+  }
+  #desktop_sidebar_toggler{
+    display: none;
+  }
+  #products_sidebar_toggler{
+    &::after{
+      content: "";
+    }
   }
   .main_sidebar {
     width: 30%;
@@ -34,16 +65,17 @@
   #navbarBrandMobile{
     display: block;
   }
-  .image_slides {
-    bottom: -140px !important;
-  }
+
   .products_cards .card{
-    min-width: 33%;
+    min-width: 25%;
   }
   .cards .card {
     padding: 4px;
     margin: 8px 4px;
     width: auto;
+  }
+  .product_gallery {
+    margin: auto 0;
   }
 }
 
@@ -195,8 +227,8 @@
   }
 
   .image_slides {
-    bottom: -160px !important;
-    right: 100px !important;
+    bottom: -135px !important;
+    right: 140px !important;
   }
   .product_gallery{
     justify-content: center;
@@ -225,18 +257,13 @@
     height: 50vh;
   }
 
-  #shops_search_container i {
-    left: 36px;
-  }
-
-  .filter_container{
-    width: 100%;
-    top: 64px;
-  }
-
 }
 
 @media screen and (max-width: 600px) {
+  .image_slides {
+    bottom: -135px !important;
+    right: 76px !important;
+  }
   .main_sidebar {
     width: 50%;
   }
@@ -268,7 +295,7 @@
     font-size: 13px;
   }
   .image_slides {
-    right: 60px !important;
+    right: 36px !important;
   }
   .sidebar{
     width: 85%;
@@ -303,7 +330,7 @@
     font-size: 11px;
   }
   .image_slides {
-    right: 20px !important;
+    right: 0 !important;
   }
   .owl-prev {
     left: -45px;

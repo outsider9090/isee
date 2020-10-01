@@ -83,11 +83,16 @@
   border-radius: 10px;
 }
 .search_box{
-  margin: 10% auto;
-  #logo img{
-    width: 125px;
-    height: auto;
-    @include myTransition(1s ease);
+  margin: 20% auto;
+  #logo {
+    img{
+      width: 125px;
+      height: auto;
+      @include myTransition(0.3s ease);
+      &:hover{
+        transform: rotateZ(360deg) scale(0.8);
+      }
+    }
   }
   input{
     position: relative;
@@ -272,9 +277,10 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 5px;
+  padding: 5px 24px;
   background-color: #ffffff;
   z-index: 1100;
+  box-shadow: 0 0 3px #eeeeee;
   ul{
     display: flex;
     flex-flow: row nowrap;

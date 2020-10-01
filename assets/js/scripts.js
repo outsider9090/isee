@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
 
-    $('.report_tooltip').tooltip();
+    $('.show_tooltip').tooltip();
 
 
     $('#gi-single').ezPlus({
@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
         }
     });
     $('#clear_btn').on('click', function () {
-        $('#search_frm_input').val('').trigger();
+        $('#search_frm_input').val('');
         $(this).css('display', 'none');
     });
 
@@ -617,7 +617,6 @@ jQuery(document).ready(function ($) {
 
 
 
-
     $('select#report_type').on('click change', function() {
         $(this).css('border-radius', '50px 50px 0 0');
     });
@@ -626,11 +625,29 @@ jQuery(document).ready(function ($) {
     });
 
 
-    $('#logo').hover(function () {
-        $(this).find('img').attr('src' , 'assets/images/sisoog-logo.png').css('transform' , 'rotateY(180deg)');
-    },function () {
-        $(this).find('img').attr('src' , 'assets/images/logo.png').css('transform' , 'rotateY(-360deg)');
-    })
+    // Sidebar toggler for Desktop
+    $('#desktop_products_sidebar_toggler').click(function (e) {
+        e.preventDefault();
+        let is_sidebar_open = $('.sidebar').hasClass('desktop_open');
+        if (! is_sidebar_open){
+            $('.sidebar').css('right', '0');
+            $('.sidebar').addClass('desktop_open');
+            $('.filter_container').css('width' , '75%');
+            $('.products_cards').find('.card').css('min-width' , '25%');
+            $('#main_content').addClass('col-lg-9');
+            $('.close_sidebar').click();
+        } else {
+            $('.sidebar').css('right', '-700px');
+            $('.sidebar').removeClass('desktop_open');
+            $('.filter_container').css('width' , '100%');
+            $('.products_cards').find('.card').css({
+                'min-width': '16%',
+                'width': '16%'
+            });
+            $('#main_content').removeClass('col-lg-9');
+        }
+    });
+
 
 });
 

@@ -90,115 +90,94 @@
     </nav>
 
     <div class="main_sidebar">
-                <ul>
-                    <li>
-                        <a class="nav-link" href="index.html"><i class="material-icons align-middle mx-2">home</i> صفحه اصلی</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="signup.html"><i class="material-icons align-middle mx-2">add_shopping_cart</i> ثبت نام فروشگاه</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="shops_list.html"><i class="material-icons align-middle mx-2">filter_list</i>لیست فروشگاه ها</a>
-                    </li>
-                </ul>
-                <span class="close_sidebar">
+        <ul>
+            <li>
+                <a class="nav-link" href="index.html"><i class="material-icons align-middle mx-2">home</i> صفحه اصلی</a>
+            </li>
+            <li>
+                <a class="nav-link" href="signup.html"><i class="material-icons align-middle mx-2">add_shopping_cart</i> ثبت نام فروشگاه</a>
+            </li>
+            <li>
+                <a class="nav-link" href="shops_list.html"><i class="material-icons align-middle mx-2">filter_list</i>لیست فروشگاه ها</a>
+            </li>
+        </ul>
+        <span class="close_sidebar">
                         بستن
                         <i class="material-icons align-middle">close</i>
                     </span>
-            </div>
+    </div>
 </header>
 
 
 <div id="back-color"></div>
-<main style="margin-top: 100px;">
-    <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document" style="direction: rtl;">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <ul class="navbar-nav right" style="float: right;">
-                        <li><p style="color: rgb(255, 187, 0);font-weight: bold;font-size: 20px;">دسته بندی ها</p></li>
-                        <li class="nav-item"><a class="nav-link" title="TEST" style="color: rgb(2, 2, 80) !important;margin-bottom: 10px;" href='/products?filters={"category":"324769765"}'>TEST</a></li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        بستن
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="top-content">
-        <div class="container">
+<main style="margin-top: 115px;" id="single_main_content">
 
-            
+    <div class="container-fluid">
 
-            <div class="row">
-                <div class="product_detail">
-                    <h4 id="productTitleMobile">STM32F103ZCT6</h4>
-                    <br>
-                    <div class="product_detail_content">
-                        <div class="row">
-                            <div class="product_detail_right col-md-6 col-sm-12">
-                                <div class="product_gallery">
-
-                                    <div class="image_single">
-                                        <img id="gi-single" class="zoom-img" src="./assets/images/p1.jpg" alt="">
-                                    </div>
-                                    <div class="image_slides owl-carousel owl-theme" id="product_gallery">
-                                        <a href="#">
-                                            <img class="gallery_image active" src="./assets/images/p1.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image"  src="./assets/images/p2.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p3.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p1.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p2.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p3.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p2.jpg" alt="">
-                                        </a>
-
+        <div class="top-content">
+            <div class="row d-flex justify-content-between">
+                <div class="card right_side_card" style="padding: 36px;">
+                    <div class="product_detail">
+                        <h4 id="productTitleMobile">STM32F103ZCT6</h4>
+                        <!--<br>-->
+                        <div class="product_detail_content">
+                            <div class="row">
+                                <div class="product_detail_right col-md-6 col-sm-12">
+                                    <div class="product_gallery">
+                                        <div class="image_single">
+                                            <img id="gi-single" class="zoom-img" src="./assets/images/p1.jpg" alt="">
+                                        </div>
+                                        <div class="image_slides owl-carousel owl-theme" id="product_gallery">
+                                            <a href="#">
+                                                <img class="gallery_image active" src="./assets/images/p1.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image"  src="./assets/images/p2.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p3.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p1.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p2.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p3.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p2.jpg" alt="">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="product_detail_left col-md-6 col-sm-12">
-                                <h4>STM32F103ZCT6</h4>
-                                <p>
-                                    <span class="col-6">Digi_key_part_numberdsfsfsfs:</span>
-                                    <span class="col-6 text-right">AT230dsfsdfsfdsfd</span>
-                                </p>
-                                <p>
-                                    <span class="col-6">Digi_key_part_sfs:</span>
-                                    <span class="col-6 text-right">AT23dsfd</span>
-                                </p>
+                                <div class="product_detail_left col-md-6 col-sm-12">
+                                    <h4>STM32F103ZCT6</h4>
+                                    <p>
+                                        <span class="col-6">Digi_key_part_numberdsfsfsfs:</span>
+                                        <span class="col-6 text-right">AT230dsfsdfsfdsfd</span>
+                                    </p>
+                                    <p>
+                                        <span class="col-6">Digi_key_part_sfs:</span>
+                                        <span class="col-6 text-right">AT23dsfd</span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="product_detail_footer">
-                        <div class="row">
-                            <div class="col-md-6 redunndant-space"></div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12 " id="buy_btn">
-                                        <button class="btn btn-danger" style="padding: 12px 24px;">خرید با کمترین قیمت</button>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
+                        <div class="product_detail_footer">
+                            <div class="row">
+                                <div class="col-md-6 redunndant-space"></div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="row" id="pd_footer_left">
+                                        <div id="buy_btn">
+                                            <button class="btn btn-danger" style="padding: 6px 36px;">خرید با کمترین قیمت</button>
+                                        </div>
                                         <div class="product_detail_footer_icons">
                                             <div class="share_popover_container">
-                                                <i class="material-icons">share</i>
+                                                <i class="material-icons ">share</i>
                                                 <div class="share_popover">
                                                     <a rel="nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=" title="فیسبوک">
                                                         <span><i class="fa fa-facebook"></i></span>
@@ -220,12 +199,11 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="#" title="notifications">
-                                                <i class="material-icons">notifications</i>
-                                            </a>
-                                            <a href="#" title="like">
-                                                <i class="material-icons">favorite</i>
-                                            </a>
+                                            <div class="">
+                                                <a href="#docsModal" data-toggle="modal" class="show_tooltip" data-toggle="tooltip" data-placement="top" title="مستندات">
+                                                    <i class="material-icons">description</i>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -233,75 +211,31 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="docs my-4">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="docs_table col-md-6 col-sm-12 my-3">
-                    <div class="docs_table_header">
-                        <h4>مستندات</h4>
+                <div class="card left_side_card" id="graph_card">
+                    <div class="card-header">
+                        <h5 class="cards_title">تغییرات قیمت</h5>
                     </div>
-                    <div class="docs_table_content d-flex justify-content-center">
-                        <table class="table table-borderless text-left" style="direction: ltr;">
-                            <tbody>
-                            <tr>
-                                <td scope="row">Datasheets:</td>
-                                <td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">EDA / CAD Models:</td>
-                                <td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Video file:</td>
-                                <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Datasheets:</td>
-                                <td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">EDA / CAD Models:</td>
-                                <td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Video file:</td>
-                                <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- if there is no docs -->
-                        <div class="d-none" id="noDocs"></div>
-                        <!-- if there is no docs -->
-                    </div>
-                </div>
-                <div class="graph-table col-md-6 col-sm-12 my-3">
-                    <div class="docs_table_header">
-                        <h4 class="digits">از 0 تا 154326 تومان</h4>
-                    </div>
-                    <div class="docs_table_content d-flex justify-content-center">
-                        <canvas id="canvas"></canvas>
-
-                        <!-- if there is no data -->
-                        <div class="d-none" id="noData"></div>
-                        <!-- if there is no data -->
+                    <div class="card-body">
+                        <div class="graph-table my-3">
+                            <div class="docs_table_header">
+                                <h4>از 0 تا 154326 تومان</h4>
+                            </div>
+                            <div class="docs_table_content d-flex justify-content-center">
+                                <canvas id="canvas"></canvas>
+                                <!-- if there is no data -->
+                                <div class="d-none" id="noData"></div>
+                                <!-- if there is no data -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="e-shops my-4">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-
-                <div class="card col-md-8 col-sm-12 e-shops-card">
-                    <div class="card-header"><h6>فروشگاه های اینترنتی</h6></div>
+        <div class="e-shops my-4">
+            <div class="row d-flex justify-content-between">
+                <div class="card right_side_card e-shops-card">
+                    <div class="card-header"><h6 class="cards_title">فروشگاه های اینترنتی</h6></div>
                     <div class="card-body">
                         <div class="row e-shops-header-row">
                             <div class="col-3">
@@ -330,7 +264,7 @@
                             <div class="col-lg-3 col-md-3 col-sm-6 shop_name">
                                 <span>جوان الکترونیک</span>
                                 <a href="#reportingModal" class="report_modal_trigger" data-toggle="modal" data-shop="shoeeepname">
-                                    <span class="report_tooltip" data-toggle="tooltip" data-placement="top" title="گزارش تخلف">
+                                    <span class="show_tooltip" data-toggle="tooltip" data-placement="top" title="گزارش تخلف">
                                         <i class="material-icons align-middle text-secondary mx-1">info_outline</i>
                                     </span>
                                 </a>
@@ -434,7 +368,7 @@
                             <div class="row">
                                 <div class="col-6 shop_name">
                                     <span>بعثت الکترونیک</span>
-                                    <a href="#" class="report_tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><span ><i class="material-icons align-middle text-secondary mx-1">info_outline</i></span></a>
+                                    <a href="#" class="show_tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><span ><i class="material-icons align-middle text-secondary mx-1">info_outline</i></span></a>
                                 </div>
                                 <div class="col-6 text-left mb-2">
                                     <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
@@ -558,8 +492,7 @@
                         <a href="#" class="btn btn-lg btn-block btn-danger">نمایش تمامی فروشگاه ها</a>
                     </div>
                 </div>
-
-                <div class="card col-md-3 col-sm-12 specs-card">
+                <div class="card left_side_card specs-card">
                     <div class="card-body">
                         <p class="row">
                             <span class="col-6">Datasheet:</span>
@@ -647,104 +580,169 @@
                         </p>
                     </div>
                 </div>
-
                 <!-- if there is no specifications -->
-                <div class="card col-md-3 col-sm-12 specs-card d-none">
+                <div class="card col-md-4 col-sm-12 specs-card d-none">
                     <canvas id="noSpecsImg"></canvas>
                 </div>
                 <!-- if there is no specifications -->
-
             </div>
         </div>
-    </div>
 
+        <!--<div class="docs my-4">-->
+            <!--<div class="row">-->
+                <!--<div class="card">-->
+                    <!--<div class="card-header">-->
+                        <!--<h5 class="cards_title">مستندات </h5>-->
+                    <!--</div>-->
+                    <!--<div class="card-body">-->
+                        <!--<div class="docs_table col-12 my-3">-->
+                            <!--&lt;!&ndash;<div class="docs_table_header">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<h4>مستندات</h4>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--<div class="docs_table_content d-flex justify-content-center">-->
+                                <!--<table class="table table-borderless text-left" style="direction: ltr;">-->
+                                    <!--<tbody>-->
+                                    <!--<tr>-->
+                                        <!--<td scope="row">Datasheets:</td>-->
+                                        <!--<td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td scope="row">EDA / CAD Models:</td>-->
+                                        <!--<td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td scope="row">Video file:</td>-->
+                                        <!--<td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td scope="row">Datasheets:</td>-->
+                                        <!--<td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td scope="row">EDA / CAD Models:</td>-->
+                                        <!--<td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                        <!--<td scope="row">Video file:</td>-->
+                                        <!--<td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>-->
+                                    <!--</tr>-->
+                                    <!--</tbody>-->
+                                <!--</table>-->
 
-    <div class="similar-products my-5">
-        <div class="container-fluid">
-            <div class="cards">
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <!-- when no image is available -->
-                            <img class="no-image" src="" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                                <!--&lt;!&ndash; if there is no docs &ndash;&gt;-->
+                                <!--<div class="d-none" id="noDocs"></div>-->
+                                <!--&lt;!&ndash; if there is no docs &ndash;&gt;-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <h5 class="cards_title text-center mt-5">محصولات مشابه</h5>
+        <div class="similar-products mb-5">
+            <div class="row d-flex justify-content-between">
+                <div class="card bg-transparent">
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <!-- when no image is available -->
+                                    <img class="no-image" src="" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card has_badge">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-shop">ATMEGA16A-PU</span></p>
+                                <p><span class="label-rating">2 فروشگاه</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-shop">ATMEGA16A-PU</span></p>
+                                <p><span class="label-rating">2 فروشگاه</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
-                <div class="card has_badge">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-shop">ATMEGA16A-PU</span></p>
-                        <p><span class="label-rating">2 فروشگاه</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
+
             </div>
         </div>
     </div>
 </main>
-
 
 
 <!-- Scroll to top btn -->
@@ -753,13 +751,12 @@
 </a>
 
 
-
 <!-- Reporting Modal -->
 <div class="modal fade" id="reportingModal" tabindex="-1" role="dialog" aria-labelledby="reportingModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <span><h5 class="modal-title" id="exampleModalLabel">گزارش تخلف</h5></span>
+                <span><h5 class="modal-title" id="reportingModalLabel">گزارش تخلف</h5></span>
                 <span>
                 <button type="button" class="close mr-auto" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -801,6 +798,99 @@
     </div>
 </div>
 <!-- Reporting Modal -->
+
+<!-- Docs Modal -->
+<div class="modal fade" id="docsModal" tabindex="-1" role="dialog" aria-labelledby="docsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span><h5 class="modal-title" id="docsModalLabel">مستندات</h5></span>
+                <span>
+                <button type="button" class="close mr-auto" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </span>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                            <div class="docs_table col-12 my-3">
+                                <!--<div class="docs_table_header">-->
+                                <!--<h4>مستندات</h4>-->
+                                <!--</div>-->
+                                <div class="docs_table_content d-flex justify-content-center">
+                                    <table class="table table-borderless text-left" style="direction: ltr;">
+                                        <tbody>
+                                        <tr>
+                                            <td scope="row">Datasheets:</td>
+                                            <td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">EDA / CAD Models:</td>
+                                            <td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Datasheets:</td>
+                                            <td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">EDA / CAD Models:</td>
+                                            <td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">Video file:</td>
+                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Docs Modal -->
 
 
 <footer>
