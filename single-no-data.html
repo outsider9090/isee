@@ -22,6 +22,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0"/>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/Chart.min.css" />
@@ -34,19 +35,45 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_navbar" aria-controls="main_navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="index.html" id="navbarBrandDesktop">
             <img src="./assets/images/logo.png" alt="">
         </a>
         <div class="navbar_search_box">
-            <form action="products.html">
+            <form action="products.html" style="position:relative;z-index: 10">
                 <div class="search_frm_container input-group mb-3">
-                    <input type="text" class="form-control" placeholder="جست و جو..." aria-label=""
-                           aria-describedby="search_btn" id="search_frm_input">
+                    <input type="text" class="form-control" aria-label=""
+                           aria-describedby="search_btn" id="search_frm_input" autocomplete="off">
                     <i class="material-icons" id="search_btn_icon">search</i>
                     <i class="material-icons" id="clear_btn" title="Clear">close</i>
+                </div>
+                <div class="search_res_ajax">
+                    <div class="row">
+                        <a href="#">
+                            <img src="assets/images/p1.jpg" alt="">
+                            <strong>STM32F103ZCT6</strong>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#">
+                            <img src="assets/images/p2.jpg" alt="">
+                            <strong>STM32F103ZCT6</strong>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#">
+                            <img src="assets/images/image_not_found.jpg" alt="">
+                            <strong>STM32F103ZCT6</strong>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="#">
+                            <img src="assets/images/p1.jpg" alt="">
+                            <strong>STM32F103ZCT6</strong>
+                        </a>
+                    </div>
                 </div>
             </form>
         </div>
@@ -61,103 +88,125 @@
             </ul>
         </div>
     </nav>
+
+    <div class="main_sidebar">
+        <ul>
+            <li>
+                <a class="nav-link" href="index.html"><i class="material-icons align-middle mx-2">home</i> صفحه اصلی</a>
+            </li>
+            <li>
+                <a class="nav-link" href="signup.html"><i class="material-icons align-middle mx-2">add_shopping_cart</i> ثبت نام فروشگاه</a>
+            </li>
+            <li>
+                <a class="nav-link" href="shops_list.html"><i class="material-icons align-middle mx-2">filter_list</i>لیست فروشگاه ها</a>
+            </li>
+        </ul>
+        <span class="close_sidebar">
+                        بستن
+                        <i class="material-icons align-middle">close</i>
+                    </span>
+    </div>
 </header>
 
+
 <div id="back-color"></div>
+<main style="margin-top: 115px;" id="single_main_content">
 
-<main style="margin-top: 100px;">
-    <div class="modal left fade" id="exampleModal" tabindex="" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document" style="direction: rtl;">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <ul class="navbar-nav right" style="float: right;">
-                        <li><p style="color: rgb(255, 187, 0);font-weight: bold;font-size: 20px;">دسته بندی ها</p></li>
-                        <li class="nav-item"><a class="nav-link" title="TEST" style="color: rgb(2, 2, 80) !important;margin-bottom: 10px;" href='/products?filters={"category":"324769765"}'>TEST</a></li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        بستن
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="top-content">
-        <div class="container">
-            <div class="row">
-                <div class="product_detail">
-                    <h4 id="productTitleMobile">STM32F103ZCT6</h4>
-                    <br>
-                    <div class="product_detail_content">
-                        <div class="row">
-                            <div class="product_detail_right col-md-6 col-sm-12">
-                                <div class="product_gallery">
+    <div class="container-fluid">
 
-                                    <div class="image_single">
-                                        <img id="gi-single" class="zoom-img" src="./assets/images/p1.jpg" alt="">
-                                    </div>
-                                    <div class="image_slides owl-carousel owl-theme" id="product_gallery">
-                                        <a href="#">
-                                            <img class="gallery_image active" src="./assets/images/p1.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image"  src="./assets/images/p2.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p3.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p1.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p2.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p3.jpg" alt="">
-                                        </a>
-                                        <a href="#">
-                                            <img class="gallery_image" src="./assets/images/p2.jpg" alt="">
-                                        </a>
-
+        <div class="top-content">
+            <div class="row d-flex justify-content-between">
+                <div class="card right_side_card" style="padding:10px 30px;">
+                    <div class="product_detail">
+                        <h4 id="productTitleMobile">STM32F103ZCT6</h4>
+                        <!--<br>-->
+                        <div class="product_detail_content">
+                            <div class="row">
+                                <div class="product_detail_right col-md-6 col-sm-12">
+                                    <div class="product_gallery">
+                                        <div class="image_single">
+                                            <img id="gi-single" class="zoom-img" src="./assets/images/p1.jpg" alt="">
+                                        </div>
+                                        <div class="image_slides owl-carousel owl-theme" id="product_gallery">
+                                            <a href="#">
+                                                <img class="gallery_image active" src="./assets/images/p1.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image"  src="./assets/images/p2.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p3.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p1.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p2.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p3.jpg" alt="">
+                                            </a>
+                                            <a href="#">
+                                                <img class="gallery_image" src="./assets/images/p2.jpg" alt="">
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="product_detail_left col-md-6 col-sm-12">
-                                <h4>STM32F103ZCT6</h4>
-                                <p>
-                                    <span class="col-6">Digi_key_part_numberdsfsfsfs:</span>
-                                    <span class="col-6 text-right">AT230dsfsdfsfdsfd</span>
-                                </p>
-                                <p>
-                                    <span class="col-6">Digi_key_part_sfs:</span>
-                                    <span class="col-6 text-right">AT23dsfd</span>
-                                </p>
+                                <div class="col-md-1"></div>
+                                <div class="product_detail_left col-md-5 col-sm-12">
+                                    <h4>STM32F103ZCT6</h4>
+                                    <p>
+                                        <span class="col-6">Digi_key_part_numberdsfsfsfs:</span>
+                                        <span class="col-6 text-right">AT230dsfsdfsfdsfd</span>
+                                    </p>
+                                    <p>
+                                        <span class="col-6">Digi_key_part_sfs:</span>
+                                        <span class="col-6 text-right">AT23dsfd</span>
+                                    </p>
+                                    <!--<div class="row" id="price_range">-->
+                                        <!--<p style="direction: rtl">-->
+                                            <!--<i class="material-icons align-middle">info_outline</i>-->
+                                            <!--<span class="mx-1"> در 6 فروشگاه </span>-->
+                                            <!--<span class="digits mx-1" style="color: #424242;"> از 0 تا 154326 تومان </span>-->
+                                        <!--</p>-->
+                                    <!--</div>-->
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="product_detail_footer">
-                        <div class="row">
-                            <div class="col-md-6 redunndant-space"></div>
-                            <div class="col-md-6 col-sm-12">
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12 " id="buy_btn">
-                                        <button class="btn btn-danger" style="padding: 12px 24px;">خرید با کمترین قیمت</button>
-                                    </div>
-                                    <div class="col-md-6 col-sm-12">
+                        <div class="product_detail_footer">
+                            <div class="row">
+                                <div class="col-md-5 redunndant-space"></div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5 col-sm-12">
+                                    <div class="row" id="pd_footer_left">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-danger" style="padding: 5px 24px;border-radius: 25px;">خرید با کمترین قیمت</button>
+                                        </div>
                                         <div class="product_detail_footer_icons">
-                                            <a href="#" title="share">
-                                                <i class="material-icons">share</i>
-                                            </a>
-                                            <a href="#" title="notifications">
-                                                <i class="material-icons">notifications</i>
-                                            </a>
-                                            <a href="#" title="like">
-                                                <i class="material-icons">favorite</i>
-                                            </a>
+                                            <div class="share_popover_container">
+                                                <i class="material-icons ">share</i>
+                                                <div class="share_popover">
+                                                    <a rel="nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=" title="فیسبوک">
+                                                        <span><i class="fa fa-facebook"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="https://twitter.com/share?url=" title="توییتر">
+                                                        <span><i class="fa fa-twitter"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="mailto:?subject=Check%20this%20" title="ایمیل">
+                                                        <span><i class="fa fa-envelope"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=" title="لینکدین">
+                                                        <span><i class="fa fa-linkedin"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="https://wa.me/?text=" title="واتساپ">
+                                                        <span><i class="fa fa-whatsapp"></i></span>
+                                                    </a>
+                                                    <a rel="nofollow" target="_blank" href="https://telegram.me/share/url?url=" title="تلگرام">
+                                                        <span><i class="fa fa-telegram"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -165,43 +214,28 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="docs my-4">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="docs_table col-md-6 col-sm-12 my-3">
-                    <div class="docs_table_header">
-                        <h4>مستندات</h4>
+                <div class="card left_side_card" id="graph_card">
+                    <div class="card-header">
+                        <h5 class="cards_title">تغییرات قیمت</h5>
                     </div>
-                    <div class="docs_table_content d-flex justify-content-center">
-                        <!-- if there is no docs -->
-                        <div id="noDocs"></div>
-                        <!-- if there is no docs -->
-                    </div>
-                </div>
-                <div class="graph-table col-md-6 col-sm-12 my-3">
-                    <div class="docs_table_header">
-                        <h4 class="digits">از 0 تا 154326 تومان</h4>
-                    </div>
-                    <div class="docs_table_content d-flex justify-content-center">
-                        <!-- if there is no data -->
-                        <div id="noData"></div>
-                        <!-- if there is no data -->
+                    <div class="card-body">
+                        <div class="graph-table my-3 p-0" style="padding: 0;width: 100%;">
+                            <div class="d-flex justify-content-center">
+                                <canvas id="canvas"></canvas>
+                                <!-- if there is no data -->
+                                <div class="d-none" id="noData"></div>
+                                <!-- if there is no data -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="e-shops my-4">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="card col-md-8 col-sm-12 e-shops-card">
-                    <div class="card-header"><h6>فروشگاه های اینترنتی</h6></div>
+        <div class="e-shops my-4">
+            <div class="row d-flex justify-content-between">
+                <div class="card e-shops-card col-12">
+                    <div class="card-header"><h6 class="cards_title">فروشگاه های اینترنتی</h6></div>
                     <div class="card-body">
                         <div class="row e-shops-header-row">
                             <div class="col-3">
@@ -227,15 +261,20 @@
                         </div>
                         <!-- for desktop size -->
                         <div class="row e-shops-row">
-                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                <span>http://www.bartarelec.com/</span>
+                            <div class="col-lg-3 col-md-3 col-sm-6 shop_name">
+                                <span>جوان الکترونیک</span>
+                                <a href="#reportingModal" class="report_modal_trigger" data-toggle="modal" data-shop="shoeeepname">
+                                    <span class="show_tooltip" data-toggle="tooltip" data-placement="top" title="گزارش تخلف">
+                                        <i class="material-icons align-middle text-secondary mx-1">info_outline</i>
+                                    </span>
+                                </a>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-12">
                                 <span class="partName">STM32F103ZCT6</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
                                 <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                <span class="subPartPrice">آخرین بروز رسانی 4 روز پیش</span>
+                                <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
                                 <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
@@ -250,7 +289,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
                                 <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                <span class="subPartPrice">آخرین بروز رسانی 2 روز پیش</span>
+                                <span class="subPartPrice">آخرین بروزرسانی 2 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
                                 <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
@@ -265,11 +304,29 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
                                 <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                <span class="subPartPrice">آخرین بروز رسانی 4 روز پیش</span>
+                                <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
                                 <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
                             </div>
+                        </div>
+                        <div class="row e-shops-row unavailable_product">
+                            <!-- unavailable product -->
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <span>http://www.bartarelec.com/</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <span class="partName">STM32F103ZCT6</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
+                                <span class="unavailable_text">ناموجود</span>
+                                <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 last-col">
+                                <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
+                            </div>
+                            <!-- unavailable product -->
                         </div>
                         <div class="row e-shops-row">
                             <div class="col-lg-3 col-md-3 col-sm-6">
@@ -280,13 +337,14 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
                                 <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                <span class="subPartPrice">آخرین بروز رسانی 4 روز پیش</span>
+                                <span class="subPartPrice">آخرین بروزرسانی 2 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
                                 <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
                             </div>
                         </div>
-                        <div class="row e-shops-row">
+                        <div class="row e-shops-row unavailable_product">
+                            <!-- unavailable product -->
                             <div class="col-lg-3 col-md-3 col-sm-6">
                                 <span>http://www.bartarelec.com/</span>
                             </div>
@@ -294,33 +352,40 @@
                                 <span class="partName">STM32F103ZCT6</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
+                                <span class="unavailable_text">ناموجود</span>
                                 <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                <span class="subPartPrice">آخرین بروز رسانی 2 روز پیش</span>
+                                <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
                                 <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
                             </div>
-                        </div>
-                        <div class="row e-shops-row">
-                            <div class="col-lg-3 col-md-3 col-sm-6">
-                                <span>http://www.bartarelec.com/</span>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12">
-                                <span class="partName">STM32F103ZCT6</span>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
-                                <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                <span class="subPartPrice">آخرین بروز رسانی 4 روز پیش</span>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 last-col">
-                                <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
-                            </div>
+                            <!-- unavailable product -->
                         </div>
                         <!-- for desktop size -->
 
                         <!-- for mobile size -->
                         <div class="e-shops-row-mobile">
                             <div class="row">
+                                <div class="col-6 shop_name">
+                                    <span>بعثت الکترونیک</span>
+                                    <a href="#" class="show_tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><span ><i class="material-icons align-middle text-secondary mx-1">info_outline</i></span></a>
+                                </div>
+                                <div class="col-6 text-left mb-2">
+                                    <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-left PartPriceContainer">
+                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
+                                </div>
+                                <div class="col-12 text-center my-4">
+                                    <span>STM32F103ZCT6</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="e-shops-row-mobile">
+                            <div class="row">
                                 <div class="col-6">
                                     <span>http://www.bartarelec.com/</span>
                                 </div>
@@ -331,7 +396,47 @@
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
                                     <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                    <span class="subPartPrice">آخرین بروز رسانی 4 روز پیش</span>
+                                    <span class="subPartPrice">آخرین بروزرسانی 2 روز پیش</span>
+                                </div>
+                                <div class="col-12 text-center my-4">
+                                    <span class="partName">STM32F103ZCT6</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="e-shops-row-mobile">
+                            <div class="row">
+                                <div class="col-6">
+                                    <span>http://www.bartarelec.com/</span>
+                                </div>
+                                <div class="col-6 text-left mb-2">
+                                    <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-left PartPriceContainer">
+                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
+                                </div>
+                                <div class="col-12 text-center my-4">
+                                    <span class="partName">STM32F103ZCT6</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="e-shops-row-mobile">
+                            <div class="row">
+                                <div class="col-6">
+                                    <span>http://www.bartarelec.com/</span>
+                                </div>
+                                <div class="col-6 text-left mb-2">
+                                    <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-left PartPriceContainer">
+                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
                                     <span>STM32F103ZCT6</span>
@@ -351,7 +456,7 @@
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
                                     <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                    <span class="subPartPrice">آخرین بروز رسانی 2 روز پیش</span>
+                                    <span class="subPartPrice">آخرین بروزرسانی 2 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
                                     <span class="partName">STM32F103ZCT6</span>
@@ -359,7 +464,8 @@
                             </div>
 
                         </div>
-                        <div class="e-shops-row-mobile">
+                        <div class="e-shops-row-mobile unavailable_product">
+                            <!-- unavailable product -->
                             <div class="row">
                                 <div class="col-6">
                                     <span>http://www.bartarelec.com/</span>
@@ -370,74 +476,15 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
+                                    <span class="unavailable_text">ناموجود</span>
                                     <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                    <span class="subPartPrice">آخرین بروز رسانی 4 روز پیش</span>
+                                    <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
                                     <span class="partName">STM32F103ZCT6</span>
                                 </div>
                             </div>
-
-                        </div>
-                        <div class="e-shops-row-mobile">
-                            <div class="row">
-                                <div class="col-6">
-                                    <span>http://www.bartarelec.com/</span>
-                                </div>
-                                <div class="col-6 text-left mb-2">
-                                    <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 text-left PartPriceContainer">
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                    <span class="subPartPrice">آخرین بروز رسانی 4 روز پیش</span>
-                                </div>
-                                <div class="col-12 text-center my-4">
-                                    <span>STM32F103ZCT6</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="e-shops-row-mobile">
-                            <div class="row">
-                                <div class="col-6">
-                                    <span>http://www.bartarelec.com/</span>
-                                </div>
-                                <div class="col-6 text-left mb-2">
-                                    <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 text-left PartPriceContainer">
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                    <span class="subPartPrice">آخرین بروز رسانی 2 روز پیش</span>
-                                </div>
-                                <div class="col-12 text-center my-4">
-                                    <span class="partName">STM32F103ZCT6</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="e-shops-row-mobile">
-                            <div class="row">
-                                <div class="col-6">
-                                    <span>http://www.bartarelec.com/</span>
-                                </div>
-                                <div class="col-6 text-left mb-2">
-                                    <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 text-left PartPriceContainer">
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
-                                    <span class="subPartPrice">آخرین بروز رسانی 4 روز پیش</span>
-                                </div>
-                                <div class="col-12 text-center my-4">
-                                    <span class="partName">STM32F103ZCT6</span>
-                                </div>
-                            </div>
-
+                            <!-- unavailable product -->
                         </div>
                         <!-- for mobile size -->
                     </div>
@@ -445,102 +492,220 @@
                         <a href="#" class="btn btn-lg btn-block btn-danger">نمایش تمامی فروشگاه ها</a>
                     </div>
                 </div>
-
-                <!-- if there is no specifications -->
-                <div class="card col-md-3 col-sm-12 specs-card">
-                    <canvas id="noSpecsImg"></canvas>
-                </div>
-                <!-- if there is no specifications -->
             </div>
         </div>
-    </div>
+
+        <!--<div class="docs my-4">-->
+        <!--<div class="row">-->
+        <!--<div class="card">-->
+        <!--<div class="card-header">-->
+        <!--<h5 class="cards_title">مستندات </h5>-->
+        <!--</div>-->
+        <!--<div class="card-body">-->
+        <!--<div class="docs_table col-12 my-3">-->
+        <!--&lt;!&ndash;<div class="docs_table_header">&ndash;&gt;-->
+        <!--&lt;!&ndash;<h4>مستندات</h4>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--<div class="docs_table_content d-flex justify-content-center">-->
+        <!--<table class="table table-borderless text-left" style="direction: ltr;">-->
+        <!--<tbody>-->
+        <!--<tr>-->
+        <!--<td scope="row">Datasheets:</td>-->
+        <!--<td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td scope="row">EDA / CAD Models:</td>-->
+        <!--<td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td scope="row">Video file:</td>-->
+        <!--<td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td scope="row">Datasheets:</td>-->
+        <!--<td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td scope="row">EDA / CAD Models:</td>-->
+        <!--<td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td scope="row">Video file:</td>-->
+        <!--<td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+        <!--</table>-->
+
+        <!--&lt;!&ndash; if there is no docs &ndash;&gt;-->
+        <!--<div class="d-none" id="noDocs"></div>-->
+        <!--&lt;!&ndash; if there is no docs &ndash;&gt;-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
 
 
-    <div class="similar-products my-5">
-        <div class="container-fluid d-flex justify-content-center">
-            <div class="cards">
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <!-- when no image is available -->
-                            <img class="no-image" src="" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+        <h5 class="cards_title text-center mt-5">محصولات مشابه</h5>
+        <div class="similar-products mb-5">
+            <div class="row d-flex justify-content-between">
+                <div class="card bg-transparent">
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <!-- when no image is available -->
+                                    <img class="no-image" src="" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card has_badge">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-price digits">11500000</span></p>
+                                <p><span class="similar-product-shop">فروشگاه آرین</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-shop">ATMEGA16A-PU</span></p>
+                                <p><span class="label-rating">2 فروشگاه</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a href="#">
+                                    <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
+                                </a>
+                                <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
+                            </div>
+                            <div class="card-body">
+                                <p><span class="similar-product-shop">ATMEGA16A-PU</span></p>
+                                <p><span class="label-rating">2 فروشگاه</span></p>
+                            </div>
+                            <span class="cart-badge">10%</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
-                <div class="card has_badge">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <a href="#">
-                            <img src="./assets/images/497x144LQFP-1.6-20x20x144.jpg" alt="">
-                        </a>
-                        <a href="#"><h6 class="partNameBold">ATMEGA16A-PU</h6></a>
-                    </div>
-                    <div class="card-body">
-                        <p><span class="similar-product-price digits">11500000</span></p>
-                        <p><span class="similar-product-shop">فروشگاه آرین</span></p>
-                    </div>
-                    <span class="cart-badge">10%</span>
-                </div>
+
             </div>
         </div>
     </div>
 </main>
+
+
+<!-- Scroll to top btn -->
+<a href="#" class="bg-primary" id="scroll_to_top_btn" title="رفتن به بالا">
+    <i class="material-icons align-middle text-white">keyboard_arrow_up</i>
+</a>
+
+
+<!-- Reporting Modal -->
+<div class="modal fade" id="reportingModal" tabindex="-1" role="dialog" aria-labelledby="reportingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span><h5 class="modal-title" id="reportingModalLabel">گزارش تخلف</h5></span>
+                <span>
+                <button type="button" class="close mr-auto" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </span>
+            </div>
+            <div class="modal-body">
+                <form method="post" id="reportingForm">
+                    <div class="form-group">
+                        <label for="report_type">انتخاب نوع گزارش:</label>
+                        <select class="form-control custom-select" id="report_type">
+                            <option>گزارش تخلف قیمت</option>
+                            <option>گزارش مغایرت قیمت</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">نام:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group required">
+                        <label for="recipient-email" class="col-form-label">ایمیل:</label>
+                        <input type="email" class="form-control" id="recipient-email">
+                        <div class="invalid-feedback">
+                            <span>لطفا یک ایمیل معتبر وارد کنید</span>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="message-text" class="col-form-label">دلیل تخلف:</label>
+                        <textarea class="form-control" id="message-text" cols="5" rows="5"></textarea>
+                        <div class="form-text">حداقل طول پیام 30 کاراکتر می باشد.</div>
+                    </div>
+                    <input type="hidden" id="shop_name" name="shop_name">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-block" id="reporting_frm_submit" disabled>ارسال</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Reporting Modal -->
+
 
 
 <footer>
@@ -564,5 +729,65 @@
 <script src="assets/js/jquery.ez-plus.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/scripts.js"></script>
+
+<script>
+    var ctx = document.getElementById('canvas').getContext('2d');
+    new Chart(ctx, {
+            type: 'line',
+            data:{
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [
+                    {
+                        label: 'میانگین قیمت',
+                        fill: false,
+                        data: [10, 29, 13, 6, 12, 7],
+                        backgroundColor: '#076fa9',
+                        borderColor: '#076fa9',
+                        borderWidth: 4
+                    },
+                ],
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            display: false
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false
+                        },
+                        angleLines: {
+                            display: false
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            display: false
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false
+                        }
+                    }],
+                },
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    rtl: true,
+                    labels: {
+                        fontFamily: 'Yekan',
+                        fontSize: 13,
+                        usePointStyle: true,
+                        pointStyleSize: 3
+                    }
+                }
+            }
+        }
+    );
+</script>
+
 </body>
 </html>

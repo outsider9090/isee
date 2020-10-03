@@ -116,7 +116,7 @@
 
         <div class="top-content">
             <div class="row d-flex justify-content-between">
-                <div class="card right_side_card" style="padding: 36px;">
+                <div class="card right_side_card" style="padding:10px 30px;">
                     <div class="product_detail">
                         <h4 id="productTitleMobile">STM32F103ZCT6</h4>
                         <!--<br>-->
@@ -152,8 +152,8 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="product_detail_left col-md-6 col-sm-12">
+                                <div class="col-md-1"></div>
+                                <div class="product_detail_left col-md-5 col-sm-12">
                                     <h4>STM32F103ZCT6</h4>
                                     <p>
                                         <span class="col-6">Digi_key_part_numberdsfsfsfs:</span>
@@ -163,17 +163,28 @@
                                         <span class="col-6">Digi_key_part_sfs:</span>
                                         <span class="col-6 text-right">AT23dsfd</span>
                                     </p>
+                                    <div class="row" id="price_range">
+                                        <p style="direction: rtl">
+                                            <i class="material-icons align-middle">info_outline</i>
+                                            <span class="mx-1"> در 6 فروشگاه </span>
+                                            <span class="digits mx-1" style="color: #424242;"> از 0 تا 154326 تومان </span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="product_detail_footer">
                             <div class="row">
-                                <div class="col-md-6 redunndant-space"></div>
-                                <div class="col-md-6 col-sm-12">
+                                <div class="col-md-5 redunndant-space"></div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5 col-sm-12">
                                     <div class="row" id="pd_footer_left">
-                                        <div id="buy_btn">
-                                            <button class="btn btn-danger" style="padding: 6px 36px;">خرید با کمترین قیمت</button>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <a href="#" type="button" class="btn btn-danger text-white" style="padding: 5px 24px;border-radius: 0 25px 25px 0;">خرید با کمترین قیمت</a>
+                                            <button type="button" data-target="#docsModal" data-toggle="modal"
+                                                    class="btn btn-primary" style="padding: 5px 24px;border-radius: 25px 0 0 25px;">مستندات
+                                            </button>
                                         </div>
                                         <div class="product_detail_footer_icons">
                                             <div class="share_popover_container">
@@ -199,11 +210,6 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div class="">
-                                                <a href="#docsModal" data-toggle="modal" class="show_tooltip" data-toggle="tooltip" data-placement="top" title="مستندات">
-                                                    <i class="material-icons">description</i>
-                                                </a>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -216,11 +222,8 @@
                         <h5 class="cards_title">تغییرات قیمت</h5>
                     </div>
                     <div class="card-body">
-                        <div class="graph-table my-3">
-                            <div class="docs_table_header">
-                                <h4>از 0 تا 154326 تومان</h4>
-                            </div>
-                            <div class="docs_table_content d-flex justify-content-center">
+                        <div class="graph-table my-3 p-0" style="padding: 0;width: 100%;">
+                            <div class="d-flex justify-content-center">
                                 <canvas id="canvas"></canvas>
                                 <!-- if there is no data -->
                                 <div class="d-none" id="noData"></div>
@@ -588,61 +591,10 @@
             </div>
         </div>
 
-        <!--<div class="docs my-4">-->
-            <!--<div class="row">-->
-                <!--<div class="card">-->
-                    <!--<div class="card-header">-->
-                        <!--<h5 class="cards_title">مستندات </h5>-->
-                    <!--</div>-->
-                    <!--<div class="card-body">-->
-                        <!--<div class="docs_table col-12 my-3">-->
-                            <!--&lt;!&ndash;<div class="docs_table_header">&ndash;&gt;-->
-                            <!--&lt;!&ndash;<h4>مستندات</h4>&ndash;&gt;-->
-                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                            <!--<div class="docs_table_content d-flex justify-content-center">-->
-                                <!--<table class="table table-borderless text-left" style="direction: ltr;">-->
-                                    <!--<tbody>-->
-                                    <!--<tr>-->
-                                        <!--<td scope="row">Datasheets:</td>-->
-                                        <!--<td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td scope="row">EDA / CAD Models:</td>-->
-                                        <!--<td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td scope="row">Video file:</td>-->
-                                        <!--<td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td scope="row">Datasheets:</td>-->
-                                        <!--<td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td scope="row">EDA / CAD Models:</td>-->
-                                        <!--<td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>-->
-                                    <!--</tr>-->
-                                    <!--<tr>-->
-                                        <!--<td scope="row">Video file:</td>-->
-                                        <!--<td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>-->
-                                    <!--</tr>-->
-                                    <!--</tbody>-->
-                                <!--</table>-->
-
-                                <!--&lt;!&ndash; if there is no docs &ndash;&gt;-->
-                                <!--<div class="d-none" id="noDocs"></div>-->
-                                <!--&lt;!&ndash; if there is no docs &ndash;&gt;-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
 
         <h5 class="cards_title text-center mt-5">محصولات مشابه</h5>
         <div class="similar-products mb-5">
-            <div class="row d-flex justify-content-between">
+            <div class="row">
                 <div class="card bg-transparent">
                     <div class="cards">
                         <div class="card">
@@ -813,84 +765,85 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                            <div class="docs_table col-12 my-3">
-                                <!--<div class="docs_table_header">-->
-                                <!--<h4>مستندات</h4>-->
-                                <!--</div>-->
-                                <div class="docs_table_content d-flex justify-content-center">
-                                    <table class="table table-borderless text-left" style="direction: ltr;">
-                                        <tbody>
-                                        <tr>
-                                            <td scope="row">Datasheets:</td>
-                                            <td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">EDA / CAD Models:</td>
-                                            <td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Datasheets:</td>
-                                            <td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">EDA / CAD Models:</td>
-                                            <td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        <tr>
-                                            <td scope="row">Video file:</td>
-                                            <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                    <div class="docs_table col-12 my-3">
+                        <!--<div class="docs_table_header">-->
+                        <!--<h4>مستندات</h4>-->
+                        <!--</div>-->
+                        <div class="docs_table_content d-flex justify-content-center">
+                            <table class="table table-borderless text-left" style="direction: ltr;">
+                                <tbody>
+                                <tr>
+                                    <td scope="row">Datasheets:</td>
+                                    <td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">EDA / CAD Models:</td>
+                                    <td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Datasheets:</td>
+                                    <td class="text-info font-weight-bold">STM32F103xC, D, E Datasheet</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">EDA / CAD Models:</td>
+                                    <td class="text-info font-weight-bold">STM32F103ZCT6 by SnapEDA</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">Video file:</td>
+                                    <td class="text-info font-weight-bold">Digi_key_part_numberdsfsfsfs</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
 <!-- Docs Modal -->
+
 
 
 <footer>
@@ -926,17 +879,25 @@
                         label: 'حداقل قیمت',
                         fill: false,
                         data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: 'green',
-                        borderColor: 'cyan',
+                        backgroundColor: '#076fa9',
+                        borderColor: '#076fa9',
                         borderWidth: 3,
+                        borderCapStyle: 'round',
+                        pointStyle: 'rectRounded',
+                        radius: 0,
+                        tension: 0,
+                        stepped: true
                     },
                     {
                         label: 'حداکثر قیمت',
                         fill: false,
                         data: [10, 29, 13, 6, 12, 7],
-                        backgroundColor: 'rgb(255, 99, 132)',
-                        borderColor: 'rgb(255, 99, 132)',
+                        backgroundColor: '#f50057',
+                        borderColor: '#f50057',
                         borderWidth: 4,
+                         radius: 0,
+                         pointStyle: 'rectRounded',
+                         tension: 0
                     },
                     {
                         label: 'میانگین قیمت',
@@ -945,6 +906,9 @@
                         backgroundColor: 'Yellow',
                         borderColor: 'Yellow',
                         borderWidth: 4,
+                         radius: 0,
+                         pointStyle: 'rectRounded',
+                         tension: 0
                     }
                 ],
             },
@@ -952,14 +916,37 @@
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: false,
+                            display: false
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false
+                        },
+                        angleLines: {
+                            display: false
                         }
-                    }]
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: false,
+                            display: false
+                        },
+                        gridLines: {
+                            display: false,
+                            drawBorder: false
+                        }
+                    }],
                 },
                 legend: {
+                    display: true,
+                    position: 'bottom',
+                    rtl: true,
                     labels: {
-                        fontFamily: 'vazir',
-                        fontSize: 15
+                        fontFamily: 'Yekan',
+                        fontSize: 13,
+                        usePointStyle: true
+        
                     }
                 }
             }

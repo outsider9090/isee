@@ -732,7 +732,9 @@ button:disabled {
 }
 
 .footer ul li:hover a {
-  text-decoration: underline;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
 }
 
 .footer li a::after {
@@ -765,7 +767,7 @@ button:disabled {
 
 .product_detail {
   width: 100%;
-  margin: auto;
+  margin: 5px auto;
   z-index: 1;
 }
 
@@ -865,8 +867,8 @@ button:disabled {
 
 .product_detail_footer #pd_footer_left {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
   align-content: center;
   margin: 15px auto;
@@ -921,7 +923,7 @@ button:disabled {
   left: 40%;
 }
 .product_detail_footer .product_detail_footer_icons i {
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: #757575;
   margin: 0 10px;
 }
@@ -952,9 +954,7 @@ button:disabled {
 }
 
 .docs_table {
-  max-height: 300px;
-  overflow-y: auto;
-  padding: 25px;
+  padding: 15px;
 }
 
 .docs_table_header {
@@ -971,12 +971,15 @@ button:disabled {
   font-family: vazirLatin, sans-serif, Arial, Helvetica;
   text-align: center;
   overflow-y: auto;
+  overflow-x: hidden;
 }
-
 .docs_table_content td {
   padding: 10px;
   text-align: left;
   font-size: 1rem;
+}
+.docs_table_content td.text-info {
+  text-align: center;
 }
 
 .table td, .table th {
@@ -1204,6 +1207,7 @@ canvas {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  width: 100%;
 }
 
 .partName {
@@ -1246,7 +1250,7 @@ canvas {
 }
 
 .sidebar {
-  background: #efedef;
+  background-color: #f5f5f5;
   height: calc(100% - 100px);
   text-align: center;
   padding: 8px;
@@ -1307,7 +1311,7 @@ canvas {
   -o-transition: 0.4s ease;
 }
 .sidebar #sitesCollapse {
-  height: 265px;
+  height: 315px;
   overflow-y: auto;
 }
 .sidebar #sitesCollapse label {
@@ -1317,7 +1321,7 @@ canvas {
 
 .filter_container {
   position: fixed;
-  background: #ffffff;
+  background-color: #f5f5f5;
   width: 75%;
   z-index: 800;
   left: 0;
@@ -1719,6 +1723,13 @@ ol.breadcrumb a {
   border-bottom: none;
   font-family: Yekan, sans-serif, Arial, Helvetica;
 }
+.card#graph_card .card-body {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
 
 .docs .card {
   width: 100%;
@@ -1738,11 +1749,35 @@ ol.breadcrumb a {
 }
 
 .right_side_card {
-  width: 70%;
+  width: 68%;
 }
 
 .left_side_card {
-  width: 28%;
+  width: 30%;
+}
+
+#price_range {
+  width: 100%;
+  margin: 8px auto;
+  padding: 5px;
+  text-align: right;
+}
+#price_range p {
+  font-size: 15px;
+  font-family: vazir, sans-serif, Arial, Helvetica;
+  color: #424242;
+}
+#price_range p i {
+  color: #076fa9;
+  font-size: 20px;
+}
+
+.btn-group button {
+  border-radius: 0;
+}
+
+#docsModal .modal-body {
+  padding: 0 12px;
 }
 
 .signup_form_container {
@@ -1765,7 +1800,7 @@ ol.breadcrumb a {
   font-size: 1.25rem;
 }
 .signup_form_container .card {
-  background-color: transparent;
+  border-radius: 12px;
   border: none;
 }
 
@@ -1933,7 +1968,7 @@ input.signUpInput {
   margin: auto;
 }
 .contact_us_form_container .card {
-  background: none;
+  border-radius: 12px;
   border: none;
 }
 .contact_us_form_container .card .card-header {
@@ -2031,6 +2066,10 @@ input.signUpInput {
   .products_cards .card {
     min-width: 25%;
   }
+
+  .product_detail_footer_icons {
+    margin: 6px auto;
+  }
 }
 @media screen and (max-width: 1200px) {
   .right_side_card {
@@ -2044,9 +2083,23 @@ input.signUpInput {
   .product_gallery {
     margin: auto -30px;
   }
+
+  .btn-group button {
+    font-size: 13px;
+    padding: 0 12px;
+  }
+
+  .product_detail_footer #pd_footer_left {
+    justify-content: flex-end;
+  }
 }
-@media screen and (max-width: 1000px) {
-  .right_side_card, .left_side_card {
+@media screen and (max-width: 1024px) {
+  .right_side_card {
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  .left_side_card {
     width: 100%;
     margin: 30px auto;
   }
@@ -2255,7 +2308,6 @@ input.signUpInput {
     text-align: center;
     margin: 15px auto;
   }
-
   .product_detail_footer_icons i {
     font-size: 1.5rem;
   }

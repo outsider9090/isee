@@ -148,6 +148,18 @@ jQuery(document).ready(function ($) {
     $('.owl-next').html('<i class="material-icons">chevron_right</i>');
     $('.owl-prev').html('<i class="material-icons">chevron_left</i>');
 
+    // $(".owl-carousel").owlCarousel({
+    //     loop: true,
+    //     autoplay: true,
+    //     items: 1,
+    //     nav: true,
+    //     autoplayHoverPause: true,
+    //     animateOut: 'slideOutUp',
+    //     animateIn: 'slideInUp'
+    // });
+
+
+
     $('.sell_count').each(function () {
         if ($(this).text() == '0'){
             $(this).css('color', '#dc004e');
@@ -414,8 +426,6 @@ jQuery(document).ready(function ($) {
 
 
 
-
-
     $('#signup_frm_submit').click(function () {
         $(this).find('i').addClass('fa-spin').css('visibility' , 'visible');
     });
@@ -641,8 +651,8 @@ jQuery(document).ready(function ($) {
             $('.sidebar').removeClass('desktop_open');
             $('.filter_container').css('width' , '100%');
             $('.products_cards').find('.card').css({
-                'min-width': '16%',
-                'width': '16%'
+                'min-width': '20%',
+                'width': '20%'
             });
             $('#main_content').removeClass('col-lg-9');
         }

@@ -6,9 +6,9 @@ $AccentColor: #f50057;
 $titleColor: #263238;
 $primaryTextColor: #212121;
 $secondaryTextColor: #424242;
-$backgroundColor: #fafafa;
+$backgroundColor: #f5f5f5;
 $hoverColor: #81939C;
-$tableHoverColor: #f5f5f5;
+$tableHoverColor: #bdbdbd;
 $textFont : vazir, sans-serif, Arial, Helvetica;
 $latinFont : vazirLatin, sans-serif, Arial, Helvetica;
 $FDFont : vazirFD;
@@ -97,7 +97,7 @@ body {
 	line-height: 1.6;
 	font-family: $textFont;
 	scroll-behavior: smooth;
-	background-color: #f5f5f5;
+	background-color: $backgroundColor;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
