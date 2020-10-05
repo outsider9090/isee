@@ -1,8 +1,5 @@
 jQuery(document).ready(function ($) {
 
-    $('.show_tooltip').tooltip();
-
-
     $('#gi-single').ezPlus({
         zoomWindowFadeIn: 500,
         zoomLensFadeIn: 500,
@@ -101,15 +98,6 @@ jQuery(document).ready(function ($) {
 
     });
 
-
-    $.fn.digits = function () {
-        return this.each(function () {
-            $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-        })
-    };
-    $('.digits').digits();
-
-
     $('.owl-carousel').owlCarousel({
         loop:false,
         margin:10,
@@ -148,15 +136,18 @@ jQuery(document).ready(function ($) {
     $('.owl-next').html('<i class="material-icons">chevron_right</i>');
     $('.owl-prev').html('<i class="material-icons">chevron_left</i>');
 
-    // $(".owl-carousel").owlCarousel({
-    //     loop: true,
-    //     autoplay: true,
-    //     items: 1,
-    //     nav: true,
-    //     autoplayHoverPause: true,
-    //     animateOut: 'slideOutUp',
-    //     animateIn: 'slideInUp'
-    // });
+
+    $(".owl-carousel").owlCarousel({
+        items: 3,
+        loop: false,
+        mouseDrag: false,
+        touchDrag: false,
+        pullDrag: false,
+        rewind: true,
+        autoplay: true,
+        margin: 0,
+        nav: true
+    });
 
 
 
@@ -592,13 +583,20 @@ jQuery(document).ready(function ($) {
         let is_sidebar_open = $('.main_sidebar').hasClass('open');
         if (! is_sidebar_open){
             $('.main_sidebar').css('left','0').addClass('open');
+            $('#nav_back_cover').css('display' , 'block');
         }else {
             $('.main_sidebar').css('left','-1000px').removeClass('open');
+            $('#nav_back_cover').css('display' , 'none');
         }
     });
     $('.close_sidebar').click(function () {
         $('.main_sidebar').css('left','-1000px').removeClass('open');
-    })
+        $('#nav_back_cover').css('display' , 'none');
+    });
+    $('#nav_back_cover').click(function () {
+        $('.main_sidebar').css('left','-1000px').removeClass('open');
+        $(this).css('display' , 'none');
+    });
 
 
 
@@ -659,6 +657,29 @@ jQuery(document).ready(function ($) {
     });
 
 
+    $('#notif_close').on('click' , function () {
+        $('.notif_banner').animate({
+                'bottom': '-200px',
+                'display': 'none'
+            },
+            1000, function() {
+            });
+    });
+
+
+    $('.prevent_default').click(function (e) {
+        e.preventDefault();
+    });
+
+
+    $.fn.digits = function () {
+        return this.each(function () {
+            $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+        })
+    };
+    $('.digits').digits();
+    $('.unavailable_digits').digits();
+
 });
 
 
@@ -696,6 +717,5 @@ function showSnackBar(bg , msg) {
         $('#snackbar').removeClass('show');
     }, 4000);
 }
-
 
 

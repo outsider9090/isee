@@ -18,7 +18,6 @@
   color: #757575;
   border: none;
   box-shadow: 0 0 5px #bdbdbd;
-  //border-radius: 50px;
   text-indent: 35px;
   direction: ltr;
 }
@@ -50,8 +49,9 @@
 }
 
 .zoomWrapper #gi-single{
-  border: 3px solid #bdbdbd;
-  padding: 0;
+  //border: 3px solid #bdbdbd;
+  border: none;
+  padding: 20px;
 }
 #p-gallery{
   overflow-x: scroll;
@@ -74,11 +74,11 @@
   position: relative;
   display: flex;
   justify-content: flex-start;
-  margin: auto;
+ margin: 15px 80px 0 0;
 }
 
 .product_gallery img{
-  border: 2px solid #bdbdbd;
+  // border: 2px solid #bdbdbd;
 }
 .product_gallery img.active{
   border: 2px solid #076fa9;
@@ -200,6 +200,7 @@
 .image_single {
   display: flex;
   justify-content: center;
+  margin: 10px 0;
 }
 
 .image_single img{
@@ -471,7 +472,6 @@ canvas {
 //  height: 300px;
 //}
 
-
 .owl-next{
   padding: 5px 15px !important;
   background: none !important;
@@ -716,7 +716,7 @@ ol.breadcrumb a{
     background: #ffffff;
     border: 1px solid #e0e0e0;
     width: 20%;
-    height: 375px;
+    height: 370px;
     border-radius: 0;
     @include myTransition(0.3s);
     &:hover{
@@ -747,7 +747,7 @@ ol.breadcrumb a{
       align-items: center;
       align-content: center;
       text-align: center;
-      padding: 10px;
+      padding: 2px 4px;
       flex: none;
       i{
         font-size: 2rem;
@@ -771,7 +771,9 @@ ol.breadcrumb a{
       }
       .availabality{
         width: 100%;
-        text-align: left;
+        text-align: right;
+        padding: 0 13px;
+        margin-top: 15px;
         span{
           font-size: 11px;
         }
@@ -780,12 +782,13 @@ ol.breadcrumb a{
         }
       }
 
+
     }
     .card-footer{
       padding: 4px;
       background-color: #ffffff;
       width: 94%;
-      margin: auto;
+      margin: 0 auto;
       .product_price_multiShop{
         display: flex;
         flex-flow: row nowrap;
@@ -817,30 +820,36 @@ ol.breadcrumb a{
     font-size: 20px;
   }
   p{
-    text-align: right;
+    text-align: center;
     font-family: $FDFont;
     color: $secondaryTextColor;
   }
 }
 .product_price_multiShop .product_price:not(.empty):not(.single-price)::before{
   content: 'از ';
+  color: $secondaryTextColor;
 }
 .product_price_multiShop .product_price:not(.empty)::after{
   content: ' تومان';
   font-size: 0.9em;
+  color: $secondaryTextColor;
 }
 .product_price_singleShop .product_price::after{
   content: ' تومان';
   font-size: 0.9em;
+  color: $secondaryTextColor;
 }
 .product_price_multiShop .product_price_shop_count::before{
   content: 'در ';
+  color: #757575;
 }
 .product_price_multiShop .product_price_shop_count::after{
   content: ' فروشگاه';
+  color: #757575;
 }
 .product_price_multiShop .product_price_shop_name::before{
   content: 'در فروشگاه ';
+  color: #757575;
 }
 
 .product_price_shop_name , .product_price_shop_count{
@@ -853,6 +862,10 @@ ol.breadcrumb a{
 .product_price span{
   font-size: 18px;
 }
+.product_price.empty span{
+  font-size: 15px;
+}
+
 
 .product_price_shop span{
   font-family: $titleFont;
@@ -936,12 +949,9 @@ ol.breadcrumb a{
 #single_main_content{
   .card{
     border-radius: 12px;
-    //box-shadow: 0 0 8px #bdbdbd;
     padding: 8px;
-    //min-height: 500px;
     border: none;
   }
-
 }
 
 
@@ -993,10 +1003,11 @@ ol.breadcrumb a{
   margin: 8px auto;
   padding: 5px;
   text-align: right;
+  font-family: $FDFont;
   p{
     font-size: 15px;
-    font-family: $textFont;
     color: $secondaryTextColor;
+    font-family: $FDFont;
     i{
       color: $primaryColor;
       font-size: 20px;
@@ -1016,29 +1027,67 @@ ol.breadcrumb a{
   }
 }
 
-//.owl-carousel {
-//  max-width: 320px;
-//  .owl-nav {
-//    padding-top: .4em;
-//    font-family: sans-serif;
-//    font-size: .8em;
-//    > div {
-//      padding: .4em 1.4em;
-//      border: 1px solid #333;
-//      background: #000;
-//      color: white;
-//      border-radius: .4em;
-//      background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(0, 0, 0, .2));
-//      box-shadow: .1em .1em .4em rgba(0, 0, 0, .5);
-//      &:hover {
-//        background-color: #333;
-//      }
-//    }
-//    .owl-prev {
-//      float: left;
-//    }
-//    .owl-next {
-//      float: right;
-//    }
-//  }
-//}
+
+.owl-carousel{
+  transform: rotate(90deg);
+  width: 270px;
+  margin-top:100px;
+  .owl-stage-outer{
+    height: auto;
+    left: -115px;
+    top: -425px;
+    width: 300px;
+  }
+}
+
+.owl-carousel .owl-nav{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 300px;
+  top: -345px;
+  left: -115px;
+}
+div.owl-carousel .owl-nav .owl-prev, div.owl-carousel .owl-nav .owl-next{
+  font-size:36px;
+  top:unset;
+  bottom: 15px;
+}
+
+.image_slides {
+  position: relative !important;
+  img{
+    transform: rotateZ(-90deg);
+  }
+}
+
+
+.notif_banner{
+  i#notif_close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    @include myTransition(0.4s ease);
+  }
+}
+.notif_banner {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 3000;
+  border-radius: 0;
+  text-align: center;
+  line-height: 60px;
+  color: #eee;
+  font-size: 1.25rem;
+  font-family: $titleFont;
+}
+.notif_banner.warning {
+  background: $AccentColor;
+}
+.notif_banner.success {
+  background: teal;
+}

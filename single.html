@@ -104,7 +104,7 @@
         <span class="close_sidebar">
                         بستن
                         <i class="material-icons align-middle">close</i>
-                    </span>
+        </span>
     </div>
 </header>
 
@@ -113,13 +113,11 @@
 <main style="margin-top: 115px;" id="single_main_content">
 
     <div class="container-fluid">
-
         <div class="top-content">
             <div class="row d-flex justify-content-between">
                 <div class="card right_side_card" style="padding:10px 30px;">
                     <div class="product_detail">
                         <h4 id="productTitleMobile">STM32F103ZCT6</h4>
-                        <!--<br>-->
                         <div class="product_detail_content">
                             <div class="row">
                                 <div class="product_detail_right col-md-6 col-sm-12">
@@ -267,8 +265,15 @@
                             <div class="col-lg-3 col-md-3 col-sm-6 shop_name">
                                 <span>جوان الکترونیک</span>
                                 <a href="#reportingModal" class="report_modal_trigger" data-toggle="modal" data-shop="shoeeepname">
-                                    <span class="show_tooltip" data-toggle="tooltip" data-placement="top" title="گزارش تخلف">
+                                    <span class="show_tooltip report_type">
+                                        <span class="tooltiptext">گزارش تخلف</span>
                                         <i class="material-icons align-middle text-secondary mx-1">info_outline</i>
+                                    </span>
+                                </a>
+                                <a class="prevent_default" style="cursor: pointer;">
+                                    <span class="show_tooltip price_type_success">
+                                        <span class="tooltiptext">قیمت این قطعه به روز است</span>
+                                        <i class="material-icons align-middle text-success mx-1">check_circle</i>
                                     </span>
                                 </a>
                             </div>
@@ -276,7 +281,36 @@
                                 <span class="partName">STM32F103ZCT6</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
-                                <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                <span class="font-weight-bold digits">1500000 تومان</span>
+                                <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 last-col">
+                                <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
+                            </div>
+                        </div>
+                        <div class="row e-shops-row">
+                            <div class="col-lg-3 col-md-3 col-sm-6 shop_name">
+                                <span>بعثت الکترونیک</span>
+                                <div>
+                                    <a href="#reportingModal" class="report_modal_trigger" data-toggle="modal" data-shop="shoeeepname">
+                                    <span class="show_tooltip report_type">
+                                        <span class="tooltiptext">گزارش تخلف</span>
+                                        <i class="material-icons align-middle text-secondary mr-1">info_outline</i>
+                                    </span>
+                                    </a>
+                                    <a class="prevent_default" style="cursor: pointer;">
+                                    <span class="show_tooltip price_type_warning">
+                                        <span class="tooltiptext">قیمت این قطعه به روز نیست</span>
+                                       <i class="material-icons align-middle text-danger">remove_circle</i>
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12">
+                                <span class="partName">STM32F103ZCT6</span>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
+                                <span class="font-weight-bold digits">1500000 تومان</span>
                                 <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
@@ -291,7 +325,7 @@
                                 <span class="partName">STM32F103ZCT6</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
-                                <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                <span class="font-weight-bold digits">1500000 تومان</span>
                                 <span class="subPartPrice">آخرین بروزرسانی 2 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
@@ -306,7 +340,7 @@
                                 <span class="partName">STM32F103ZCT6</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
-                                <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                <span class="font-weight-bold digits">1500000 تومان</span>
                                 <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
@@ -323,7 +357,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
                                 <span class="unavailable_text">ناموجود</span>
-                                <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                <span class="unavailable_digits">1500000 تومان</span>
                                 <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
@@ -339,7 +373,7 @@
                                 <span class="partName">STM32F103ZCT6</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
-                                <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                <span class="font-weight-bold digits">1500000 تومان</span>
                                 <span class="subPartPrice">آخرین بروزرسانی 2 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
@@ -356,7 +390,7 @@
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 PartPriceContainer">
                                 <span class="unavailable_text">ناموجود</span>
-                                <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                <span class="unavailable_digits">1500000 تومان</span>
                                 <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-6 last-col">
@@ -371,7 +405,18 @@
                             <div class="row">
                                 <div class="col-6 shop_name">
                                     <span>بعثت الکترونیک</span>
-                                    <a href="#" class="show_tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><span ><i class="material-icons align-middle text-secondary mx-1">info_outline</i></span></a>
+                                    <div>
+                                        <a href="#" class="show_tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                            <span ><i class="material-icons align-middle text-secondary mr-1">info_outline</i></span>
+                                        </a>
+                                        <a class="prevent_default" style="cursor: pointer;">
+                                    <span class="show_tooltip price_type_warning">
+                                        <span class="tooltiptext">قیمت این قطعه به روز نیست</span>
+                                       <i class="material-icons align-middle text-danger">remove_circle</i>
+                                    </span>
+                                        </a>
+                                    </div>
+
                                 </div>
                                 <div class="col-6 text-left mb-2">
                                     <a href="#" title="" target="_blank" class="btn btn-outline-danger">خرید اینترنتی</a>
@@ -379,7 +424,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="font-weight-bold digits">1500000 تومان</span>
                                     <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
@@ -398,7 +443,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="unavailable_digits">1500000 تومان</span>
                                     <span class="subPartPrice">آخرین بروزرسانی 2 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
@@ -418,7 +463,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="font-weight-bold digits">1500000 تومان</span>
                                     <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
@@ -438,7 +483,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="font-weight-bold digits">1500000 تومان</span>
                                     <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
@@ -458,7 +503,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="font-weight-bold digits">1500000 تومان</span>
                                     <span class="subPartPrice">آخرین بروزرسانی 2 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
@@ -480,7 +525,7 @@
                             <div class="row">
                                 <div class="col-12 text-left PartPriceContainer">
                                     <span class="unavailable_text">ناموجود</span>
-                                    <span class="font-weight-bold text-danger digits">1500000 تومان</span>
+                                    <span class="unavailable_digits">1500000 تومان</span>
                                     <span class="subPartPrice">آخرین بروزرسانی 4 روز پیش</span>
                                 </div>
                                 <div class="col-12 text-center my-4">
@@ -690,7 +735,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -845,7 +889,6 @@
 <!-- Docs Modal -->
 
 
-
 <footer>
     <nav class="footer">
         <ul class="mr-auto">
@@ -867,6 +910,7 @@
 <script src="assets/js/jquery.ez-plus.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/scripts.js"></script>
+
 
 <script>
     var ctx = document.getElementById('canvas').getContext('2d');
@@ -895,9 +939,9 @@
                         backgroundColor: '#f50057',
                         borderColor: '#f50057',
                         borderWidth: 4,
-                         radius: 0,
-                         pointStyle: 'rectRounded',
-                         tension: 0
+                        radius: 0,
+                        pointStyle: 'rectRounded',
+                        tension: 0
                     },
                     {
                         label: 'میانگین قیمت',
@@ -906,9 +950,9 @@
                         backgroundColor: 'Yellow',
                         borderColor: 'Yellow',
                         borderWidth: 4,
-                         radius: 0,
-                         pointStyle: 'rectRounded',
-                         tension: 0
+                        radius: 0,
+                        pointStyle: 'rectRounded',
+                        tension: 0
                     }
                 ],
             },
@@ -946,7 +990,6 @@
                         fontFamily: 'Yekan',
                         fontSize: 13,
                         usePointStyle: true
-        
                     }
                 }
             }
