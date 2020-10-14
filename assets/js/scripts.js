@@ -1,3 +1,7 @@
+$(window).on('load', function () {
+    $('#search_frm_input').css('border-radius', '25px');
+});
+
 jQuery(document).ready(function ($) {
 
     $('#gi-single').ezPlus({
@@ -22,7 +26,7 @@ jQuery(document).ready(function ($) {
         maxZoomLevel: 1.5
     });
 
-    $('#search_frm_input').css('border-radius', '25px');
+    //$('#search_frm_input').css('border-radius', '25px');
 
     $(document).click(function(e) {
         if ( $(e.target).closest('#search_frm_input').length === 0 ) {
@@ -34,7 +38,6 @@ jQuery(document).ready(function ($) {
         if ( $(e.target).closest('.share_popover_container').length === 0 ) {
             $('.share_popover_container').removeClass('active').find('.share_popover').css('display' , 'none');
         }
-
     });
 
 
@@ -43,11 +46,16 @@ jQuery(document).ready(function ($) {
             'border-radius': '25px',
             'box-shadow': '0 0 10px #bdbdbd'
         });
+        //$('.search_res_ajax').css('display' , 'none');
     });
     $('#search_frm_input').on('input',function () {
         let input_txt = $(this).val();
-        if (input_txt !== ''){
+        if (input_txt.length > 0 ){
             $('#clear_btn').css('display', 'block');
+        }else {
+            $('#clear_btn').css('display', 'none');
+        }
+        if (input_txt.length > 1 ){
             $('.search_res_ajax').css('display' , 'block');
             $(this).css({
                 'display': 'block',
@@ -56,7 +64,6 @@ jQuery(document).ready(function ($) {
                 'box-shadow': '0 -5px 10px #bdbdbd'
             });
         }else {
-            $('#clear_btn').css('display', 'none');
             $('#search_frm_input').css({
                 'border-radius': '25px',
                 'box-shadow': '0 0 10px #bdbdbd'
@@ -189,268 +196,269 @@ jQuery(document).ready(function ($) {
 
 
 //  signup form validation
-    let is_name_validate = false;
-    let is_shop_name_validate = false;
-    let is_shop_link_validate = false;
-    let is_phone_validate = false;
-    let is_email_validate = false;
+let is_name_validate = false;
+let is_shop_name_validate = false;
+let is_shop_link_validate = false;
+let is_phone_validate = false;
+let is_email_validate = false;
 
 
-    $('.signup_frm').find('input#name').on('input', function () {
-        let value = $(this).val();
-        if (value === ''){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_name_validate = false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_name_validate = true;
-        }
-        $(this).siblings('.notValid').css('display', 'none');
-        $('.signup_frm').change();
-    });
-    $('.signup_frm').find('input#shop_name').on('input', function () {
-        let value = $(this).val();
-        if (value === ''){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_shop_name_validate = false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_shop_name_validate = true;
-        }
-        $(this).siblings('.notValid').css('display', 'none');
-        $('.signup_frm').change();
-    });
-    $('.signup_frm').find('input#shop_url').on('input', function () {
-        let value = $(this).val();
-        let urlRejex = /(^http[s]?:\/{2})|(^www)|(^\/{1,2})/;
-        let is_url_valid = urlRejex.test(value);
-        console.log(is_url_valid);
-        if (value === '' || ! is_url_valid ){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_shop_link_validate = false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_shop_link_validate = true;
-        }
-        $(this).siblings('.notValid').css('display', 'none');
-        $('.signup_frm').change();
-    });
-    $('.signup_frm').find('input#phone').on('input', function () {
-        let value = $(this).val();
-        if (value === '' || value.length != 11){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_phone_validate = false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_phone_validate = true;
-        }
-        $(this).siblings('.notValid').css('display', 'none');
-        $('.signup_frm').change();
+$('.signup_frm').find('input#name').on('input', function () {
+    let value = $(this).val();
+    if (value === ''){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_name_validate = false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_name_validate = true;
+    }
+    $(this).siblings('.notValid').css('display', 'none');
+    $('.signup_frm').change();
+});
+$('.signup_frm').find('input#shop_name').on('input', function () {
+    let value = $(this).val();
+    if (value === ''){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_shop_name_validate = false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_shop_name_validate = true;
+    }
+    $(this).siblings('.notValid').css('display', 'none');
+    $('.signup_frm').change();
+});
+$('.signup_frm').find('input#shop_url').on('input', function () {
+    let value = $(this).val();
+    let urlRejex = /^http:\/\/|(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+    let is_url_valid = urlRejex.test(value);
+   // console.log(is_url_valid);
+    if (value === '' || ! is_url_valid ){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_shop_link_validate = false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_shop_link_validate = true;
+    }
+    $(this).siblings('.notValid').css('display', 'none');
+    $('.signup_frm').change();
+});
+$('.signup_frm').find('input#phone').on('input', function () {
+    let value = $(this).val();
+    if (value === '' || value.length != 11){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_phone_validate = false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_phone_validate = true;
+    }
+    $(this).siblings('.notValid').css('display', 'none');
+    $('.signup_frm').change();
+});
+$('.signup_frm').find('input#email').on('input', function () {
+    let value = $(this).val();
+    let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    let is_email_valid = emailReg.test( value );
+    if (! is_email_valid || value === ''){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_email_validate = false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_email_validate = true;
+    }
+    $(this).siblings('.notValid').css('display', 'none');
+    $('.signup_frm').change();
 
-    });
-    $('.signup_frm').find('input#email').on('input', function () {
-        let value = $(this).val();
-        let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        let is_email_valid = emailReg.test( value );
-        if (! is_email_valid || value === ''){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_email_validate = false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_email_validate = true;
-        }
-        $(this).siblings('.notValid').css('display', 'none');
-        $('.signup_frm').change();
-
-    });
-    $('.signup_frm').on('change' , function () {
-        if (is_name_validate && is_shop_name_validate && is_shop_link_validate && is_phone_validate && is_email_validate){
-            $('#signup_frm_submit').attr('disabled' , false);
-        }else {
-            $('#signup_frm_submit').attr('disabled' , true);
-        }
-    });
+});
+$('.signup_frm').on('change' , function () {
+    if (is_name_validate && is_shop_name_validate && is_shop_link_validate && is_phone_validate && is_email_validate){
+        $('#signup_frm_submit').attr('disabled' , false);
+    }else {
+        $('#signup_frm_submit').attr('disabled' , true);
+    }
+});
 //  signup form validation
 
-    $('#signup_frm_submit').click(function () {
-        let name = $('#signup_frm').find('input#name').val();
-        let family = $('#signup_frm').find('input#family').val();
-        let shop_name = $('#signup_frm').find('input#shop_name').val();
-        let shop_url = $('#signup_frm').find('input#shop_url').val();
-        let email = $('#signup_frm').find('input#email').val();
-        let phone = $('#signup_frm').find('input#phone').val();
+$('#signup_frm_submit').click(function () {
+    let name = $('#signup_frm').find('input#name').val();
+    let family = $('#signup_frm').find('input#family').val();
+    let shop_name = $('#signup_frm').find('input#shop_name').val();
+    let shop_url = $('#signup_frm').find('input#shop_url').val();
+    let email = $('#signup_frm').find('input#email').val();
+    let phone = $('#signup_frm').find('input#phone').val();
+    let desc = $('#signup_frm').find('textarea#description').val();
 
-        let emailPattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
-        let urlPattern = /(^http[s]?:\/{2})|(^www)|(^\/{1,2})/;
-        if (name === ''){
-            $('#signup_frm').find('input#name').siblings('.invalid-feedback').css('display', 'block');
-        }
-        if(shop_name === ''){
-            $('#signup_frm').find('input#shop_name').siblings('.invalid-feedback').css('display', 'block');
-        }
-        if(phone === ''){
-            $('#signup_frm').find('input#phone').siblings('.invalid-feedback').css('display', 'block');
-        }
-        if(!urlPattern.test(shop_url)){
-            $('#signup_frm').find('input#shop_url').siblings('.invalid-feedback').css('display', 'block');
-        }
-        if(!emailPattern.test(email)){
-            $('#signup_frm').find('input#email').siblings('.invalid-feedback').css('display', 'block');
-        }
+    let emailPattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+    let urlPattern = /^http:\/\/|(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+                  
+    if (name === ''){
+        $('#signup_frm').find('input#name').siblings('.invalid-feedback').css('display', 'block');
+    }
+    if(shop_name === ''){
+        $('#signup_frm').find('input#shop_name').siblings('.invalid-feedback').css('display', 'block');
+    }
+    if(phone === ''){
+        $('#signup_frm').find('input#phone').siblings('.invalid-feedback').css('display', 'block');
+    }
+    if(!urlPattern.test(shop_url)){
+        $('#signup_frm').find('input#shop_url').siblings('.invalid-feedback').css('display', 'block');
+    }
+    if(!emailPattern.test(email)){
+        $('#signup_frm').find('input#email').siblings('.invalid-feedback').css('display', 'block');
+    }
 
-        if (name !== '' && shop_name !== '' && phone !== '' && emailPattern.test(email) && urlPattern.test(shop_url)  ) {
-            $(this).find('i').css('visibility', 'visible').addClass('fa-spin');
-            let link_phone = shop_name + '\n' + phone;
-            $.ajax({
-                url: '/api/v1/users/forms/report',
-                type: 'POST',
-                data: { 'report_type':'shopSignup' ,'full_name':name+family ,'email':email ,'reason':link_phone ,'shop_name':shop_name  },
-                dataType: 'JSON',
-                success: function (data , xhr) {
-                    if (xhr === 'success'){
-                        showSnackBar('green' , 'مشخصات شما ارسال شد. به زودی با شما تماس میگیریم');
-                        resetSignUpForm();
-                    } else {
-                        showSnackBar('red' , xhr);
-                    }
-                }, error:function (err) {
+    if (name !== '' && shop_name !== '' && phone !== '' && emailPattern.test(email) && urlPattern.test(shop_url)  ) {
+        $(this).find('i').css('visibility', 'visible').addClass('fa-spin');
+        let link_phone_desc = shop_name + '\n' + phone + '\n' +  desc;
+        $.ajax({
+            url: '/api/v1/users/forms/report',
+            type: 'POST',
+            data: { 'report_type':'shopSignup' ,'full_name':name+family ,'email':email ,'reason':link_phone_desc ,'shop_name':shop_name  },
+            dataType: 'JSON',
+            success: function (data , xhr) {
+                if (xhr === 'success'){
+                    showSnackBar('green' , 'مشخصات شما ارسال شد. به زودی با شما تماس میگیریم');
+                    resetSignUpForm();
+                } else {
+                    showSnackBar('red' , xhr);
+                }
+            }, error:function (err) {
                     //console.log(err);
                 }, complete:function () {
                     $('#signup_frm_submit').find('i').css('visibility', 'hidden').removeClass('fa-spin');
                 }
             });
-        }else {
-            showSnackBar('red' , 'لطفا خطاهای موجود را اصلاح کنید!');
-        }
+    }else {
+        showSnackBar('red' , 'لطفا خطاهای موجود را اصلاح کنید!');
+    }
 
-    });
+});
 
 
 
 //  contact-us form validation
-    let is_your_name_validate = false;
-    let is_your_email_validate = false;
-    let is_your_subject_validate = false;
-    let is_your_message_body_validate = false;
+let is_your_name_validate = false;
+let is_your_email_validate = false;
+let is_your_subject_validate = false;
+let is_your_message_body_validate = false;
 
-    $('.contact_us_frm').find('input#your_name').on('input', function () {
-        let value = $(this).val();
-        if (value === ''){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_your_name_validate = false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_your_name_validate = true;
-        }
-        $('.contact_us_frm').change();
-    });
-    $('.contact_us_frm').find('input#your_email').on('input', function () {
-        let value = $(this).val();
-        let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        let is_email_valid = emailReg.test( value );
-        if (! is_email_valid || value === ''){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_your_email_validate = false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_your_email_validate = true;
-        }
-        $('.contact_us_frm').change();
-    });
-    $('.contact_us_frm').find('input#your_subject').on('input', function () {
-        let value = $(this).val();
-        if (value === ''){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_your_subject_validate =false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_your_subject_validate =true;
-        }
-        $('.contact_us_frm').change();
-    });
-    $('.contact_us_frm').find('textarea#your_message_body').on('keyup', function () {
-        let value = $(this).val();
-        if (value.length < 20){
-            $(this).siblings('.invalid-feedback').css('display', 'block');
-            is_your_message_body_validate = false;
-        }else {
-            $(this).siblings('.invalid-feedback').css('display', 'none');
-            is_your_message_body_validate = true;
-        }
-        $('.contact_us_frm').change();
-    });
+$('.contact_us_frm').find('input#your_name').on('input', function () {
+    let value = $(this).val();
+    if (value === ''){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_your_name_validate = false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_your_name_validate = true;
+    }
+    $('.contact_us_frm').change();
+});
+$('.contact_us_frm').find('input#your_email').on('input', function () {
+    let value = $(this).val();
+    let emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    let is_email_valid = emailReg.test( value );
+    if (! is_email_valid || value === ''){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_your_email_validate = false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_your_email_validate = true;
+    }
+    $('.contact_us_frm').change();
+});
+$('.contact_us_frm').find('input#your_subject').on('input', function () {
+    let value = $(this).val();
+    if (value === ''){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_your_subject_validate =false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_your_subject_validate =true;
+    }
+    $('.contact_us_frm').change();
+});
+$('.contact_us_frm').find('textarea#your_message_body').on('keyup', function () {
+    let value = $(this).val();
+    if (value.length < 20){
+        $(this).siblings('.invalid-feedback').css('display', 'block');
+        is_your_message_body_validate = false;
+    }else {
+        $(this).siblings('.invalid-feedback').css('display', 'none');
+        is_your_message_body_validate = true;
+    }
+    $('.contact_us_frm').change();
+});
 
-    $('.contact_us_frm').on('change' , function () {
-        if (is_your_name_validate && is_your_email_validate && is_your_subject_validate && is_your_message_body_validate){
-            $('#contactus_frm_submit').attr('disabled' , false);
-        }else {
-            $('#contactus_frm_submit').attr('disabled' , true);
-        }
-    });
+$('.contact_us_frm').on('change' , function () {
+    if (is_your_name_validate && is_your_email_validate && is_your_subject_validate && is_your_message_body_validate){
+        $('#contactus_frm_submit').attr('disabled' , false);
+    }else {
+        $('#contactus_frm_submit').attr('disabled' , true);
+    }
+});
 //  contact-us form validation
-    $('#contactus_frm_submit').click(function () {
-        let your_name = $('#contact_us_frm').find('input#your_name').val();
-        let your_email = $('#contact_us_frm').find('input#your_email').val();
-        let your_subject = $('#contact_us_frm').find('input#your_subject').val();
-        let your_message_body = $('#contact_us_frm').find('textarea#your_message_body').val();
+$('#contactus_frm_submit').click(function () {
+    let your_name = $('#contact_us_frm').find('input#your_name').val();
+    let your_email = $('#contact_us_frm').find('input#your_email').val();
+    let your_subject = $('#contact_us_frm').find('input#your_subject').val();
+    let your_message_body = $('#contact_us_frm').find('textarea#your_message_body').val();
 
-        $(this).find('i').css('visibility', 'visible').addClass('fa-spin');
-        $.ajax({
-            url: '/contactUs',
-            type: 'POST',
-            data: { 'your_name':your_name ,'your_email':your_email ,'your_subject':your_subject ,'your_message_body':your_message_body },
-            dataType: 'JSON',
-            success: function (data) {
-                if (data['msg'] === 1){
-                    alert('پیام شما ارسال شد.');
-                    resetContactUsForm();
-                } else {
-                    alert(data['msg']);
-                }
-            }, error:function (err) {
-                console.log(err);
-            }, complete:function () {
-                $('#contactus_frm_submit').find('i').css('visibility', 'hidden').removeClass('fa-spin');
+    $(this).find('i').css('visibility', 'visible').addClass('fa-spin');
+    $.ajax({
+        url: '/contactUs',
+        type: 'POST',
+        data: { 'your_name':your_name ,'your_email':your_email ,'your_subject':your_subject ,'your_message_body':your_message_body },
+        dataType: 'JSON',
+        success: function (data) {
+            if (data['msg'] === 1){
+                alert('پیام شما ارسال شد.');
+                resetContactUsForm();
+            } else {
+                alert(data['msg']);
             }
-        });
+        }, error:function (err) {
+            console.log(err);
+        }, complete:function () {
+            $('#contactus_frm_submit').find('i').css('visibility', 'hidden').removeClass('fa-spin');
+        }
     });
+});
 
 
 
-    $('#signup_frm_submit').click(function () {
-        $(this).find('i').addClass('fa-spin').css('visibility' , 'visible');
-    });
-    $('#contactus_frm_submit').click(function (e) {
-        $(this).find('i').addClass('fa-spin').css('visibility' , 'visible');
-    });
+$('#signup_frm_submit').click(function () {
+    $(this).find('i').addClass('fa-spin').css('visibility' , 'visible');
+});
+$('#contactus_frm_submit').click(function (e) {
+    $(this).find('i').addClass('fa-spin').css('visibility' , 'visible');
+});
 
 
-    $('#showPassword').hover(function () {
-        $('.signup_frm').find('input#password').attr('type', 'text');
-        $(this).find('i').text('visibility');
-    }, (function () {
-        $('.signup_frm').find('input#password').attr('type', 'password');
-        $(this).find('i').text('visibility_off');
-    }));
-    $('#showConfirmPassword').hover(function () {
-        $('.signup_frm').find('input#password-confirm').attr('type', 'text');
-        $(this).find('i').text('visibility');
-    }, (function () {
-        $('.signup_frm').find('input#password-confirm').attr('type', 'password');
-        $(this).find('i').text('visibility_off');
-    }));
+$('#showPassword').hover(function () {
+    $('.signup_frm').find('input#password').attr('type', 'text');
+    $(this).find('i').text('visibility');
+}, (function () {
+    $('.signup_frm').find('input#password').attr('type', 'password');
+    $(this).find('i').text('visibility_off');
+}));
+$('#showConfirmPassword').hover(function () {
+    $('.signup_frm').find('input#password-confirm').attr('type', 'text');
+    $(this).find('i').text('visibility');
+}, (function () {
+    $('.signup_frm').find('input#password-confirm').attr('type', 'password');
+    $(this).find('i').text('visibility_off');
+}));
 
 
-    $('#add_input').click(function (e) {
-        e.preventDefault();
-        $('.addAttrib').append('<div class="col-6 mb-4"><label for="Attribute_name">عنوان ویژگی </label><input type="text" class="form-control" id="Attribute_name" required></div><div class="col-6 mb-4"><label for="Attribute_value">مقدار ویژگی </label><input type="text" class="form-control" id="Attribute_value" required></div>');
-    });
+$('#add_input').click(function (e) {
+    e.preventDefault();
+    $('.addAttrib').append('<div class="col-6 mb-4"><label for="Attribute_name">عنوان ویژگی </label><input type="text" class="form-control" id="Attribute_name" required></div><div class="col-6 mb-4"><label for="Attribute_value">مقدار ویژگی </label><input type="text" class="form-control" id="Attribute_value" required></div>');
+});
 
 
-    $('.share_popover_container').click(function () {
-        $(this).addClass('active');
-        $(this).find('.share_popover').css('display', 'flex');
-    });
+$('.share_popover_container').click(function () {
+    $(this).addClass('active');
+    $(this).find('.share_popover').css('display', 'flex');
+});
 
 
 
@@ -558,10 +566,16 @@ jQuery(document).ready(function ($) {
 
     // Filter shops list
     $('#shops_list_search').on('input' , function () {
+        window.scrollTo(0,document.body.scrollHeight);
         let value = $(this).val().toLowerCase();
         $('.partNameBold').filter(function() {
             $(this).parent().parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
+        if ($('.partNameBold').text().toLowerCase().indexOf(value) < 0) {
+            $('#shops_search_alert').css('display','block');
+        }else {
+            $('#shops_search_alert').css('display','none');
+        }
         if (value !== ''){
             $('#shops_list_search_icon').html('close').css('cursor' , 'pointer');
         } else {
@@ -611,10 +625,22 @@ jQuery(document).ready(function ($) {
     $(window).scroll(function(event) {
         if ($(this).scrollTop() > 600) {
             $('#scroll_to_top_btn').css('transform', 'translateX(125px) rotateZ(360deg)');
-            //$('.navbar').css('height', '65px');
+            // $('.sidebar').css({
+            //     'position': 'fixed',
+            //     'top': '60px',
+            //     'right': '0',
+            //     'width' : '25%',
+            //     'overflowY' : 'auto'
+            // });
         } else {
             $('#scroll_to_top_btn').css('transform', 'translateX(-125px) rotateZ(-360deg)');
-            //$('.navbar').css('height', '80px');
+            // $('.sidebar').css({
+            //     'position': 'relative',
+            //     'top': '0',
+            //     'right': '0',
+            //     'width' : '100%',
+            //     'overflowY' : 'hidden'
+            // });
         }
     });
     $('#scroll_to_top_btn').on('click', function () {
@@ -640,8 +666,8 @@ jQuery(document).ready(function ($) {
         if (! is_sidebar_open){
             $('.sidebar').css('right', '0');
             $('.sidebar').addClass('desktop_open');
-            $('.filter_container').css('width' , '75%');
-            $('.products_cards').find('.card').css('min-width' , '25%');
+            $('.filter_container').css('width' , '78%');
+            $('.products_cards').find('.card').css('min-width' , '20%');
             $('#main_content').addClass('col-lg-9');
             $('.close_sidebar').click();
         } else {
@@ -649,8 +675,8 @@ jQuery(document).ready(function ($) {
             $('.sidebar').removeClass('desktop_open');
             $('.filter_container').css('width' , '100%');
             $('.products_cards').find('.card').css({
-                'min-width': '20%',
-                'width': '20%'
+                'min-width': '16%',
+                'width': '16%'
             });
             $('#main_content').removeClass('col-lg-9');
         }
@@ -659,17 +685,18 @@ jQuery(document).ready(function ($) {
 
     $('#notif_close').on('click' , function () {
         $('.notif_banner').animate({
-                'bottom': '-200px',
-                'display': 'none'
-            },
-            1000, function() {
-            });
+            'bottom': '-200px',
+            'display': 'none'
+        },
+        1000, function() {
+        });
     });
 
 
     $('.prevent_default').click(function (e) {
         e.preventDefault();
     });
+
 
 
     $.fn.digits = function () {
@@ -680,9 +707,29 @@ jQuery(document).ready(function ($) {
     $('.digits').digits();
     $('.unavailable_digits').digits();
 
+
+
+
+    //set_sidebar_height();
+    $('button.btn-link').click(function(event) {
+        set_sidebar_height();
+    });
 });
 
 
+
+function set_sidebar_height(){
+    //alert('ssss');
+    let overalHeight = 0;
+    $('.sidebar_collapse').each(function(){
+        overalHeight += $(this).height();
+    });
+    $('#sitesCollapse').find('.card-body').css({
+        'height': overalHeight+'px',
+        'maxHeight': '450px'
+    });
+    $('#sitesCollapse').css('height', $(window).height()+overalHeight-100+'px');
+}
 function resetContactUsForm(){
     $('#contact_us_frm').find('input#your_name').val('');
     $('#contact_us_frm').find('input#your_email').val('');
@@ -697,6 +744,7 @@ function resetSignUpForm(){
     $('#signup_frm').find('input#shop_url').val('');
     $('#signup_frm').find('input#email').val('');
     $('#signup_frm').find('input#phone').val('');
+    $('#signup_frm').find('textarea#description').val('');
     $('#signup_frm_submit').attr('disabled','true');
 }
 function resetReportForm(){

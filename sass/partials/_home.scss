@@ -85,12 +85,14 @@
 }
 .search_frm_container{
   border-radius: 10px;
+  margin: auto;
+  width: 100%;
 }
 .search_box{
-  margin: 20% auto;
+  margin: 17% auto;
   #logo {
     img{
-      width: 125px;
+      width: 100px;
       height: auto;
       @include myTransition(0.3s ease);
       &:hover{
@@ -102,7 +104,7 @@
     position: relative;
     height: 50px;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 16px;
     padding: 12px;
     color: #757575;
     border: none;
@@ -119,6 +121,7 @@
     }
   }
 }
+
 
 
 .search_box input::placeholder{
@@ -153,11 +156,10 @@
   padding: 4px;
 }
 
-
 .search_res_ajax{
   position: absolute;
   top: 40px;
-  left: 0;
+  left:0;
   direction: ltr;
   padding: 12px 0;
   background: #fff;
@@ -171,6 +173,9 @@
   -webkit-transition: 0.8s ease;
   -moz-transition: 0.8s ease;
   -o-transition: 0.8s ease;
+  max-height: 250px;
+  overflow-y: auto;
+
   .row{
     border-bottom: 1px solid #e0e0e0;
     margin: auto;
@@ -178,7 +183,8 @@
     max-height: 54px;
     overflow: hidden;
     &::after{
-      content: "...";
+      // content: "\f1ce";
+      // font-family: FontAwesome;
     }
   }
   a{
@@ -188,7 +194,7 @@
     font-size: 14px;
   }
   img{
-    width: 60px;
+    width: 54px;
     padding: 6px;
     margin: auto 8px;
     border-radius: 4px;
@@ -269,6 +275,7 @@
     text-align: center;
     width: 100%;
     padding: 8px;
+    cursor: pointer;
     i{
       color: $AccentColor;
     }
@@ -314,4 +321,13 @@
 }
 .footer li:last-child a::after{
   content: "";
+}
+
+
+.badge{
+    position: absolute;
+    left: 0;
+    top: -4px;
+    border-radius: 50px;
+    padding: 5px;
 }

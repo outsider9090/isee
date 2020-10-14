@@ -102,19 +102,19 @@ body {
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
 	color:    #777;
-	font-size: 0.875rem;
+	font-size: clamp(0.5rem , 0.875rem , 1rem);
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	color:    #777;
-	font-size: 0.875rem;
+	font-size: clamp(0.5rem , 0.875rem , 1rem);
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
 	color:    #777;
-	font-size: 0.875rem;
+	font-size: clamp(0.5rem , 0.875rem , 1rem);
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
 	color:    #777;
-	font-size: 0.875rem;
+	font-size: clamp(0.5rem , 0.875rem , 1rem);
 }
 a {
 	text-decoration: none;
@@ -147,7 +147,7 @@ button:disabled{
 }
 
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 6px;
 }
 
 /* Track */
@@ -471,4 +471,21 @@ button:disabled{
 }
 .show_tooltip:hover .tooltiptext {
 	visibility: visible;
+}
+
+input.form-control:focus , textarea.form-control:focus , select.form-control:focus , {
+    border-color: #e0e0e0;
+    box-shadow: 0 0 0 0.1rem #e0e0e0;
+}
+
+.main-title span{
+	font-family: Arial,sans-serif, Helvetica;
+}
+.blurb , .lego-btn{
+	font-family: $titleFont;
+}
+
+span.bold_text {
+	color: $primaryColor;
+	font-weight: bold;
 }

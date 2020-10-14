@@ -22,7 +22,7 @@
     <meta property="og:description" content="" />
     <title>آی سی Isee - موتور جستجو قطعات الکترونیکی</title>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/maticons.css"/>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/main-styles.css" />
 </head>
@@ -40,7 +40,10 @@
                     <a class="nav-link" href="signup.html">ثبت نام فروشگاه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="shops_list.html">لیست فروشگاه ها</a>
+                    <a class="nav-link" href="shops_list.html" style="position: relative;">
+                        لیست فروشگاه ها 
+                        <span class="badge badge-success">11</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -52,7 +55,10 @@
                             <a class="nav-link" href="signup.html"><i class="material-icons align-middle mx-2">add_shopping_cart</i> ثبت نام فروشگاه</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="shops_list.html"><i class="material-icons align-middle mx-2">filter_list</i>لیست فروشگاه ها</a>
+                            <a class="nav-link" href="shops_list.html" style="position: relative;">
+                                <i class="material-icons align-middle mx-2">filter_list</i>لیست فروشگاه ها
+                                <span class="badge badge-success" id="sidebar_badge">33</span>
+                            </a>
                         </li>
                     </ul>
                     <span class="close_sidebar">
@@ -67,7 +73,7 @@
 <section style="background-color: #f5f5f5;height: 100vh;">
     <div class="container-fluid demo">
         <div class="text-center">
-            <main class="container-fluid">
+            <main class="">
                 <div id="nav_back_cover"></div>
                 <div class="row h-100 justify-content-center align-items-center">
                     <div class="search_box col-lg-8 col-md-8 col-sm-12">
@@ -77,13 +83,61 @@
                             </figure>
                         </div>
                         <form action="products.html" style="position:relative;z-index: 10" id="search_frm">
-                            <div class="search_frm_container input-group mb-3">
+                            <div class="search_frm_container input-group mb-3" style="width: 74%">
                                 <input type="text" class="form-control" aria-label=""
-                                       aria-describedby="search_btn" id="search_frm_input" autocomplete="off">
+                                       aria-describedby="search_btn" id="search_frm_input" autocomplete="off" />
                                 <i class="material-icons" id="search_btn_icon" style="height: 50px;line-height: 50px;">search</i>
                                 <i class="material-icons" id="clear_btn" title="Clear" style="height: 50px;line-height: 50px;">close</i>
                             </div>
-                            <div class="search_res_ajax">
+                            <div class="search_res_ajax" style="left: 13%;width: 74%">
+                                <div class="row">
+                                    <a href="#">
+                                        <img src="assets/images/p1.jpg" alt="">
+                                        <strong>STM32F103ZCT6</strong>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="#">
+                                        <img src="assets/images/p2.jpg" alt="">
+                                        <strong>STM32F103ZCT6</strong>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="#">
+                                        <img src="assets/images/image_not_found.jpg" alt="">
+                                        <strong>STM32F103ZCT6</strong>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="#">
+                                        <img src="assets/images/p1.jpg" alt="">
+                                        <strong>STM32F103ZCT6</strong>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="#">
+                                        <img src="assets/images/p1.jpg" alt="">
+                                        <strong>STM32F103ZCT6</strong>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="#">
+                                        <img src="assets/images/p2.jpg" alt="">
+                                        <strong>STM32F103ZCT6</strong>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="#">
+                                        <img src="assets/images/image_not_found.jpg" alt="">
+                                        <strong>STM32F103ZCT6</strong>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <a href="#">
+                                        <img src="assets/images/p1.jpg" alt="">
+                                        <strong>STM32F103ZCT6</strong>
+                                    </a>
+                                </div>
                                 <div class="row">
                                     <a href="#">
                                         <img src="assets/images/p1.jpg" alt="">

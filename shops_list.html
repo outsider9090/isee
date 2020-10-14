@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0"/>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animate.min.css"/>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/main-styles.css" />
 </head>
@@ -70,39 +71,64 @@
                             <li class="breadcrumb-item"><a href="#">صفحه اصلی</a></li>
                             <li class="breadcrumb-item active" aria-current="page">لیست فروشگاه ها</li>
                         </ol>
-                    </nav>
-                    <div id="shops_list_search_container">
+                        <div id="shops_list_search_container">
                         <input type="text" class="form-control my-2" id="shops_list_search" placeholder="جستجوی فروشگاه...">
                         <i class="material-icons align-middle text-muted" id="shops_list_search_icon">search</i>
                     </div>
+                    </nav>
                 </div>
 
+                <div class="shops_list_desc jumbotron">
+                  <p class="lead">
+                    اگر شما صاحب فروشگاهی هستید که نام آن در لیست فروشگاه‌های زیر وجود ندارد و تمایل به اضافه کردن آن به سامانه Isee را دارید، لطفاً
+                      <a href="#" style="font-weight: bold;">فرم ثبت فروشگاه</a> را تکمیل کنید تا در اولین فرصت با شما تماس بگیریم و فروشگاه شما هم به لیست اضافه شود.
+                      <br>
+                    اگر شما صاحب فروشگاهی هستید که فروشگاه شما در لیست زیر وجود دارد، لطفاً اطلاعات تماس خود را در <a href="#" style="font-weight: bold;">فرم ثبت فروشگاه</a> وارد نمایید تا بتوانیم در آینده نزدیک کنترل پنل وب سایتتان را به شما تحویل دهیم و در صورت بروز مشکل یا خطا با شما مستقیماً در تماس باشیم.
+                      <br>
+                    همچنین اگر شما صاحب فروشگاهی نیستید ولی فروشگاه‌هایی را می‌شناسید که اضافه شدن اون ها به سامانه Isee می‌تواند به شما و سایرین کمک کند، لطفاً <a href="#" style="font-weight: bold;">فرم ثبت فروشگاه</a> را پر کرده و برای ما ارسال کنید.
+                  </p>
+                </div>
+                <fieldset class="shops_list_header">
+                    <h3>تعداد کل فروشگاه ها: <span>33</span></h3>
+                </fieldset>
+                <hr />
+
                 <div class="shops_list d-flex justify-content-start">
+
+                    <div class="alert alert-warning fade show m-3 w-100 text-center" role="alert" style="display: none;" id="shops_search_alert">
+                        <strong>خطا!</strong> جستجوی شما نتیجه ای نداشت.
+                    </div>
+
                     <div class="shops_cards">
-                        <div class="card">
+                        <div class="card wow fadeInUp" data-wow-duration="1s">
                             <div class="card-header">
                                 <a href="single.html">
                                     <img src="./assets/images/shop1.jpg" alt="">
                                 </a>
                                 <h6 class="partNameBold">فروشگاه پینو</h6>
                             </div>
-                            <!--<div class="card-body">-->
-                                <!--<div class="shops_desc my-1">-->
-                                    <!--<p>-->
-                                        <!--لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است-->
-                                    <!--</p>-->
-                                <!--</div>-->
-                            <!--</div>-->
+                            <div class="card-body">
+                                <div class="shops_details">
+                                    <span class="all_products"> تعداد کل محصولات : <span>444</span></span>
+                                    <span class="availabale_products"> تعداد محصولات موجود :<span>222</span> </span>
+                                </div>
+                            </div>
                             <div class="card-footer">
                                 <a href="#" class="btn btn-block btn-primary">مشاهده</a>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card wow fadeInUp" data-wow-duration="1s">
                             <div class="card-header">
                                 <a href="single.html">
                                     <img src="./assets/images/shop2.jpg" alt="">
                                 </a>
                                 <h6 class="partNameBold">فروشگاه پوما</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="shops_details">
+                                    <span class="all_products"> تعداد کل محصولات : <span>780</span></span>
+                                    <span class="availabale_products"> تعداد محصولات موجود :<span>250</span> </span>
+                                </div>
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn btn-block btn-primary">مشاهده</a>
@@ -115,18 +141,11 @@
                                 </a>
                                <h6 class="partNameBold">فروشگاه پینو</h6>
                             </div>
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-block btn-primary">مشاهده</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <a href="single.html">
-                                    <!-- if shop has no avatar -->
-                                    <img src="./assets/images/image_not_found.jpg" alt="">
-                                    <!-- if shop has no avatar -->
-                                </a>
-                                <h6 class="partNameBold">فروشگاه پینو</h6>
+                            <div class="card-body">
+                                <div class="shops_details">
+                                    <span class="all_products"> تعداد کل محصولات : <span>780</span></span>
+                                    <span class="availabale_products"> تعداد محصولات موجود :<span>250</span> </span>
+                                </div>
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn btn-block btn-primary">مشاهده</a>
@@ -141,6 +160,12 @@
                                 </a>
                                 <h6 class="partNameBold">فروشگاه پینو</h6>
                             </div>
+                            <div class="card-body">
+                                <div class="shops_details">
+                                    <span class="all_products"> تعداد کل محصولات : <span>780</span></span>
+                                    <span class="availabale_products"> تعداد محصولات موجود :<span>250</span> </span>
+                                </div>
+                            </div>
                             <div class="card-footer">
                                 <a href="#" class="btn btn-block btn-primary">مشاهده</a>
                             </div>
@@ -148,9 +173,17 @@
                         <div class="card">
                             <div class="card-header">
                                 <a href="single.html">
-                                    <img src="./assets/images/shop1.jpg" alt="">
+                                    <!-- if shop has no avatar -->
+                                    <img src="./assets/images/image_not_found.jpg" alt="">
+                                    <!-- if shop has no avatar -->
                                 </a>
                                 <h6 class="partNameBold">فروشگاه پینو</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="shops_details">
+                                    <span class="all_products"> تعداد کل محصولات : <span>780</span></span>
+                                    <span class="availabale_products"> تعداد محصولات موجود :<span>250</span> </span>
+                                </div>
                             </div>
                             <div class="card-footer">
                                 <a href="#" class="btn btn-block btn-primary">مشاهده</a>
@@ -186,6 +219,14 @@
 <script src="assets/js/jquery.ez-plus.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/scripts.js"></script>
+<script src="assets/js/wow.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        new WOW().init();
+    })
+</script>
+
 
 </body>
 </html>
