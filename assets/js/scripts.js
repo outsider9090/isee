@@ -1,7 +1,3 @@
-$(window).on('load', function () {
-    $('#search_frm_input').css('border-radius', '25px');
-});
-
 jQuery(document).ready(function ($) {
 
     $('#gi-single').ezPlus({
@@ -26,11 +22,13 @@ jQuery(document).ready(function ($) {
         maxZoomLevel: 1.5
     });
 
-    //$('#search_frm_input').css('border-radius', '25px');
-
     $(document).click(function(e) {
         if ( $(e.target).closest('#search_frm_input').length === 0 ) {
             $('.search_res_ajax').css('display' , 'none');
+            $('#search_frm_input').css({
+            'border-radius': '25px',
+            'box-shadow': '0 0 10px #bdbdbd'
+        });
         }
         if ( $(e.target).closest('#dropdownMenuButton').length === 0 ) {
             $('#dropdownMenuButton').find('i').css('transform' , 'rotateZ(0deg)');
@@ -42,10 +40,10 @@ jQuery(document).ready(function ($) {
 
 
     $('#search_frm_input').on('blur', function () {
-        $(this).css({
-            'border-radius': '25px',
-            'box-shadow': '0 0 10px #bdbdbd'
-        });
+        // $(this).css({
+        //     'border-radius': '25px',
+        //     'box-shadow': '0 0 10px #bdbdbd'
+        // });
         //$('.search_res_ajax').css('display' , 'none');
     });
     $('#search_frm_input').on('input',function () {
@@ -232,15 +230,15 @@ $('.signup_frm').find('input#shop_url').on('input', function () {
     let urlRejex = /^http:\/\/|(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
     let is_url_valid = urlRejex.test(value);
    // console.log(is_url_valid);
-    if (value === '' || ! is_url_valid ){
-        $(this).siblings('.invalid-feedback').css('display', 'block');
-        is_shop_link_validate = false;
-    }else {
-        $(this).siblings('.invalid-feedback').css('display', 'none');
-        is_shop_link_validate = true;
-    }
-    $(this).siblings('.notValid').css('display', 'none');
-    $('.signup_frm').change();
+   if (value === '' || ! is_url_valid ){
+    $(this).siblings('.invalid-feedback').css('display', 'block');
+    is_shop_link_validate = false;
+}else {
+    $(this).siblings('.invalid-feedback').css('display', 'none');
+    is_shop_link_validate = true;
+}
+$(this).siblings('.notValid').css('display', 'none');
+$('.signup_frm').change();
 });
 $('.signup_frm').find('input#phone').on('input', function () {
     let value = $(this).val();
@@ -289,7 +287,7 @@ $('#signup_frm_submit').click(function () {
 
     let emailPattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
     let urlPattern = /^http:\/\/|(www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
-                  
+
     if (name === ''){
         $('#signup_frm').find('input#name').siblings('.invalid-feedback').css('display', 'block');
     }
@@ -675,8 +673,8 @@ $('.share_popover_container').click(function () {
             $('.sidebar').removeClass('desktop_open');
             $('.filter_container').css('width' , '100%');
             $('.products_cards').find('.card').css({
-                'min-width': '16%',
-                'width': '16%'
+                'min-width': '20%',
+                'width': '20%'
             });
             $('#main_content').removeClass('col-lg-9');
         }
@@ -698,7 +696,6 @@ $('.share_popover_container').click(function () {
     });
 
 
-
     $.fn.digits = function () {
         return this.each(function () {
             $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
@@ -706,8 +703,6 @@ $('.share_popover_container').click(function () {
     };
     $('.digits').digits();
     $('.unavailable_digits').digits();
-
-
 
 
     //set_sidebar_height();
@@ -755,6 +750,7 @@ function resetReportForm(){
         'font-size': '11px'
     });
     $('#reportingForm').find('#message-text').css('border-color', '#ced4da');
+    $('#reporting_frm_submit').attr('disabled','true');
 }
 function getShopName(shop_name) {
     $('input#shop_name').val(shop_name);

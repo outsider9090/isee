@@ -14,6 +14,9 @@
   box-shadow: 0 0 5px #bdbdbd;
   text-indent: 35px;
   direction: ltr;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+
 }
 
 .product_detail{
@@ -85,29 +88,64 @@
   align-items: center;
   align-content: flex-start;
   padding: 0;
-}
-.product_detail_left h4{
-  text-align: center;
-  color: #076fa9;
-  margin-bottom: 30px;
-  font-weight: bold;
-  font-family: vazirLatinBold, sans-serif, Arial, Helvetica;
-}
-.product_detail_left p{
-  width: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  align-content: center;
-  direction: ltr;
-  margin: 15px auto;
-  color: #757575;
-  font-family: sans-serif, sans-serif, Arial, Helvetica;
-  font-weight: bold;
-}
-.product_detail_left p span {
-  text-align: left;
+  h4{
+    text-align: center;
+    color: #076fa9;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: vazirLatinBold, sans-serif, Arial, Helvetica;
+  }
+  p{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    direction: ltr;
+    margin: 15px auto;
+    color: #757575;
+    font-family: sans-serif, sans-serif, Arial, Helvetica;
+    font-weight: bold;
+    span {
+      text-align: left;
+    }
+  }
+  .shop_details {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    span{
+      width: 100%;
+      padding: 5px 0;
+    }
+    .shop_details_title{
+      font-family: $titleFont;
+      font-size: 16px;
+      margin-left: 4px;
+      color: $titleColor;
+    }
+    .shop_details_value{
+      color: $primaryTextColor;
+      font-size: 14px;
+    }
+    .shop_details_name_value{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: center;
+    }
+  }
+  .shop_details_btn{
+    width: 100%;
+    margin: auto;
+  }
+
 }
 
 
@@ -500,6 +538,8 @@ canvas {
     top: 55px;
     right: 0;
     width: 22%;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
     @include myTransition(0.2s ease);
     overflow-y:auto;
     .card{
@@ -712,6 +752,17 @@ canvas {
 
   .products_list{
     margin-top: 60px;
+    .img_container{
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+  }
+
+  .products_cards .card-header::-webkit-scrollbar {
+    display: none;
   }
 
   .products_cards{
@@ -728,23 +779,24 @@ canvas {
       background: #ffffff;
       border: 1px solid #e0e0e0;
       width: 20%;
-      height: 400px;
+      height: 435px;
       border-radius: 0;
       @include myTransition(0.3s);
       &:hover{
         box-shadow: 0 0 8px 8px #eeeeee;
         border-color: #ffffff;
       }
-            &:hover img{
+      &:hover img{
         transform: scale(1.05);
       }
-
       .card-header {
         text-align: center;
         background-color: transparent;
         border-bottom: none;
         height: 250px;
-        overflow-y: hidden;
+        overflow-y: auto;
+        -ms-overflow-style: none; /* IE 11 */
+        scrollbar-width: none; /* Firefox 64 */
         h6{
           color: #757575;
           margin: 12px auto;
@@ -754,6 +806,7 @@ canvas {
         img{
           width: 150px;
           height: auto;
+          max-height:150px;
           @include myTransition(0.5s ease);
         }
       }
@@ -786,8 +839,6 @@ canvas {
           font-weight: bold;
           font-family: VazirBold, sans-serif, Arial, Helvetica;
         }
-
-
         .product_status{
           text-align: right;
           width: 100%;
@@ -815,14 +866,11 @@ canvas {
             }
           }
         }
-
-
-
       }
       .card-footer{
         padding: 4px;
         background-color: #ffffff;
-        width: 94%;
+        width: 100%;
         margin: 0 auto;
         .product_price_multiShop{
           display: flex;
@@ -1131,3 +1179,16 @@ canvas {
     cursor: default;
   }
 
+
+.marginTopAvailability{
+  margin-top: 60px;
+}
+.marginTopUpToDatePrice{
+  margin-top: 31px;
+}
+
+.highlight_text{
+  color: $primaryColor;
+  font-weight: bold;
+  font-size: 15px;
+}
