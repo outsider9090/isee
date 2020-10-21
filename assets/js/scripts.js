@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
         zoomWindowPosition: 10,
         borderColour: '#888',
         borderSize: 4,
-        constrainSize: true,
+        constrainSize: false,
         easing:true,
         easingAmount: 12,
         galleryActiveClass:"active",

@@ -587,6 +587,60 @@
     font-size: 13px;
   }
 
+  .shops_list{
+    margin-top: 24px;
+    .shops_cards{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      align-content: center;
+      padding:0 20px;
+      .card{
+        padding: 0;
+        margin: 20px 1px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        min-width: 130px;
+        max-width: 22%;
+        height: auto;
+        width: 100%;
+        text-align: right;
+        border-radius: 20px;
+        @include myTransition(0.3s ease);
+        &:hover {
+          box-shadow: 0 0 4px $hoverColor;
+          transform: translateY(-2px);
+        }
+        .card-header {
+          text-align: center;
+          background-color: transparent;
+          border-bottom: none;
+          h6{
+            font-size: 14px;
+          }
+          img{
+            width: 85px;
+            height: 85px;
+          }
+        }
+        .card-body {
+          span{
+            font-size: 10px;
+          }
+          .all_products span{
+            font-size: 12px !important;
+          }
+          .availabale_products span{
+            font-size: 12px !important;
+          }
+        }
+
+      }
+    }
+  }
+
+
 }
 @media screen and (max-width: 300px) {
   .product_detail_left .shop_details_btn{

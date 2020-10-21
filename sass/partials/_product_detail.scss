@@ -779,7 +779,7 @@ canvas {
       background: #ffffff;
       border: 1px solid #e0e0e0;
       width: 20%;
-      height: 435px;
+      height: 405px;
       border-radius: 0;
       @include myTransition(0.3s);
       &:hover{
@@ -793,8 +793,8 @@ canvas {
         text-align: center;
         background-color: transparent;
         border-bottom: none;
-        height: 250px;
-        overflow-y: auto;
+        height: 240px;
+        overflow-y: hidden;
         -ms-overflow-style: none; /* IE 11 */
         scrollbar-width: none; /* Firefox 64 */
         h6{
@@ -842,7 +842,7 @@ canvas {
         .product_status{
           text-align: right;
           width: 100%;
-          margin-top: 15px;
+          margin-top: 0;
           .availabality{
             width: 100%;
             text-align: right;

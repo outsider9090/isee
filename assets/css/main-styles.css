@@ -1656,7 +1656,7 @@ ol.breadcrumb a {
   background: #ffffff;
   border: 1px solid #e0e0e0;
   width: 20%;
-  height: 435px;
+  height: 405px;
   border-radius: 0;
   transition: 0.3s !important;
   -webkit-transition: 0.3s !important;
@@ -1675,8 +1675,8 @@ ol.breadcrumb a {
   text-align: center;
   background-color: transparent;
   border-bottom: none;
-  height: 250px;
-  overflow-y: auto;
+  height: 240px;
+  overflow-y: hidden;
   -ms-overflow-style: none;
   /* IE 11 */
   scrollbar-width: none;
@@ -1731,7 +1731,7 @@ ol.breadcrumb a {
 .products_cards .card .card-body .product_status {
   text-align: right;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 0;
 }
 .products_cards .card .card-body .product_status .availabality {
   width: 100%;
@@ -3094,6 +3094,60 @@ input.signUpInput {
 
   .similar-product-shop {
     font-size: 13px;
+  }
+
+  .shops_list {
+    margin-top: 24px;
+  }
+  .shops_list .shops_cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+    padding: 0 20px;
+  }
+  .shops_list .shops_cards .card {
+    padding: 0;
+    margin: 20px 1px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    min-width: 130px;
+    max-width: 22%;
+    height: auto;
+    width: 100%;
+    text-align: right;
+    border-radius: 20px;
+    transition: 0.3s ease !important;
+    -webkit-transition: 0.3s ease !important;
+    -moz-transition: 0.3s ease !important;
+    -o-transition: 0.3s ease !important;
+    -ms-transition: 0.3s ease !important;
+  }
+  .shops_list .shops_cards .card:hover {
+    box-shadow: 0 0 4px #81939C;
+    transform: translateY(-2px);
+  }
+  .shops_list .shops_cards .card .card-header {
+    text-align: center;
+    background-color: transparent;
+    border-bottom: none;
+  }
+  .shops_list .shops_cards .card .card-header h6 {
+    font-size: 14px;
+  }
+  .shops_list .shops_cards .card .card-header img {
+    width: 85px;
+    height: 85px;
+  }
+  .shops_list .shops_cards .card .card-body span {
+    font-size: 10px;
+  }
+  .shops_list .shops_cards .card .card-body .all_products span {
+    font-size: 12px !important;
+  }
+  .shops_list .shops_cards .card .card-body .availabale_products span {
+    font-size: 12px !important;
   }
 }
 @media screen and (max-width: 300px) {
