@@ -18,27 +18,20 @@
     //margin: auto -30px;
     margin-right: 75px;
   }
-  .btn-group{
-    button{
-      font-size: 13px;
-    }
-    a{
-      font-size: 13px;
-      padding: 0 12px;
-    }
-  }
+  
   .product_detail_footer #pd_footer_left {
     justify-content: flex-end;
   }
 
 }
+
 @media screen and (max-width: 1024px) {
   .product_detail_left .shop_details_btn{
     width: 75%;
   }
   .right_side_card {
-    width: 100%;
-    margin: 30px auto;
+    width: 96%;
+    margin: 10px auto;
   }
   .left_side_card{
     width: 100%;
@@ -103,7 +96,28 @@
     margin: auto 75px;
   }
 }
+
 @media screen and (max-width: 768px) {
+  .product_detail_footer #pd_footer_left {
+    justify-content: center;
+    width: 100%;
+}
+  .modal-dialog{
+    margin-bottom: 50px;
+  }
+  .footer ul {
+    justify-content: center;
+}
+
+  #breadcrumb_nav .filter_buttons_container {
+    margin: 8px auto;
+}
+  .container-fluid {
+    width: 100%;
+}
+  #price_range{
+    width: 85%;
+  }
   .product_detail_left .shop_details_btn{
     width: 75%;
   }
@@ -146,8 +160,12 @@
     width: 52px !important;
   }
   .product_gallery{
-    margin-right: 50%;
+    //margin-right: 50%;
+    margin: auto;
     justify-content: center;
+  }
+  .image_single img{
+    width: 200px;
   }
   .owl-carousel .owl-stage-outer {
     left: -175px;
@@ -193,12 +211,12 @@
 
   .share_popover_container.active{
     &:after{
-      bottom: 36px !important;
+      bottom: 40px !important;
     }
   }
   .signup_form_container{
     max-width: 100%;
-    padding: 15px;
+    padding: 0;
     margin: 50px auto;
     border-radius: 8px;
   }
@@ -316,6 +334,7 @@
 
   .products_cards{
     justify-content: center;
+    padding: 50px 0;
   }
 
   .sidebar{
@@ -341,6 +360,9 @@
 
 }
 @media screen and (max-width: 600px) {
+  #price_range{
+    width: 70%;
+  }
   .product_detail_left .shop_details_btn{
     width: 65%;
   }
@@ -373,10 +395,13 @@
     font-size: 14px;
   }
   .pre-content {
-    max-width: 65% !important;
+    //max-width: 65% !important;
   }
 }
 @media screen and (max-width: 500px) {
+  #price_range{
+    width: 60%;
+  }
 
   .product_detail_left .shop_details_btn{
     width: 55%;
@@ -394,7 +419,7 @@
     }
 
   .pre-content {
-    max-width: 50% !important;
+    //max-width: 50% !important;
   }
   .owl-carousel .owl-stage-outer {
     left: -175px;
@@ -499,6 +524,16 @@
   }
 }
 @media screen and (max-width: 400px) {
+  .aboutus_container .card .aboutus_txt p {
+    font-size: 13px;
+  }
+  .shops_list_desc p {
+    font-size: 13px;
+  }
+
+  #price_range{
+    width: 45%;
+  }
   .product_detail_left .shop_details_btn{
     width: 40%;
   }
@@ -510,7 +545,7 @@
     text-align: center;
   }
   .pre-content {
-    max-width: 40% !important;
+    //max-width: 40% !important;
   }
   .owl-carousel .owl-stage-outer {
     left: -175px;
@@ -530,7 +565,7 @@
   }
 
   .pre-content {
-    max-width: 75%;
+    //max-width: 75%;
     text-align: center;
   }
   .main_sidebar {
@@ -574,10 +609,10 @@
   .cards .card {
     padding: 0 !important;
     margin: 5px 2px;
-    width: 150px;
+    width: 110px;
     .card-header img {
-      width: 115px;
-      height: 115px;
+      width: 85px;
+      height: 85px;
     }
     .card-header h6 {
       font-size: 13px;
@@ -588,7 +623,7 @@
   }
 
   .shops_list{
-    margin-top: 24px;
+    margin: 24px auto;
     .shops_cards{
       display: flex;
       flex-flow: row wrap;
@@ -640,9 +675,11 @@
     }
   }
 
-
 }
 @media screen and (max-width: 300px) {
+  #price_range{
+    width: 30%;
+  }
   .product_detail_left .shop_details_btn{
     width: 30%;
   }
@@ -653,7 +690,7 @@
     width: 100%;
   }
   .pre-content {
-    max-width: 30% !important;
+    //max-width: 30% !important;
   }
   .products_cards .card{
     min-width: 100%;
@@ -668,6 +705,9 @@
   .navbar-brand{
     width: 10%;
     text-align: center;
+  }
+  #docs_btn{
+    width: 100%;
   }
 
 }

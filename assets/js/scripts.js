@@ -666,6 +666,7 @@ $('.share_popover_container').click(function () {
             $('.sidebar').addClass('desktop_open');
             $('.filter_container').css('width' , '78%');
             $('.products_cards').find('.card').css('min-width' , '20%');
+            $('.products_cards').css('width' , '96%');
             $('#main_content').addClass('col-lg-9');
             $('.close_sidebar').click();
         } else {
@@ -676,6 +677,7 @@ $('.share_popover_container').click(function () {
                 'min-width': '20%',
                 'width': '20%'
             });
+            $('.products_cards').css('width' , '100%');
             $('#main_content').removeClass('col-lg-9');
         }
     });

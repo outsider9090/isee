@@ -5,10 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/main-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/main-styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main-styles.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/partials/_about_us.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/partials/_about_us.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/partials/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/partials/_home.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/partials/_product_detail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/partials/_product_detail.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sass/partials/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/partials/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shops_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/shops_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/single.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,16 +24,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/products.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="399" column="42" lean-forward="true" selection-start-line="399" selection-start-column="42" selection-end-line="399" selection-end-column="42" />
+            <state relative-caret-position="365">
+              <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sass/partials/_home.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5208">
+              <caret line="217" column="15" selection-start-line="217" selection-start-column="15" selection-end-line="217" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -39,17 +48,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/partials/_product_detail.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="791" column="18" selection-start-line="791" selection-start-column="7" selection-end-line="791" selection-end-column="18" />
+            <state relative-caret-position="18408">
+              <caret line="767" column="2" selection-start-line="767" selection-start-column="2" selection-end-line="768" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/single.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="968" column="34" lean-forward="true" selection-start-line="968" selection-start-column="34" selection-end-line="968" selection-end-column="34" />
+              <caret line="1021" column="25" lean-forward="true" selection-start-line="1021" selection-start-column="25" selection-end-line="1021" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -57,12 +66,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/partials/_responsive.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="613" column="9" lean-forward="true" selection-start-line="613" selection-start-column="9" selection-end-line="613" selection-end-column="9" />
+            <state relative-caret-position="14520">
+              <caret line="613" column="9" selection-start-line="613" selection-start-column="9" selection-end-line="613" selection-end-column="9" />
               <folding>
                 <element signature="e#38#149#0" />
-                <element signature="e#188#542#0" />
-                <element signature="e#7423#8609#0" />
               </folding>
             </state>
           </provider>
@@ -71,8 +78,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/partials/_base.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="672">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/scripts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16080">
+              <caret line="670" column="40" selection-start-line="670" selection-start-column="40" selection-end-line="670" selection-end-column="40" />
+              <folding>
+                <element signature="n#!!block;n#set_sidebar_height#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,6 +109,8 @@
       <find>products_cards</find>
       <find>atmega</find>
       <find>card-header</find>
+      <find>owl-carousel</find>
+      <find>desktop_products_sidebar_toggler</find>
     </findStrings>
     <dirStrings>
       <dir>D:\NEW\sisog\sisog\others\1\isee</dir>
@@ -105,8 +126,11 @@
         <option value="$PROJECT_DIR$/sass/partials/_responsive.scss" />
         <option value="$PROJECT_DIR$/shops_list.html" />
         <option value="$PROJECT_DIR$/products.html" />
+        <option value="$PROJECT_DIR$/sass/partials/_home.scss" />
         <option value="$PROJECT_DIR$/sass/partials/_product_detail.scss" />
+        <option value="$PROJECT_DIR$/assets/js/scripts.js" />
         <option value="$PROJECT_DIR$/single.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -128,6 +152,17 @@
             <path>
               <item name="isee" type="b2602c69:ProjectViewProjectNode" />
               <item name="isee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="isee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="isee" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="isee" type="b2602c69:ProjectViewProjectNode" />
+              <item name="isee" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="isee" type="b2602c69:ProjectViewProjectNode" />
@@ -184,11 +219,17 @@
       <workItem from="1603171037756" duration="320000" />
       <workItem from="1603180108845" duration="2374000" />
       <workItem from="1603258930493" duration="530000" />
+      <workItem from="1603689374787" duration="1199000" />
+      <workItem from="1604295497808" duration="402000" />
+      <workItem from="1604308617802" duration="470000" />
+      <workItem from="1604309150099" duration="1081000" />
+      <workItem from="1604322917221" duration="1220000" />
+      <workItem from="1604467514711" duration="1436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9282000" />
+    <option name="totallyTimeSpent" value="15090000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -279,8 +320,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/products.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="399" column="42" lean-forward="true" selection-start-line="399" selection-start-column="42" selection-end-line="399" selection-end-column="42" />
+        <state relative-caret-position="7320">
+          <caret line="399" column="42" selection-start-line="399" selection-start-column="42" selection-end-line="399" selection-end-column="42" />
           <folding>
             <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#main#0;n#body#0;n#html#0;n#!!top" />
@@ -296,36 +337,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sass/partials/_contact_us.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/partials/_home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5208">
+          <caret line="217" column="15" selection-start-line="217" selection-start-column="15" selection-end-line="217" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/partials/_product_detail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18408">
+          <caret line="767" column="2" selection-start-line="767" selection-start-column="2" selection-end-line="768" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sass/partials/_responsive.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="613" column="9" lean-forward="true" selection-start-line="613" selection-start-column="9" selection-end-line="613" selection-end-column="9" />
+        <state relative-caret-position="14520">
+          <caret line="613" column="9" selection-start-line="613" selection-start-column="9" selection-end-line="613" selection-end-column="9" />
           <folding>
             <element signature="e#38#149#0" />
-            <element signature="e#188#542#0" />
-            <element signature="e#7423#8609#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/partials/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="672">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sass/partials/_product_detail.scss">
+    <entry file="file://$PROJECT_DIR$/assets/js/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="791" column="18" selection-start-line="791" selection-start-column="7" selection-end-line="791" selection-end-column="18" />
+        <state relative-caret-position="16080">
+          <caret line="670" column="40" selection-start-line="670" selection-start-column="40" selection-end-line="670" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!block;n#set_sidebar_height#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/single.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="968" column="34" lean-forward="true" selection-start-line="968" selection-start-column="34" selection-end-line="968" selection-end-column="34" />
+          <caret line="1021" column="25" lean-forward="true" selection-start-line="1021" selection-start-column="25" selection-end-line="1021" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="83" column="30" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
+          <folding>
+            <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

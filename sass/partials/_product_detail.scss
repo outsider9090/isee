@@ -202,7 +202,7 @@
         width: 15px;
         height: 15px;
         position: absolute;
-        bottom: 45px;
+        bottom: 40px;
         left: 40%;
       }
     }
@@ -766,7 +766,7 @@ canvas {
   }
 
   .products_cards{
-    width: 100%;
+    width: 96%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -1115,6 +1115,9 @@ canvas {
     transform: rotate(90deg);
     width: 270px;
     margin-top:100px;
+    //display: none;
+    //width: 100%;
+    z-index: 0 !important;
     .owl-stage-outer{
       height: auto;
       left: -115px;
@@ -1139,6 +1142,7 @@ canvas {
 
   .image_slides {
     position: relative !important;
+    z-index: 0;
     img{
       transform: rotateZ(-90deg);
     }
@@ -1192,3 +1196,10 @@ canvas {
   font-weight: bold;
   font-size: 15px;
 }
+
+
+.pre-content {
+    min-height: 40px !important;
+}
+
+

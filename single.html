@@ -433,7 +433,7 @@
                                 <div class="col-6 shop_name">
                                     <span>بعثت الکترونیک</span>
                                     <div>
-                                        <a href="#" class="show_tooltip" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                                        <a href="#reportingModal" class="show_tooltip" data-toggle="modal" data-placement="top" title="Tooltip on top">
                                             <span ><i class="material-icons align-middle text-secondary mr-1">info_outline</i></span>
                                         </a>
                                         <a class="prevent_default">
@@ -772,6 +772,14 @@
 <a href="#" class="bg-primary" id="scroll_to_top_btn" title="رفتن به بالا">
     <i class="material-icons align-middle text-white">keyboard_arrow_up</i>
 </a>
+<!-- Scroll to top btn -->
+
+<!-- Add to homescreen btn -->
+<a href="#" class="bg-primary" id="add_to_homescreen_btn" title="افزودن به صفحه اصلی">
+    <i class="material-icons align-middle text-white">add</i>
+</a>
+<!-- Add to homescreen btn -->
+
 
 
 <!-- Reporting Modal -->
@@ -995,7 +1003,7 @@
                             drawBorder: false
                         },
                         angleLines: {
-                            display: false
+                            display: true
                         }
                     }],
                     xAxes: [{
@@ -1017,6 +1025,14 @@
                         fontFamily: 'Yekan',
                         fontSize: 13,
                         usePointStyle: true
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 15,
+                        right: 15,
+                        top: 15,
+                        bottom: 15
                     }
                 }
             }

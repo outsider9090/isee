@@ -350,6 +350,23 @@ button:disabled{
 	}
 }
 
+#add_to_homescreen_btn{
+	display: none;
+	position: fixed;
+	bottom: 55px;
+	right: 30px;
+	width: 45px;
+	height: 45px;
+	border-radius: 30px;
+	@include myTransition(1s ease);
+	i{
+		text-align: center;
+		width: 45px;
+		line-height: 45px;
+	}
+}
+
+
 .form-check-input {
 	position: relative;
 }
