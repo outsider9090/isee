@@ -48,7 +48,7 @@
 .zoomWrapper #gi-single{
   //border: 3px solid #bdbdbd;
   border: none;
-  padding: 20px;
+  padding: 30px;
 }
 #p-gallery{
   overflow-x: scroll;
@@ -74,9 +74,6 @@
   margin: 15px 80px 0 0;
 }
 
-.product_gallery img{
-  // border: 2px solid #bdbdbd;
-}
 .product_gallery img.active{
   border: 2px solid #076fa9;
 }
@@ -312,6 +309,9 @@
     flex-flow: row wrap;
     justify-content: center;
   }
+  i{
+    color: $primaryColor;
+  }
 }
 .e-shops-row-mobile:last-child{
   border-bottom: none;
@@ -511,7 +511,7 @@ canvas {
     position: absolute;
     right: -60px;
     top: 5px;
-  }
+}
   .owl-prev{
     padding: 5px 15px !important;
     background: none !important;
@@ -602,8 +602,58 @@ canvas {
           font-size: 15px;
         }
       }
+    }
+    .filter-option{
+      text-align: right !important;
+      font-size: 15px !important;
+    }
+    .bootstrap-select {
+      .bs-ok-default:after{
+      color: $AccentColor !important;
+      }
+      .dropdown-menu li a {
+        color: $secondaryTextColor !important;
+        font-size: 13px;
+        text-align: right;
+      }
+      .no-results {
+        text-align: right;
+        font-size: 13px;
+      }
 
     }
+
+
+    .bootstrap-select.show-tick .dropdown-menu .selected span.check-mark {
+      left: 15px !important;
+      right: unset !important;
+    }
+    .bootstrap-select.show-tick .dropdown-menu li a span.text {
+      margin-right: 0 !important;
+    }
+
+    .bootstrap-select.form-control {
+      border: 1px solid #ced4da !important;
+    }
+
+    .dropdown-item.active, .dropdown-item:active {
+      background-color: transparent !important;
+    }
+
+    .btn-light:hover {
+      background-color: #fff !important;
+      border-color: transparent !important;
+    }
+
+    .bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+      background: #ffffff !important;
+    }
+
+    .bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+      outline: none !important;
+      outline-offset: 0 !important;
+    }
+
 
   }
 
@@ -873,6 +923,7 @@ canvas {
         width: 100%;
         margin: 0 auto;
         .product_price_multiShop{
+          width: 100%;
           display: flex;
           flex-flow: row nowrap;
           justify-content: flex-start;
@@ -881,6 +932,36 @@ canvas {
           color: $secondaryTextColor;
           .product_price_shop_name span{
             color: #000000;
+          }
+          i{
+            color: $primaryColor;
+            font-size: 20px;
+          }
+          p{
+            text-align: center;
+            font-family: $FDFont;
+            color: $secondaryTextColor;
+          }
+        }
+        .product_city{
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          align-content: center;
+          color: $secondaryTextColor;
+          .product_city_name span{
+            color: #000000;
+          }
+          i{
+            color: $primaryColor;
+            font-size: 20px;
+          }
+          p{
+            text-align: center;
+            font-family: $FDFont;
+            font-size: 13px;
+            color: $secondaryTextColor;
           }
         }
       }
@@ -896,18 +977,7 @@ canvas {
       color: $secondaryTextColor;
     }
   }
-  .product_price_multiShop{
-    width: 100%;
-    i{
-      color: $primaryColor;
-      font-size: 20px;
-    }
-    p{
-      text-align: center;
-      font-family: $FDFont;
-      color: $secondaryTextColor;
-    }
-  }
+
   .product_price_multiShop .product_price:not(.empty):not(.single-price)::before{
     content: 'از ';
     color: $secondaryTextColor;
@@ -1202,4 +1272,7 @@ canvas {
     min-height: 40px !important;
 }
 
+.modal-dialog{
+  margin: 75px auto;
+}
 

@@ -24,6 +24,7 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/maticons.css"/>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="assets/css/animate.min.css"/> -->
     <link rel="stylesheet" href="assets/css/main-styles.css" />
 </head>
 
@@ -31,9 +32,9 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f5f5f5;box-shadow: none;">
-        <button class="navbar-toggler" type="button">
+        <!-- <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
         <div class="collapse navbar-collapse" id="main_navbar">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -84,11 +85,18 @@
                             <!--<span>موتور جستجوی هوشمند قطعات الکترونیک</span>-->
                         </div>
                         <form action="products.html" style="position:relative;z-index: 10" id="search_frm">
-                            <div class="search_frm_container input-group mb-3" style="width: 74%">
+                            <div class="search_frm_container home input-group mb-3" style="width: 74%">
                                 <input type="text" class="form-control" aria-label=""
                                        aria-describedby="search_btn" id="search_frm_input" autocomplete="off" />
-                                <i class="material-icons" id="search_btn_icon" >search</i>
-                                <i class="material-icons" id="clear_btn" title="Clear">close</i>
+                                <!-- <i class="material-icons" id="search_btn_icon" >search</i> -->
+                                <svg id="search_btn_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <circle cx="14" cy="14" r="12" />
+    <path d="M23 23 L30 30"  />
+</svg>
+                                <!-- <i class="material-icons" id="clear_btn" title="Clear">close</i> -->
+                                <svg id="clear_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <path d="M2 30 L30 2 M30 30 L2 2" />
+</svg>
                             </div>
                             <div class="search_res_ajax" style="left: 13%;width: 74%">
                                 <div class="row">
@@ -192,16 +200,77 @@
 </section>
 
 
+
+<!-- Add to homescreen btn -->
+<a href="#" class="bg-primary wow slideInLeft" data-wow-duration="0.6s" id="add_to_homescreen_btn" title="افزودن به صفحه اصلی">
+    نصب نسخه موبایل
+    <span id="add_to_homescreen_btn_close"><i class="material-icons align-middle mx-1">close</i></span>
+</a>
+<!-- Add to homescreen btn -->
+
+
 <footer>
     <nav class="footer" style="background-color: #f5f5f5;">
-        <ul class="mr-auto">
+        <ul class="mr-auto for_desktop">
             <li class="nav-item">
-                <a class="nav-link" href="about_us.html">درباره ما </a>
+                <a class="nav-link" href="/about_us">درباره ما </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact_us.html">تماس با ما</a>
+                <a class="nav-link" href="/contact_us">تماس با ما</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/terms_conditions">قوانین و مقررات</a>
             </li>
         </ul>
+        <div class="row">
+            <ul class="for_mobile">
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup">
+                        <svg id="i-portfolio" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M29 17 L29 28 3 28 3 17 M2 8 L30 8 30 16 C30 16 24 20 16 20 8 20 2 16 2 16 L2 8 Z M16 22 L16 18 M20 8 C20 8 20 4 16 4 12 4 12 8 12 8" />
+                        </svg>
+                        <span>ثبت نام فروشگاه</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shops_list">
+                        <svg id="i-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M6 6 L30 6 27 19 9 19 M27 23 L10 23 5 2 2 2" />
+                            <circle cx="25" cy="27" r="2" />
+                            <circle cx="12" cy="27" r="2" />
+                        </svg>
+                        <span>لیست فروشگاه ها</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about_us">
+                        <svg id="i-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M16 14 L16 23 M16 8 L16 10" />
+                            <circle cx="16" cy="16" r="14" />
+                        </svg>
+                        <span>درباره ما</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact_us">
+                        <svg id="i-telephone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11 14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" />
+                            <circle cx="16" cy="21" r="4" />
+                        </svg>
+                        <span>تماس با ما</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/terms_conditions">
+                        <svg id="i-clipboard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M12 2 L12 6 20 6 20 2 12 2 Z M11 4 L6 4 6 30 26 30 26 4 21 4" />
+                        </svg>
+                        <span>قوانین و مقررات</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
     </nav>
 </footer>
 
@@ -211,6 +280,7 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.ez-plus.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
 <script src="assets/js/scripts.js"></script>
 </body>
 </html>

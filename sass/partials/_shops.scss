@@ -90,9 +90,15 @@
         text-align: center;
         background-color: transparent;
         border-bottom: none;
-        h6{
-          color: #757575;
-          margin: 24px auto;
+        h6.partNameBold{
+          color: #424242;
+          margin: 20px auto 0 auto;
+        }
+        h6.partCity{
+          color: $primaryColor;
+          margin: 10px auto 20px auto;
+          font-weight: bold;
+          font-size: 13px;
         }
         img{
           width: 150px;

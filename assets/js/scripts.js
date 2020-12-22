@@ -1,5 +1,19 @@
 jQuery(document).ready(function ($) {
 
+    new WOW().init();
+    $('.selectpicker').selectpicker({
+        liveSearch: true,
+        actionsBox: true,
+        liveSearchPlaceholder: 'جستجوی نام شهر',
+        noneSelectedText: 'موردی انتخاب نشده است!',
+        noneResultsText: 'نتیجه ای یافت نشد!',
+        selectAllText: 'انتخاب همه',
+        deselectAllText: 'انتخاب هیچیک',
+        multipleSeparator: ' ، '
+    });
+
+
+
     $('#gi-single').ezPlus({
         zoomWindowFadeIn: 500,
         zoomLensFadeIn: 500,
@@ -305,7 +319,7 @@ $('#signup_frm_submit').click(function () {
     }
 
     if (name !== '' && shop_name !== '' && phone !== '' && emailPattern.test(email) && urlPattern.test(shop_url)  ) {
-        $(this).find('i').css('visibility', 'visible').addClass('fa-spin');
+        $(this).find('i').css('display', 'inline-block').addClass('fa-spin');
         let link_phone_desc = shop_name + '\n' + phone + '\n' +  desc;
         $.ajax({
             url: '/api/v1/users/forms/report',
@@ -322,7 +336,7 @@ $('#signup_frm_submit').click(function () {
             }, error:function (err) {
                     //console.log(err);
                 }, complete:function () {
-                    $('#signup_frm_submit').find('i').css('visibility', 'hidden').removeClass('fa-spin');
+                    $('#signup_frm_submit').find('i').css('display', 'none').removeClass('fa-spin');
                 }
             });
     }else {
@@ -400,7 +414,7 @@ $('#contactus_frm_submit').click(function () {
     let your_subject = $('#contact_us_frm').find('input#your_subject').val();
     let your_message_body = $('#contact_us_frm').find('textarea#your_message_body').val();
 
-    $(this).find('i').css('visibility', 'visible').addClass('fa-spin');
+    $(this).find('i').css('display', 'inline-block').addClass('fa-spin');
     $.ajax({
         url: '/contactUs',
         type: 'POST',
@@ -416,7 +430,7 @@ $('#contactus_frm_submit').click(function () {
         }, error:function (err) {
             console.log(err);
         }, complete:function () {
-            $('#contactus_frm_submit').find('i').css('visibility', 'hidden').removeClass('fa-spin');
+            $('#contactus_frm_submit').find('i').css('display', 'none').removeClass('fa-spin');
         }
     });
 });
@@ -697,6 +711,10 @@ $('.share_popover_container').click(function () {
         e.preventDefault();
     });
 
+    //set_sidebar_height();
+    $('button.btn-link').click(function(event) {
+        set_sidebar_height();
+    });
 
     $.fn.digits = function () {
         return this.each(function () {
@@ -707,16 +725,32 @@ $('.share_popover_container').click(function () {
     $('.unavailable_digits').digits();
 
 
-    //set_sidebar_height();
-    $('button.btn-link').click(function(event) {
-        set_sidebar_height();
-    });
+$('#add_to_homescreen_btn_close').on('click', function(event) {
+    event.preventDefault();
+    $('#add_to_homescreen_btn').animate({'opacity': 0}, 400);
+    setTimeout(function() {
+            $('#add_to_homescreen_btn').css('display', 'none');
+    }, 2000)
 });
 
 
 
+
+});
+
+
+// let add_to_homescreen_btn = document.querySelector('#add_to_homescreen_btn');
+//     add_to_homescreen_btn.style.opacity = 1;
+
+setTimeout(function() {
+    //add_to_homescreen_btn.style.opacity = 1;
+    if (screen.width > 768 ) {
+                    add_to_homescreen_btn.style.display = 'none';
+                }
+}, 1500);
+
+
 function set_sidebar_height(){
-    //alert('ssss');
     let overalHeight = 0;
     $('.sidebar_collapse').each(function(){
         overalHeight += $(this).height();

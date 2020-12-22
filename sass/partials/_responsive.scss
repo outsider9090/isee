@@ -73,6 +73,10 @@
   .navbar-nav li a::after{
     content: "";
   }
+   
+  #single_navbar_search_box {
+width: 75%;
+  }
   .navbar_search_box {
     width: 60%;
     margin-right: 0;
@@ -98,15 +102,32 @@
 }
 
 @media screen and (max-width: 768px) {
-  .product_detail_footer #pd_footer_left {
+
+.search_frm_container.home svg#search_btn_icon , .search_frm_container.home svg#clear_btn{
+  height: 45px;
+  line-height: 45px;
+}
+
+.product_detail_footer #pd_footer_left {
     justify-content: center;
     width: 100%;
 }
-  .modal-dialog{
-    margin-bottom: 50px;
+
+.footer {
+  ul.for_mobile{
+    display: flex;
+    padding: 0 20px;
+    li{
+      a{
+        span{
+          font-size: 10px;
+        }
+      }
+    }
   }
-  .footer ul {
-    justify-content: center;
+  ul.for_desktop{
+    display: none;
+  }
 }
 
   #breadcrumb_nav .filter_buttons_container {
@@ -159,10 +180,13 @@
   .owl-item{
     width: 52px !important;
   }
-  .product_gallery{
-    //margin-right: 50%;
-    margin: auto;
+  .product_gallery.nc{
+        margin: auto;
     justify-content: center;
+  }
+  .product_gallery{
+    margin: 0 35%;
+    justify-content: flex-start;
   }
   .image_single img{
     width: 200px;
@@ -349,11 +373,11 @@
     height: 45px;
     line-height: 45px;
   }
-  .search_frm_container i#clear_btn {
+  .search_frm_container #clear_btn {
     height: 45px;
     line-height: 45px;
   }
-  .search_frm_container i#search_btn_icon {
+  .search_frm_container #search_btn_icon {
     height: 45px;
     line-height: 45px;
   }
@@ -399,6 +423,9 @@
   }
 }
 @media screen and (max-width: 500px) {
+  .product_gallery{
+    margin: 0 20%;
+  }
   #price_range{
     width: 60%;
   }
@@ -418,12 +445,9 @@
       justify-content: center;
     }
 
-  .pre-content {
-    //max-width: 50% !important;
-  }
   .owl-carousel .owl-stage-outer {
     left: -175px;
-    top: -400px;
+    top: -365px;
   }
   .owl-carousel .owl-nav {
     left: -175px;
@@ -487,6 +511,7 @@
         min-width: 145px;
         max-width: 22%;
         height: auto;
+        min-height: 325px;
         width: 100%;
         text-align: right;
         border-radius: 20px;
@@ -558,7 +583,7 @@
   }
   .zoomWrapper #gi-single {
     margin: auto 50px;
-    padding: 75px;
+    padding: 0;
   }
   .image_slides img {
     padding: 6px;
@@ -677,6 +702,28 @@
 
 }
 @media screen and (max-width: 300px) {
+    .navbar .site_title {
+    font-size: 0.875em;
+}
+  .footer {
+  ul{
+    margin: 10px auto;
+    li{
+      a{
+        span{
+          display: none;
+        }
+        i{
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+
+  #scroll_to_top_btn{
+    bottom:70px;
+  }
   #price_range{
     width: 30%;
   }
@@ -688,9 +735,6 @@
   }
   .product_detail_left .shop_details span {
     width: 100%;
-  }
-  .pre-content {
-    //max-width: 30% !important;
   }
   .products_cards .card{
     min-width: 100%;

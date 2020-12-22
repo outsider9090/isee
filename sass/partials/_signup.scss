@@ -46,7 +46,8 @@ input#password , input#password-confirm{
   cursor: not-allowed;
 }
 #signup_frm_submit i , #contactus_frm_submit i {
-  visibility: hidden;
+  //visibility: hidden;
+  display: none;
 }
 .show_pass{
   position: absolute;
