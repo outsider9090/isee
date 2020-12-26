@@ -207,6 +207,21 @@ button:disabled {
   transition: border-color 0.2s, background-color 0.2s;
 }
 
+.pure-material-checkbox.blue > span::before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 3px 11px 3px 8px;
+  border: solid 2px;
+  /* Safari */
+  border-color: #757575;
+  border-radius: 2px;
+  width: 15px;
+  height: 15px;
+  vertical-align: top;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
 /* Checkmark */
 .pure-material-checkbox > span::after {
   content: "";
@@ -222,6 +237,20 @@ button:disabled {
   transform: translate(3px, 4px) rotate(-45deg);
 }
 
+.pure-material-checkbox.blue > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 17px;
+  width: 8px;
+  height: 5px;
+  border: solid 2px transparent;
+  border-right: none;
+  border-top: none;
+  transform: translate(3px, 4px) rotate(-45deg);
+}
+
 /* Checked, Indeterminate */
 .pure-material-checkbox > input:checked,
 .pure-material-checkbox > input:indeterminate {
@@ -230,8 +259,22 @@ button:disabled {
 
 .pure-material-checkbox > input:checked + span::before,
 .pure-material-checkbox > input:indeterminate + span::before {
-  border-color: #dc004e;
-  background-color: #dc004e;
+  border-color: #f50057;
+  background-color: #f50057;
+}
+
+.pure-material-checkbox.blue {
+  width: 100%;
+}
+
+.pure-material-checkbox.blue > input:checked + span::before,
+.pure-material-checkbox.blue > input:indeterminate + span::before {
+  border-color: #076fa9;
+  background-color: #076fa9;
+}
+
+.pure-material-checkbox.blue > input:active + span::before {
+  border-color: #076fa9;
 }
 
 .pure-material-checkbox > input:checked + span::after,
@@ -265,12 +308,12 @@ button:disabled {
 }
 
 .pure-material-checkbox > input:active + span::before {
-  border-color: #dc004e;
+  border-color: #f50057;
 }
 
 .pure-material-checkbox > input:checked:active + span::before {
   border-color: transparent;
-  background-color: #dc004e;
+  background-color: #f50057;
 }
 
 /* Disabled */
@@ -1631,6 +1674,10 @@ canvas {
 .sidebar .bootstrap-select .dropdown-toggle:focus, .sidebar .bootstrap-select > select.mobile-device:focus + .dropdown-toggle {
   outline: none !important;
   outline-offset: 0 !important;
+}
+.sidebar div#select_city {
+  max-height: 150px;
+  overflow: auto;
 }
 
 #main_content {

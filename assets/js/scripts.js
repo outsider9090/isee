@@ -4,6 +4,9 @@ jQuery(document).ready(function ($) {
     $('.selectpicker').selectpicker({
         liveSearch: true,
         actionsBox: true,
+        dropdownAlignRight: true,
+        header: "true",
+        hideDisabled: true,
         liveSearchPlaceholder: 'جستجوی نام شهر',
         noneSelectedText: 'موردی انتخاب نشده است!',
         noneResultsText: 'نتیجه ای یافت نشد!',
@@ -11,6 +14,8 @@ jQuery(document).ready(function ($) {
         deselectAllText: 'انتخاب هیچیک',
         multipleSeparator: ' ، '
     });
+
+    $('.popover-header').html('<button type="button" class="close" aria-hidden="true">×</button>');
 
 
 

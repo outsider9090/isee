@@ -654,6 +654,10 @@ canvas {
       outline-offset: 0 !important;
     }
 
+    div#select_city {
+      max-height: 150px;
+      overflow: auto;
+    }
 
   }
 
